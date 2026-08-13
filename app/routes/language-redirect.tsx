@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router";
 import { defaultLocale, LOCALE_STORAGE_KEY, locales, type Locale } from "../i18n/routing";
-import { SITE_ORIGIN } from "../lib/site";
+import { asset, SITE_ORIGIN } from "../lib/site";
 
 export function meta() {
   return [
@@ -36,7 +36,7 @@ export default function LanguageRedirect() {
   return (
     <main className="field-noche grid min-h-svh place-items-center px-6 text-center">
       <div>
-        <img src="/media/logo-badge-360.webp" alt="Harmonia" className="mx-auto h-24 w-24 rounded-full" width="96" height="96" />
+        <img src={asset("/media/logo-badge-360.webp")} alt="Harmonia" className="mx-auto h-24 w-24 rounded-full" width="96" height="96" />
         <p className="display-mid mt-5 text-2xl text-crudo">
           Harmonia<span className="text-lima">·</span>Baila
         </p>

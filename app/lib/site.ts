@@ -8,6 +8,12 @@ export const CONTACT_EMAIL = (import.meta.env.VITE_CONTACT_EMAIL as string | und
 
 export const WEB3FORMS_KEY = (import.meta.env.VITE_WEB3FORMS_KEY as string | undefined) ?? "";
 
+/** Prefix a public-root path with the build base (subpath-hosting safe). */
+export function asset(path: string): string {
+  const base = import.meta.env.BASE_URL ?? "/";
+  return base.replace(/\/$/, "") + path;
+}
+
 export const INSTAGRAM_URL = "https://www.instagram.com/harmonia.baila";
 export const INSTAGRAM_HANDLE = "@harmonia.baila";
 

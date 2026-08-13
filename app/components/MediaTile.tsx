@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import type { Locale } from "../i18n/routing";
+import { asset as assetUrl } from "../lib/site";
 
 export type MediaAsset = {
   id: string;
@@ -113,24 +114,24 @@ export function MediaTile({
         playsInline
         autoPlay
         preload="none"
-        poster={asset.poster ? `/media/${asset.poster}` : undefined}
+        poster={asset.poster ? assetUrl(`/media/${asset.poster}`) : undefined}
         aria-label={asset.alt[locale]}
       >
-        {asset.formats?.includes("webm") && <source src={`/media/${asset.id}.webm`} type="video/webm" />}
-        <source src={`/media/${asset.id}.mp4`} type="video/mp4" />
+        {asset.formats?.includes("webm") && <source src={assetUrl(`/media/${asset.id}.webm`)} type="video/webm" />}
+        <source src={assetUrl(`/media/${asset.id}.mp4`)} type="video/mp4" />
       </video>
     );
   }
 
   const widths = asset.widths ?? [480];
-  const srcSet = (ext: string) => widths.map((w) => `/media/${asset.id}-${w}.${ext} ${w}w`).join(", ");
+  const srcSet = (ext: string) => widths.map((w) => `${assetUrl(`/media/${asset.id}-${w}.${ext}`)} ${w}w`).join(", ");
   const largest = widths[widths.length - 1];
   return (
     <picture>
       <source type="image/avif" srcSet={srcSet("avif")} sizes={sizes} />
       <img
         className={`${ratio} w-full rounded-xl object-cover ${className}`}
-        src={`/media/${asset.id}-${largest}.webp`}
+        src={assetUrl(`/media/${asset.id}-${largest}.webp`)}
         srcSet={srcSet("webp")}
         sizes={sizes}
         alt={asset.alt[locale]}

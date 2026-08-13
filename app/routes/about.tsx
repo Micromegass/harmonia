@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { breadcrumbJsonLd, metaFor, studioJsonLd } from "../lib/seo";
+import { asset } from "../lib/site";
 import { Reveal } from "../components/Reveal";
 import { RuffleDivider } from "../components/RuffleDivider";
 import { JsonLd } from "../components/JsonLd";
@@ -43,7 +44,7 @@ export default function About() {
             </div>
             <Reveal beats={2} className="self-start md:sticky md:top-24">
               <img
-                src="/media/logo-wide.webp"
+                src={asset("/media/logo-wide.webp")}
                 alt={t("brand.logoAlt")}
                 className="w-full rounded-2xl"
                 width="1143"

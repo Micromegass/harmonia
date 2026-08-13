@@ -4,12 +4,29 @@
  *  2. robots.txt pointing at the sitemap
  *  3. 404.html at the output root (Vercel serves it with status 404 for unmatched paths)
  */
-import { readFile, writeFile, copyFile } from "node:fs/promises";
+import { readFile, writeFile, copyFile, cp, rm, access } from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "build", "client");
 const ORIGIN = (process.env.VITE_SITE_ORIGIN ?? "https://harmonia-baila.vercel.app").replace(/\/$/, "");
+const BASE = process.env.BASE_PATH ?? "/";
+const SUBPATH_BUILD = BASE !== "/";
+
+// Subpath builds: React Router prerenders pages under OUT/<basename>/ while
+// public assets stay at OUT root. Flatten so the artifact root maps 1:1 to
+// the hosted subpath (GitHub Pages serves the artifact at /<basename>/).
+if (SUBPATH_BUILD) {
+  const nested = path.join(OUT, BASE.replaceAll("/", ""));
+  try {
+    await access(nested);
+    await cp(nested, OUT, { recursive: true, force: true });
+    await rm(nested, { recursive: true });
+    console.log(`✓ flattened ${path.relative(ROOT, nested)}/ into build/client/`);
+  } catch {
+    console.log("✓ no nested basename dir to flatten");
+  }
+}
 
 // Mirror of app/i18n/routing.ts pageSlugs (kept in sync manually; the build
 // fails loudly in verification if a prerendered page is missing from here).
@@ -102,6 +119,11 @@ const csp = [
 ].join("; ");
 
 const vercelPath = path.join(ROOT, "vercel.json");
+if (SUBPATH_BUILD) {
+  // Subpath preview build (GitHub Pages): headers don't apply there and the
+  // inline-script hashes intentionally differ — leave vercel.json untouched.
+  console.log("✓ subpath build: vercel.json headers left as committed (root build owns them)");
+} else {
 const vercelBefore = await readFile(vercelPath, "utf8");
 const vercelJson = JSON.parse(vercelBefore);
 vercelJson.headers = [
@@ -132,6 +154,7 @@ if (vercelAfter !== vercelBefore) {
   console.log(`✓ vercel.json headers refreshed (${hashes.size} inline-script hashes) — commit it`);
 } else {
   console.log(`✓ vercel.json headers up to date (${hashes.size} inline-script hashes)`);
+}
 }
 
 // Sanity: every sitemap URL must exist as prerendered HTML.

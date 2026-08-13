@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import { LazyMotion, domAnimation } from "motion/react";
 import "./app.css";
 import i18n, { syncLocale } from "./i18n/config";
+import { asset } from "./lib/site";
 import { defaultLocale, type Locale } from "./i18n/routing";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -49,13 +50,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href={asset("/favicon.png")} />
+        <link rel="apple-touch-icon" href={asset("/apple-touch-icon.png")} />
         {/* Preload only the upright face — italic is below-the-fold accent type
             and loads on demand (font-display: swap). */}
         <link
           rel="preload"
-          href="/fonts/archivo-var.woff2"
+          href={asset("/fonts/archivo-var.woff2")}
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

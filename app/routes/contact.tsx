@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router";
 import { Trans, useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { breadcrumbJsonLd, metaFor, studioJsonLd } from "../lib/seo";
-import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, mailtoLink, waLink, WEB3FORMS_KEY } from "../lib/site";
+import { asset, CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, mailtoLink, waLink, WEB3FORMS_KEY } from "../lib/site";
 import { Reveal } from "../components/Reveal";
 import { RuffleDivider } from "../components/RuffleDivider";
 import { JsonLd } from "../components/JsonLd";
@@ -317,7 +317,7 @@ export default function Contact() {
 
           <aside className="self-start md:sticky md:top-24">
             <Reveal>
-              <img src="/media/logo-badge-360.webp" alt={t("brand.logoAlt")} className="h-20 w-20 rounded-full" width="80" height="80" loading="lazy" />
+              <img src={asset("/media/logo-badge-360.webp")} alt={t("brand.logoAlt")} className="h-20 w-20 rounded-full" width="80" height="80" loading="lazy" />
               <h2 className="display-mid mt-5 text-2xl">{t("contact.info.heading")}</h2>
               <address className="mt-4 space-y-2 not-italic">
                 <p className="font-bold">{t("contact.info.cityLine")}</p>

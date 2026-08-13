@@ -7,7 +7,7 @@
   font-weight: 100 900;
   font-stretch: 62% 125%;
   font-display: swap;
-  src: url("/fonts/archivo-var.woff2") format("woff2");
+  src: url("../fonts/archivo-var.woff2") format("woff2");
 }
 @font-face {
   font-family: "Archivo";
@@ -15,7 +15,7 @@
   font-weight: 100 900;
   font-stretch: 62% 125%;
   font-display: swap;
-  src: url("/fonts/archivo-var-italic.woff2") format("woff2");
+  src: url("../fonts/archivo-var-italic.woff2") format("woff2");
 }
 
 /* ─── La Falda design tokens: pollera fabric fields on a night ground ─── */
@@ -61,21 +61,19 @@ body {
   overflow-x: clip;
 }
 
-/* Display voice: expanded black Archivo, poster register */
+/* Display voice: gently expanded Archivo, sentence case — confident, not shouty */
 .display {
-  font-variation-settings: "wdth" 125;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 0.92;
+  font-variation-settings: "wdth" 108;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
   text-wrap-style: balance;
 }
 .display-mid {
-  font-variation-settings: "wdth" 118;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 0.95;
-  letter-spacing: 0;
+  font-variation-settings: "wdth" 105;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   text-wrap-style: balance;
 }
 .lead {

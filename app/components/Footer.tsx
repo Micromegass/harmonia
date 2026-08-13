@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { pathFor, resolvePath, type Locale, type PageKey } from "../i18n/routing";
-import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../lib/site";
+import { asset, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../lib/site";
 
 const NAV_PAGES: PageKey[] = ["home", "about", "classes", "schedule", "gallery", "contact"];
 const LEGAL_PAGES: { page: PageKey; key: string }[] = [
@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="field-noche border-t border-crudo/10">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
-          <img src="/media/logo-badge-360.webp" alt={t("brand.logoAlt")} className="h-16 w-16 rounded-full" width="64" height="64" />
+          <img src={asset("/media/logo-badge-360.webp")} alt={t("brand.logoAlt")} className="h-16 w-16 rounded-full" width="64" height="64" />
           <p className="display-mid mt-4 text-xl text-crudo">
             Harmonia<span className="text-lima">·</span>Baila
           </p>

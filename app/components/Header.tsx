@@ -4,6 +4,7 @@ import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { alternatePath, pathFor, resolvePath, LOCALE_STORAGE_KEY, type Locale, type PageKey } from "../i18n/routing";
 import { BEAT, EASE_DANCE } from "./motion";
+import { asset } from "../lib/site";
 
 const NAV_PAGES: PageKey[] = ["about", "classes", "schedule", "gallery", "contact"];
 
@@ -46,7 +47,7 @@ export function Header() {
           to={pathFor("home", locale)}
           className="flex items-center gap-2.5"
         >
-          <img src="/media/logo-badge-360.webp" alt="" className="h-10 w-10 rounded-full" width="40" height="40" />
+          <img src={asset("/media/logo-badge-360.webp")} alt="" className="h-10 w-10 rounded-full" width="40" height="40" />
           <span className="display-mid text-base leading-none tracking-tight text-crudo sm:text-lg">
             Harmonia<span className="text-lima">·</span>Baila
           </span>

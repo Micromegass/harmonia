@@ -37,3 +37,4 @@ media-raw/
 !.impeccable/config.json
 !.impeccable/design.json
 !.impeccable/critique/
+.vercel
