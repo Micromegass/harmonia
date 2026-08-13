@@ -18,6 +18,19 @@ Format: date · decision · rationale · verify.
 - **2026-08-13 · Style list assumed: salsa, bachata (confirmed by user prompt) + urbano, ritmos tropicales (cumbia/merengue), baile infantil, contemporáneo (plausible for a university-trained dancer in Medellín).** All marked as placeholder content. Verify: confirm exact styles taught.
 - **2026-08-13 · ffmpeg not installed on this machine** — video branch of the pipeline copies uncompressed with a warning until `brew install ffmpeg`. Verify: install ffmpeg before processing real video.
 
+## 2026-08-13 — Design direction (Phase 1)
+
+- **2026-08-13 · Committed world: "La Falda" — the pollera skirt in motion** (impeccable concept roll, seed cf667dc0, assigned grounded candidate 7 of 7). Drenched fabric fields (noche/fucsia/crudo/sol) with scalloped ruffle hems, ribbon-trail hero, Archivo (Omnibus-Type) expanded-black poster type, all motion quantized to a 140ms 8-count. Challengers weighed and rejected on audience identification. Recorded in DESIGN.md + contract comment in built HTML. Verify: nothing — this is the site's identity now; don't relitigate per page.
+- **2026-08-13 · impeccable's interview/decision-page steps substituted with brief-derived decisions** — the brief runs unattended and forbids questions. The visualize/comp-approval step was skipped because the only available image generation (Higgsfield) costs credits and the run may not spend money. Verify: if she dislikes the direction, a re-roll with her steer is cheap.
+- **2026-08-13 · Finish review run inline (degraded mode)** — the impeccable finish-reviewer subagent type doesn't exist in this harness's agent registry; the skill's degraded in-thread pass was used instead. Disposition: **ship**; open ceiling items recorded in DESIGN.md.
+
+## 2026-08-13 — Critique loop (Phase 6, three passes)
+
+- **Pass 1 (home/hero):** found — mobile headline broke mid-word ("¿BAILA/MOS?"), hero subtitle unreadable over ribbons, ribbons clipped hard at hero edge + collided with scroll hint, prerendered HTML hid content for no-JS/pre-hydration visitors. Fixed: word-level wrap spans + fitted type scale (a `text-wrap: balance` vs `white-space: nowrap` cascade bug was the root cause), hero scrim + full-contrast subtitle, gradient mask fade on ribbons, `html:not(.js)` + reduced-motion CSS overrides forcing content visible.
+- **Pass 2 (inner pages):** found — gallery placeholder labels overflowed on long style names, contemporáneo placeholder read washed-gray against the world, schedule's final CTA field was a bare button. Fixed all three; added 30-check Playwright functional sweep (redirects, switcher, direct loads, 404 status, form validation, honeypot, lightbox keyboard, reduced motion) — all pass.
+- **Pass 3 (a11y/perf/taste):** found — `dl` structure invalid on home, logo link accessible-name mismatch, LCP waited for hydration, dual font preload contention; taste pre-flight flagged em-dashes throughout copy + hero scroll cue (banned tells). Fixed: a11y 100 both locales, hero mounts static then animates, single font preload, LazyMotion bundle, zero em-dashes in visible copy, scroll cue removed.
+- **Lighthouse (local gzip server, both locales): desktop 100/100/100/100; mobile-emulated 87/100/100/100** (FCP 2.9s/LCP 3.3s on simulated slow-4G moto G). The remaining mobile-perf gap is the React runtime + font on a throttled connection; CLS 0, TBT 0. Production Vercel (brotli, CDN edge, immutable caching) should land slightly higher. Documented rather than chased further — the next real win would be dropping client-side hydration entirely, which the stack mandate (React SPA + Framer Motion) precludes. `npx impeccable detect`: zero findings.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

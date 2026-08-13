@@ -7,7 +7,7 @@ Frontend-only marketing site for **Harmonia Baila**, a dance studio in Medellín
 - **React Router v8 framework mode** (Vite-based) + React 19 + TypeScript. `ssr: false` + `prerender` = fully static HTML per route in both locales → SEO + Vercel free tier, zero servers.
 - **Tailwind CSS v4** (CSS-first config in `app/app.css` via `@theme`), **Framer Motion** (`motion` package) for all animation.
 - **No backend, no database, no analytics.** Contact form posts to **Web3Forms**; fallback = WhatsApp + mailto.
-- Route-based locales `/es/...` + `/en/...` with **localized slugs** (`/es/clases` ↔ `/en/classes`). Root `/` = static page with tiny external JS redirect (localStorage choice → navigator.language → `/es`), `<noscript>` links.
+- Route-based locales `/es/...` + `/en/...` with **localized slugs** (`/es/clases` ↔ `/en/classes`). Root `/` = prerendered chooser page that client-redirects (localStorage choice → navigator.language → `/es`). NOTE: `scripts/postbuild.mjs` mirrors the slug map — keep in sync with `app/i18n/routing.ts` (build fails loudly if a page is missing).
 - i18n via **react-i18next**, strings in `app/i18n/es.json` + `app/i18n/en.json`. **Zero hardcoded strings in components.**
 
 ## Directory map
@@ -54,4 +54,4 @@ Frontend-only marketing site for **Harmonia Baila**, a dance studio in Medellín
 - Secrets never committed; only `.env.example` ships.
 
 ## Pointers
-Status & next steps → **STATE.md** · assumptions & client TODOs → **DECISIONS.md** · legal research → **LEGAL-NOTES.md** · media workflow → **MEDIA.md**
+Status & next steps → **STATE.md** · assumptions & client TODOs → **DECISIONS.md** · design system → **DESIGN.md** (+ PRODUCT.md) · legal research → **LEGAL-NOTES.md** · media workflow → **MEDIA.md**
