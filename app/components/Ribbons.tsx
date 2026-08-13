@@ -40,7 +40,11 @@ export function Ribbons() {
   ];
 
   return (
-    <div ref={ref} aria-hidden="true" className="absolute inset-0 overflow-hidden">
+    <div
+      ref={ref}
+      aria-hidden="true"
+      className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,black_78%,transparent_98%)]"
+    >
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" className="h-full w-full" focusable="false">
         {ribbons.map((r, i) => (
           <motion.g key={i} style={{ y: reduced ? 0 : r.y }}>

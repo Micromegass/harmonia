@@ -59,6 +59,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <div hidden dangerouslySetInnerHTML={{ __html: DESIGN_CONTRACT }} />
+        {/* Progressive-enhancement flag: entrance animations only apply when JS
+            runs (see .no-js override in app.css). Hashed into the CSP by postbuild. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         {children}
         <ScrollRestoration />
         <Scripts />

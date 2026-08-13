@@ -177,12 +177,18 @@ function Hero({ locale }: { locale: Locale }) {
   const { t } = useTranslation();
   const reduced = useReducedMotion();
   const title = t("home.hero.title");
-  const letters = Array.from(title);
+  // Words wrap; letters inside a word never do (letter spans are the stagger unit).
+  const words = title.split(" ").map((w) => Array.from(w));
 
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
       <Ribbons />
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-28 sm:px-8">
+      {/* local scrim so hero copy stays readable where ribbons cross it */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(34_16_34/0.82)_0%,rgb(34_16_34/0.55)_45%,transparent_75%)]"
+      />
+      <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-24 sm:px-8">
         {reduced ? (
           <p className="text-sm font-bold uppercase tracking-[0.35em] text-sol">{t("home.hero.count")}</p>
         ) : (
@@ -211,30 +217,34 @@ function Hero({ locale }: { locale: Locale }) {
         )}
 
         <h1
-          className="display mt-5 text-[19vw] leading-[0.9] sm:text-8xl md:text-9xl"
+          className="display mt-5 text-[min(10.4vw,8rem)] leading-[0.92] md:text-[min(8.6vw,9.5rem)]"
           aria-label={title}
         >
           {reduced ? (
             <span>{title}</span>
           ) : (
             <motion.span
-              className="inline-block"
               initial="hidden"
               animate="visible"
               transition={{ staggerChildren: BEAT / 2, delayChildren: BEAT * 4 }}
               aria-hidden="true"
             >
-              {letters.map((ch, i) => (
-                <motion.span key={i} className="inline-block whitespace-pre" variants={swingIn()}>
-                  {ch}
-                </motion.span>
+              {words.map((letters, w) => (
+                <span key={w} className="inline-block whitespace-nowrap">
+                  {letters.map((ch, i) => (
+                    <motion.span key={i} className="inline-block" variants={swingIn()}>
+                      {ch}
+                    </motion.span>
+                  ))}
+                  {w < words.length - 1 && " "}
+                </span>
               ))}
             </motion.span>
           )}
         </h1>
 
         <motion.p
-          className="lead muted mt-7 max-w-xl"
+          className="lead mt-7 max-w-xl text-crudo"
           initial={reduced ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: BEAT * 8, duration: BEAT * 4, ease: [...EASE_DANCE] }}

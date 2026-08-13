@@ -66,7 +66,7 @@ body {
   text-transform: uppercase;
   letter-spacing: -0.01em;
   line-height: 0.92;
-  text-wrap: balance;
+  text-wrap-style: balance;
 }
 .display-mid {
   font-variation-settings: "wdth" 118;
@@ -74,7 +74,7 @@ body {
   text-transform: uppercase;
   line-height: 0.95;
   letter-spacing: 0;
-  text-wrap: balance;
+  text-wrap-style: balance;
 }
 .lead {
   font-size: 1.125rem;
@@ -122,6 +122,13 @@ body {
 .skip-link:focus-visible {
   left: 0.5rem;
   top: 0.5rem;
+}
+
+/* No-JS fallback: entrance animations bake opacity:0 into the prerendered
+   HTML; without JS (or before it runs) force everything visible. */
+html:not(.js) [style*="opacity"] {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Reduced motion: kill non-essential animation globally */
