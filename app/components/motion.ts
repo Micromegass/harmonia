@@ -43,4 +43,4 @@ export function swingIn(beats = 0): Variants {
   };
 }
 
-export const viewportOnce = { once: true, amount: 0.3 } as const;
+export const viewportOnce = { once: true, amount: 0.2, margin: "0px 0px -40px 0px" } as const;

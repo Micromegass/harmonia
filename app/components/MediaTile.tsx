@@ -24,7 +24,7 @@ const STYLE_COLORS: Record<string, [string, string]> = {
   urbano: ["var(--color-mar)", "var(--color-sol)"],
   tropical: ["var(--color-sol)", "var(--color-coral)"],
   kids: ["var(--color-sol)", "var(--color-mar)"],
-  contemporaneo: ["var(--color-crudo)", "var(--color-fucsia)"],
+  contemporaneo: ["var(--color-mar)", "var(--color-crudo)"],
 };
 
 /** Deterministic pseudo-random from the asset id, so placeholder art is stable. */
@@ -67,11 +67,11 @@ export function PlaceholderArt({ asset, styleName }: { asset: MediaAsset; styleN
         <path key={i} d={p.d} fill="none" stroke={p.color} strokeWidth={p.w} strokeLinecap="round" opacity={p.o} />
       ))}
       <text
-        x="20"
-        y={h - 24}
+        x="16"
+        y={h - 18}
         fill="var(--color-crudo)"
         opacity="0.85"
-        style={{ font: "700 18px Archivo, sans-serif", textTransform: "uppercase", letterSpacing: "0.08em" }}
+        style={{ font: "700 13px Archivo, sans-serif", textTransform: "uppercase", letterSpacing: "0.06em" }}
       >
         {styleName}
       </text>

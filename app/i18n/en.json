@@ -220,7 +220,8 @@
       "private": "Private lessons (by appointment)"
     },
     "privateNote": "Private lessons are scheduled around your availability — mornings, afternoons or weekends.",
-    "cta": "Save my spot"
+    "cta": "Save my spot",
+    "ctaHeading": "Spots go fast — save yours"
   },
   "gallery": {
     "heading": "The gallery",

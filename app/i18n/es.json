@@ -220,7 +220,8 @@
       "private": "Clases personalizadas (con cita)"
     },
     "privateNote": "Las clases personalizadas se agendan según tu disponibilidad — mañanas, tardes o fines de semana.",
-    "cta": "Reservar mi cupo"
+    "cta": "Reservar mi cupo",
+    "ctaHeading": "Los cupos vuelan — asegura el tuyo"
   },
   "gallery": {
     "heading": "La galería",

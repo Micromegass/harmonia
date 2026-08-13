@@ -72,6 +72,9 @@ export default function Schedule() {
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-16">
           <Reveal>
+            <h2 className="display text-3xl sm:text-4xl">{t("schedule.ctaHeading")}</h2>
+          </Reveal>
+          <Reveal beats={2} className="mt-7">
             <a
               href={waLink(t("whatsapp.prefill"))}
               target="_blank"
