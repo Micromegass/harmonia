@@ -131,6 +131,15 @@ html:not(.js) [style*="opacity"] {
   transform: none !important;
 }
 
+/* Reduced motion: entrance states must never hide content, not even before
+   hydration — force the static composition. */
+@media (prefers-reduced-motion: reduce) {
+  [style*="opacity"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Reduced motion: kill non-essential animation globally */
 @media (prefers-reduced-motion: reduce) {
   *,
