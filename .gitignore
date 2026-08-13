@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+/build/
+/dist/
+.react-router/
+
+# Env & secrets — never commit; only .env.example ships
+.env
+.env.*
+!.env.example
+
+# Keys / credentials (belt & braces)
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs & caches
+*.log
+npm-debug.log*
+.cache/
+.vercel/
+
+# Media working files (raw downloads pre-processing)
+media-raw/
+
+# impeccable — keep config/design/critique, ignore the rest
+.impeccable/*
+!.impeccable/config.json
+!.impeccable/design.json
+!.impeccable/critique/
