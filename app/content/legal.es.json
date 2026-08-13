@@ -1,6 +1,234 @@
 {
-  "dataPolicy": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "privacyNotice": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "terms": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "cookies": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []}
+  "dataPolicy": {
+    "metaTitle": "Política de Tratamiento de Datos Personales — Harmonia Baila",
+    "metaDescription": "Cómo Harmonia Baila recopila, usa y protege tus datos personales conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013, y cómo ejercer tus derechos.",
+    "title": "Política de Tratamiento de Datos Personales",
+    "updated": "Última actualización: 13 de agosto de 2026",
+    "sections": [
+      {
+        "heading": "1. Responsable del tratamiento",
+        "paragraphs": [
+          "El responsable del tratamiento de tus datos personales es {{razonSocial}}, identificada con NIT {{nit}}, con domicilio en {{domicilio}} (en adelante, «Harmonia Baila»).",
+          "Canal de atención para todo lo relacionado con datos personales: correo electrónico {{email}}. También puedes escribirnos por WhatsApp a través del botón disponible en este sitio web."
+        ]
+      },
+      {
+        "heading": "2. Marco legal",
+        "paragraphs": [
+          "Esta política se expide en cumplimiento de la Ley Estatutaria 1581 de 2012, del Decreto 1377 de 2013 (compilado en el Decreto Único 1074 de 2015) y de las demás normas que los modifiquen o complementen. Desarrolla el derecho constitucional de habeas data previsto en el artículo 15 de la Constitución Política de Colombia."
+        ]
+      },
+      {
+        "heading": "3. Datos que recopilamos",
+        "paragraphs": [
+          "Este sitio web no usa cookies de rastreo ni herramientas de analítica. Solo tratamos los datos personales que tú nos entregas voluntariamente:"
+        ],
+        "list": [
+          "A través del formulario de contacto: nombre, correo electrónico, número de WhatsApp (opcional), interés seleccionado y el contenido de tu mensaje.",
+          "A través de WhatsApp: tu número de teléfono y el contenido de la conversación que inicies con nosotros.",
+          "En la operación de la academia (fuera de este sitio web): datos necesarios para la inscripción y gestión de clases, que se tratan bajo esta misma política."
+        ]
+      },
+      {
+        "heading": "4. Finalidades del tratamiento",
+        "list": [
+          "Responder tu solicitud de información sobre clases, horarios y precios.",
+          "Gestionar la programación de clases y la relación comercial contigo.",
+          "Contactarte por los canales que nos indiques (correo, WhatsApp).",
+          "Cumplir obligaciones legales y contables cuando apliquen.",
+          "Nunca vendemos tus datos ni los usamos para publicidad de terceros."
+        ]
+      },
+      {
+        "heading": "5. Autorización",
+        "paragraphs": [
+          "Recogemos tu autorización previa, expresa e informada mediante la casilla de aceptación del formulario de contacto, que está desmarcada por defecto y enlaza a esta política. Si nos escribes directamente por WhatsApp o correo, tu comunicación voluntaria constituye una conducta inequívoca de autorización para responderte, conforme al Decreto 1377 de 2013.",
+          "Puedes revocar tu autorización en cualquier momento escribiendo a {{email}}, salvo que exista un deber legal o contractual que requiera conservar los datos."
+        ]
+      },
+      {
+        "heading": "6. Tus derechos como titular",
+        "list": [
+          "Conocer, actualizar y rectificar tus datos personales.",
+          "Solicitar prueba de la autorización otorgada.",
+          "Ser informado sobre el uso que se ha dado a tus datos.",
+          "Revocar la autorización y/o solicitar la supresión de tus datos cuando no exista un deber legal o contractual de conservarlos.",
+          "Acceder de forma gratuita a tus datos personales.",
+          "Presentar quejas ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la ley, una vez agotado el trámite de consulta o reclamo ante Harmonia Baila."
+        ]
+      },
+      {
+        "heading": "7. Cómo ejercer tus derechos: consultas y reclamos",
+        "paragraphs": [
+          "Escríbenos a {{email}} indicando tu nombre, el derecho que quieres ejercer, la descripción de tu solicitud y un canal para responderte.",
+          "Consultas: las respondemos en un plazo máximo de diez (10) días hábiles desde su recibo. Si no es posible en ese plazo, te informaremos los motivos y responderemos a más tardar cinco (5) días hábiles después del vencimiento del primer plazo.",
+          "Reclamos: si consideras que tus datos deben ser corregidos, actualizados o suprimidos, o que hay un presunto incumplimiento de la ley, resolveremos tu reclamo en un plazo máximo de quince (15) días hábiles desde el día siguiente a su recibo. Si no es posible, te informaremos los motivos y resolveremos a más tardar ocho (8) días hábiles después del vencimiento del primer término. Si el reclamo está incompleto, te pediremos subsanarlo dentro de los cinco (5) días siguientes; transcurridos dos (2) meses sin respuesta tuya, entenderemos desistido el reclamo."
+        ]
+      },
+      {
+        "heading": "8. Encargados y transferencias internacionales",
+        "paragraphs": [
+          "Para operar este sitio usamos proveedores tecnológicos que pueden procesar datos fuera de Colombia:"
+        ],
+        "list": [
+          "Vercel Inc. (Estados Unidos): alojamiento del sitio web. No recibe los datos de tu formulario.",
+          "Web3Forms (servicio de envío de formularios): transmite el contenido del formulario de contacto a nuestro correo. Solo procesa los datos que tú envías al pulsar «Enviar mensaje».",
+          "Meta Platforms (WhatsApp): si decides contactarnos por WhatsApp, aplica la política de privacidad de WhatsApp además de la nuestra."
+        ]
+      },
+      {
+        "heading": "9. Seguridad y conservación",
+        "paragraphs": [
+          "Aplicamos medidas razonables de seguridad técnica y administrativa: el sitio se sirve exclusivamente por HTTPS, no almacenamos tus datos en bases de datos propias del sitio web y limitamos el acceso a los correos recibidos.",
+          "Conservamos los datos solo el tiempo necesario para las finalidades descritas o el exigido por normas legales, y después los eliminamos de forma segura."
+        ]
+      },
+      {
+        "heading": "10. Datos de niños, niñas y adolescentes",
+        "paragraphs": [
+          "El tratamiento de datos de menores de edad (por ejemplo, para clases infantiles) solo se realiza con la autorización de sus padres o representantes legales, respetando siempre el interés superior del menor y sus derechos fundamentales, conforme al artículo 7 de la Ley 1581 de 2012 y al artículo 12 del Decreto 1377 de 2013. Las fotografías o videos donde aparezcan menores solo se publican con autorización expresa y por escrito de sus representantes."
+        ]
+      },
+      {
+        "heading": "11. Registro Nacional de Bases de Datos (RNBD)",
+        "paragraphs": [
+          "De acuerdo con el Decreto 090 de 2018, la obligación de inscribir bases de datos en el RNBD de la SIC aplica a sociedades y entidades sin ánimo de lucro con activos totales superiores a 100.000 UVT y a entidades públicas. Harmonia Baila se encuentra por debajo de ese umbral y, por tanto, no está obligada al registro; ello no la exime del cumplimiento íntegro de la Ley 1581 de 2012, que esta política desarrolla."
+        ]
+      },
+      {
+        "heading": "12. Vigencia y cambios",
+        "paragraphs": [
+          "Esta política rige a partir de su publicación en este sitio web y permanece vigente mientras Harmonia Baila trate datos personales. Cualquier cambio sustancial será publicado en esta misma página con su fecha de actualización, y será informado antes de aplicar nuevas finalidades."
+        ]
+      }
+    ]
+  },
+  "privacyNotice": {
+    "metaTitle": "Aviso de Privacidad — Harmonia Baila",
+    "metaDescription": "Aviso de privacidad de Harmonia Baila: quién trata tus datos, para qué, y dónde consultar la Política de Tratamiento de Datos Personales.",
+    "title": "Aviso de Privacidad",
+    "updated": "Última actualización: 13 de agosto de 2026",
+    "sections": [
+      {
+        "heading": "Responsable",
+        "paragraphs": [
+          "{{razonSocial}}, NIT {{nit}}, con domicilio en {{domicilio}} («Harmonia Baila»), es responsable del tratamiento de tus datos personales. Contacto: {{email}}."
+        ]
+      },
+      {
+        "heading": "Tratamiento y finalidades",
+        "paragraphs": [
+          "Los datos que nos entregas por el formulario de contacto o por WhatsApp se usan únicamente para responder tu solicitud, gestionar clases y mantener la relación comercial contigo. No usamos tus datos para publicidad de terceros ni los vendemos."
+        ]
+      },
+      {
+        "heading": "Tus derechos y cómo ejercerlos",
+        "paragraphs": [
+          "Tienes derecho a conocer, actualizar, rectificar y suprimir tus datos, a revocar tu autorización y a presentar quejas ante la Superintendencia de Industria y Comercio. Escríbenos a {{email}} para ejercerlos.",
+          "La Política de Tratamiento de Datos Personales completa —con los procedimientos y plazos de consultas y reclamos— está disponible de forma permanente en este sitio web, en la sección Legal del pie de página."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Términos y Condiciones — Harmonia Baila",
+    "metaDescription": "Términos y condiciones de uso del sitio web de Harmonia Baila: servicios, precios, propiedad intelectual, derechos de imagen y ley aplicable (Colombia).",
+    "title": "Términos y Condiciones de Uso",
+    "updated": "Última actualización: 13 de agosto de 2026",
+    "sections": [
+      {
+        "heading": "1. Identificación",
+        "paragraphs": [
+          "Este sitio web es operado por {{razonSocial}}, NIT {{nit}}, con domicilio en {{domicilio}} («Harmonia Baila»). Contacto: {{email}} y el canal de WhatsApp disponible en el sitio."
+        ]
+      },
+      {
+        "heading": "2. Objeto del sitio",
+        "paragraphs": [
+          "Este sitio tiene una finalidad informativa y comercial: presentar los servicios de formación en baile de Harmonia Baila (clases grupales y personalizadas, para niños y adultos) y facilitar el contacto con la academia. El uso del sitio implica la aceptación de estos términos."
+        ]
+      },
+      {
+        "heading": "3. Servicios y precios",
+        "paragraphs": [
+          "La información de estilos, niveles y horarios publicada en este sitio es de carácter informativo y puede variar; los horarios definitivos y la disponibilidad de cupos se confirman directamente por WhatsApp o correo.",
+          "Los precios de los servicios se informan de manera previa, clara y completa por los canales de contacto antes de cualquier pago, en cumplimiento de la Ley 1480 de 2011 (Estatuto del Consumidor). Este sitio no procesa pagos ni celebra contratos en línea."
+        ]
+      },
+      {
+        "heading": "4. Derechos del consumidor",
+        "paragraphs": [
+          "Como consumidor tienes derecho a recibir información veraz y suficiente, a la calidad e idoneidad de los servicios y a presentar peticiones, quejas y reclamos escribiendo a {{email}}. Las respondemos dentro de los quince (15) días hábiles siguientes a su recibo. También puedes acudir a la Superintendencia de Industria y Comercio (www.sic.gov.co) como autoridad de protección al consumidor."
+        ]
+      },
+      {
+        "heading": "5. Propiedad intelectual",
+        "paragraphs": [
+          "El contenido de este sitio —textos, marca, logotipo, fotografías, videos y diseño— pertenece a Harmonia Baila o se usa con autorización de sus titulares. No puede reproducirse con fines comerciales sin autorización previa y escrita. Puedes compartir enlaces al sitio libremente."
+        ]
+      },
+      {
+        "heading": "6. Derechos de imagen",
+        "paragraphs": [
+          "Las fotografías y videos de clases publicados en este sitio o en las redes sociales de la academia se usan únicamente con la autorización previa, expresa y escrita de las personas que aparecen en ellos. En el caso de niños, niñas y adolescentes, la autorización la otorgan sus padres o representantes legales, y puede revocarse en cualquier momento escribiendo a {{email}}, con efecto sobre publicaciones futuras y retirada razonable de las existentes.",
+          "Si apareces en algún contenido y deseas que sea retirado, escríbenos y lo gestionaremos con prioridad."
+        ]
+      },
+      {
+        "heading": "7. Uso aceptable y responsabilidad",
+        "paragraphs": [
+          "Te comprometes a usar el sitio de forma lícita. Harmonia Baila procura mantener el sitio disponible y actualizado, pero no garantiza la ausencia de interrupciones o errores y no responde por decisiones tomadas con base en información desactualizada, sin perjuicio de los derechos irrenunciables del consumidor.",
+          "El sitio contiene enlaces a servicios de terceros (Instagram, WhatsApp). Su uso se rige por los términos y políticas de esos servicios."
+        ]
+      },
+      {
+        "heading": "8. Protección de datos",
+        "paragraphs": [
+          "El tratamiento de datos personales recogidos a través de este sitio se rige por nuestra Política de Tratamiento de Datos Personales y el Aviso de Privacidad, disponibles en la sección Legal del pie de página."
+        ]
+      },
+      {
+        "heading": "9. Ley aplicable",
+        "paragraphs": [
+          "Estos términos se rigen por las leyes de la República de Colombia. Cualquier controversia se someterá a los jueces competentes de Medellín, sin perjuicio de las normas de protección al consumidor que establezcan otra competencia."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Política de Cookies — Harmonia Baila",
+    "metaDescription": "Este sitio no usa cookies de rastreo ni analítica. Conoce qué almacenamiento local usamos y para qué.",
+    "title": "Política de Cookies",
+    "updated": "Última actualización: 13 de agosto de 2026",
+    "sections": [
+      {
+        "heading": "Lo importante primero",
+        "paragraphs": [
+          "Este sitio no usa cookies de rastreo, ni de publicidad, ni herramientas de analítica. No hay banners de cookies porque no hay nada que rastrear: no recopilamos información sobre tu navegación."
+        ]
+      },
+      {
+        "heading": "Qué almacenamos en tu navegador",
+        "paragraphs": [
+          "Usamos únicamente el almacenamiento local del navegador (localStorage) para dos funciones estrictamente técnicas:"
+        ],
+        "list": [
+          "hb-locale: recuerda el idioma que elegiste (español o inglés) para no preguntártelo cada vez. No contiene datos personales.",
+          "hb-last-submit: guarda el momento del último envío del formulario para evitar envíos duplicados o abusivos. No contiene datos personales."
+        ]
+      },
+      {
+        "heading": "Servicios de terceros",
+        "paragraphs": [
+          "Al enviar el formulario de contacto, los datos viajan directamente al servicio Web3Forms para llegar a nuestro correo; esto ocurre solo cuando pulsas «Enviar mensaje». Los enlaces a Instagram y WhatsApp abren esos servicios, que aplican sus propias políticas de cookies una vez estás en ellos."
+        ]
+      },
+      {
+        "heading": "Cómo borrar el almacenamiento",
+        "paragraphs": [
+          "Puedes borrar el almacenamiento local en cualquier momento desde la configuración de privacidad de tu navegador (por ejemplo: Configuración → Privacidad → Borrar datos de navegación). El sitio seguirá funcionando; solo volverá a preguntarte el idioma."
+        ]
+      }
+    ]
+  }
 }

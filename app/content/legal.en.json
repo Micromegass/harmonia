@@ -1,6 +1,234 @@
 {
-  "dataPolicy": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "privacyNotice": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "terms": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []},
-  "cookies": {"metaTitle": "TBD", "metaDescription": "TBD", "title": "TBD", "updated": "TBD", "sections": []}
+  "dataPolicy": {
+    "metaTitle": "Personal Data Processing Policy — Harmonia Baila",
+    "metaDescription": "How Harmonia Baila collects, uses and protects your personal data under Colombian Law 1581 of 2012 and Decree 1377 of 2013, and how to exercise your rights.",
+    "title": "Personal Data Processing Policy",
+    "updated": "Last updated: August 13, 2026",
+    "prevails": "This is an English translation provided for convenience. The Spanish version is the legally governing text: in case of any discrepancy, the Spanish version prevails.",
+    "sections": [
+      {
+        "heading": "1. Data controller",
+        "paragraphs": [
+          "The controller of your personal data is {{razonSocial}}, tax ID (NIT) {{nit}}, domiciled at {{domicilio}} (\"Harmonia Baila\").",
+          "Contact channel for anything related to personal data: email {{email}}. You can also reach us on WhatsApp through the button on this website."
+        ]
+      },
+      {
+        "heading": "2. Legal framework",
+        "paragraphs": [
+          "This policy is issued under Colombian Statutory Law 1581 of 2012 and Decree 1377 of 2013 (compiled into Decree 1074 of 2015), which develop the constitutional right to habeas data established in Article 15 of the Colombian Constitution."
+        ]
+      },
+      {
+        "heading": "3. Data we collect",
+        "paragraphs": [
+          "This website uses no tracking cookies and no analytics tools. We only process the personal data you voluntarily give us:"
+        ],
+        "list": [
+          "Through the contact form: name, email address, WhatsApp number (optional), selected interest, and the content of your message.",
+          "Through WhatsApp: your phone number and the content of the conversation you start with us.",
+          "In the studio's operations (outside this website): data needed to enroll and manage classes, processed under this same policy."
+        ]
+      },
+      {
+        "heading": "4. Purposes of processing",
+        "list": [
+          "Answering your request for information about classes, schedules and prices.",
+          "Scheduling classes and managing our commercial relationship with you.",
+          "Contacting you through the channels you indicate (email, WhatsApp).",
+          "Meeting legal and accounting obligations where applicable.",
+          "We never sell your data or use it for third-party advertising."
+        ]
+      },
+      {
+        "heading": "5. Authorization",
+        "paragraphs": [
+          "We collect your prior, express and informed authorization through the checkbox in the contact form, which is unchecked by default and links to this policy. If you write to us directly on WhatsApp or by email, your voluntary message constitutes unequivocal conduct authorizing us to reply, as provided by Decree 1377 of 2013.",
+          "You may revoke your authorization at any time by writing to {{email}}, unless a legal or contractual duty requires us to keep the data."
+        ]
+      },
+      {
+        "heading": "6. Your rights as data subject",
+        "list": [
+          "To know, update and rectify your personal data.",
+          "To request proof of the authorization you granted.",
+          "To be informed about how your data has been used.",
+          "To revoke your authorization and/or request deletion of your data when there is no legal or contractual duty to keep it.",
+          "To access your personal data free of charge.",
+          "To file complaints with the Superintendence of Industry and Commerce (SIC) for legal violations, after first raising the matter with Harmonia Baila."
+        ]
+      },
+      {
+        "heading": "7. How to exercise your rights: inquiries and claims",
+        "paragraphs": [
+          "Write to {{email}} stating your name, the right you wish to exercise, a description of your request, and a channel where we can reply.",
+          "Inquiries (consultas): we answer within a maximum of ten (10) business days from receipt. If that is not possible, we will explain why and answer no later than five (5) business days after the first deadline expires.",
+          "Claims (reclamos): if you believe your data should be corrected, updated or deleted, or that the law has been breached, we will resolve your claim within a maximum of fifteen (15) business days from the day after receipt. If that is not possible, we will explain why and resolve it no later than eight (8) business days after the first deadline. If a claim is incomplete, we will ask you to complete it within five (5) days; if two (2) months pass without your response, the claim is deemed withdrawn."
+        ]
+      },
+      {
+        "heading": "8. Processors and international transfers",
+        "paragraphs": ["To operate this site we use technology providers that may process data outside Colombia:"],
+        "list": [
+          "Vercel Inc. (United States): website hosting. It does not receive your form data.",
+          "Web3Forms (form delivery service): transmits the contact form content to our email. It only processes the data you send when you press \"Send message\".",
+          "Meta Platforms (WhatsApp): if you choose to contact us on WhatsApp, WhatsApp's own privacy policy applies in addition to ours."
+        ]
+      },
+      {
+        "heading": "9. Security and retention",
+        "paragraphs": [
+          "We apply reasonable technical and administrative security measures: the site is served exclusively over HTTPS, the website itself stores no personal data in databases, and access to received emails is restricted.",
+          "We keep data only as long as needed for the purposes described or as required by law, and then delete it securely."
+        ]
+      },
+      {
+        "heading": "10. Children's and adolescents' data",
+        "paragraphs": [
+          "Personal data of minors (for example, for kids' classes) is processed only with the authorization of their parents or legal guardians, always respecting the best interests of the child and their fundamental rights, as required by Article 7 of Law 1581 of 2012 and Article 12 of Decree 1377 of 2013. Photos or videos showing minors are published only with the express written authorization of their guardians."
+        ]
+      },
+      {
+        "heading": "11. National Database Registry (RNBD)",
+        "paragraphs": [
+          "Under Decree 090 of 2018, the obligation to register databases in the SIC's National Database Registry applies to companies and non-profits with total assets above 100,000 UVT and to public entities. Harmonia Baila is below that threshold and is therefore not required to register; this does not exempt it from full compliance with Law 1581 of 2012, which this policy implements."
+        ]
+      },
+      {
+        "heading": "12. Validity and changes",
+        "paragraphs": [
+          "This policy applies from its publication on this website and remains in force while Harmonia Baila processes personal data. Any substantial change will be published on this page with its update date and communicated before new purposes are applied."
+        ]
+      }
+    ]
+  },
+  "privacyNotice": {
+    "metaTitle": "Privacy Notice — Harmonia Baila",
+    "metaDescription": "Harmonia Baila's privacy notice: who processes your data, for what purposes, and where to find the full Personal Data Processing Policy.",
+    "title": "Privacy Notice",
+    "updated": "Last updated: August 13, 2026",
+    "prevails": "This is an English translation provided for convenience. The Spanish version is the legally governing text: in case of any discrepancy, the Spanish version prevails.",
+    "sections": [
+      {
+        "heading": "Controller",
+        "paragraphs": [
+          "{{razonSocial}}, NIT {{nit}}, domiciled at {{domicilio}} (\"Harmonia Baila\"), is the controller of your personal data. Contact: {{email}}."
+        ]
+      },
+      {
+        "heading": "Processing and purposes",
+        "paragraphs": [
+          "The data you provide through the contact form or WhatsApp is used solely to answer your request, schedule classes and manage our relationship with you. We do not use your data for third-party advertising and we never sell it."
+        ]
+      },
+      {
+        "heading": "Your rights and how to exercise them",
+        "paragraphs": [
+          "You have the right to know, update, rectify and delete your data, to revoke your authorization, and to file complaints with Colombia's Superintendence of Industry and Commerce. Write to {{email}} to exercise them.",
+          "The full Personal Data Processing Policy — including the procedures and response times for inquiries and claims — is permanently available on this website in the Legal section of the footer."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Terms & Conditions — Harmonia Baila",
+    "metaDescription": "Terms of use for the Harmonia Baila website: services, prices, intellectual property, image rights, and governing law (Colombia).",
+    "title": "Terms & Conditions of Use",
+    "updated": "Last updated: August 13, 2026",
+    "prevails": "This is an English translation provided for convenience. The Spanish version is the legally governing text: in case of any discrepancy, the Spanish version prevails.",
+    "sections": [
+      {
+        "heading": "1. Who we are",
+        "paragraphs": [
+          "This website is operated by {{razonSocial}}, NIT {{nit}}, domiciled at {{domicilio}} (\"Harmonia Baila\"). Contact: {{email}} and the WhatsApp channel available on the site."
+        ]
+      },
+      {
+        "heading": "2. Purpose of the site",
+        "paragraphs": [
+          "This site is informational and commercial: it presents Harmonia Baila's dance instruction services (group and private classes, for kids and adults) and makes it easy to contact the studio. Using the site implies acceptance of these terms."
+        ]
+      },
+      {
+        "heading": "3. Services and prices",
+        "paragraphs": [
+          "Information about styles, levels and schedules on this site is informational and may change; final times and availability are confirmed directly by WhatsApp or email.",
+          "Prices are communicated in advance, clearly and completely through our contact channels before any payment, in compliance with Law 1480 of 2011 (Colombian Consumer Statute). This site does not process payments or conclude contracts online."
+        ]
+      },
+      {
+        "heading": "4. Consumer rights",
+        "paragraphs": [
+          "As a consumer you are entitled to truthful and sufficient information, to quality and suitability of services, and to submit petitions, complaints and claims by writing to {{email}}. We answer within fifteen (15) business days of receipt. You may also contact the Superintendence of Industry and Commerce (www.sic.gov.co), Colombia's consumer protection authority."
+        ]
+      },
+      {
+        "heading": "5. Intellectual property",
+        "paragraphs": [
+          "The content of this site — texts, brand, logo, photos, videos and design — belongs to Harmonia Baila or is used with its owners' permission. It may not be reproduced for commercial purposes without prior written authorization. You are welcome to share links to the site."
+        ]
+      },
+      {
+        "heading": "6. Image rights",
+        "paragraphs": [
+          "Photos and videos of classes published on this site or on the studio's social media are used only with the prior, express, written consent of the people who appear in them. For minors, consent is given by their parents or legal guardians and may be revoked at any time by writing to {{email}}, with effect on future publications and reasonable removal of existing ones.",
+          "If you appear in any content and would like it removed, write to us and we will handle it as a priority."
+        ]
+      },
+      {
+        "heading": "7. Acceptable use and liability",
+        "paragraphs": [
+          "You agree to use the site lawfully. Harmonia Baila strives to keep the site available and up to date but does not guarantee uninterrupted or error-free operation, and is not liable for decisions based on outdated information, without prejudice to non-waivable consumer rights.",
+          "The site links to third-party services (Instagram, WhatsApp). Their use is governed by those services' own terms and policies."
+        ]
+      },
+      {
+        "heading": "8. Data protection",
+        "paragraphs": [
+          "Personal data collected through this site is processed under our Personal Data Processing Policy and Privacy Notice, available in the Legal section of the footer."
+        ]
+      },
+      {
+        "heading": "9. Governing law",
+        "paragraphs": [
+          "These terms are governed by the laws of the Republic of Colombia. Any dispute will be submitted to the competent courts of Medellín, without prejudice to consumer protection rules establishing a different venue."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Cookie Policy — Harmonia Baila",
+    "metaDescription": "This site uses no tracking cookies and no analytics. Learn what local storage we use and why.",
+    "title": "Cookie Policy",
+    "updated": "Last updated: August 13, 2026",
+    "prevails": "This is an English translation provided for convenience. The Spanish version is the legally governing text: in case of any discrepancy, the Spanish version prevails.",
+    "sections": [
+      {
+        "heading": "The important part first",
+        "paragraphs": [
+          "This site uses no tracking cookies, no advertising cookies and no analytics tools. There is no cookie banner because there is nothing to track: we collect no information about your browsing."
+        ]
+      },
+      {
+        "heading": "What we store in your browser",
+        "paragraphs": ["We use only the browser's local storage (localStorage) for two strictly technical functions:"],
+        "list": [
+          "hb-locale: remembers the language you chose (Spanish or English) so we don't ask every time. Contains no personal data.",
+          "hb-last-submit: stores the time of your last form submission to prevent duplicate or abusive sends. Contains no personal data."
+        ]
+      },
+      {
+        "heading": "Third-party services",
+        "paragraphs": [
+          "When you submit the contact form, the data travels directly to the Web3Forms service to reach our email; this happens only when you press \"Send message\". Links to Instagram and WhatsApp open those services, which apply their own cookie policies once you are there."
+        ]
+      },
+      {
+        "heading": "How to clear the storage",
+        "paragraphs": [
+          "You can clear local storage at any time in your browser's privacy settings (for example: Settings → Privacy → Clear browsing data). The site will keep working; it will simply ask for your language again."
+        ]
+      }
+    ]
+  }
 }
