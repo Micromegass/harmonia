@@ -38,7 +38,7 @@ export default function Schedule() {
           <Reveal>
             <h1 className="display text-5xl sm:text-7xl">{t("schedule.heading")}</h1>
             <p className="lead muted mt-6 max-w-2xl">{t("schedule.intro")}</p>
-            <p className="mt-4 inline-block rounded-full bg-sol/15 px-4 py-2 text-sm font-semibold text-sol">
+            <p className="mt-4 inline-block rounded-full bg-lima/15 px-4 py-2 text-sm font-semibold text-lima">
               {t("schedule.disclaimer")}
             </p>
           </Reveal>
@@ -47,7 +47,7 @@ export default function Schedule() {
             {WEEK.map(({ day, slots }, i) => (
               <Reveal key={day} beats={i}>
                 <section aria-labelledby={`day-${day}`} className="h-full rounded-2xl bg-noche-2 p-6">
-                  <h2 id={`day-${day}`} className="display-mid text-2xl text-sol">
+                  <h2 id={`day-${day}`} className="display-mid text-2xl text-lima">
                     {t(`schedule.days.${day}`)}
                   </h2>
                   <ul className="mt-4 space-y-3">
@@ -68,7 +68,7 @@ export default function Schedule() {
         </div>
       </section>
 
-      <section className="field-fucsia">
+      <section className="field-petrol">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-16">
           <Reveal>

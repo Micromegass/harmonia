@@ -293,7 +293,7 @@
     "cta": "Back home"
   },
   "footer": {
-    "tagline": "Dance studio in Medellín: salsa, bachata and more, for kids and adults.",
+    "tagline": "Bailar encanta (\"dancing enchants\"). Dance studio in Medellín: salsa, bachata and more, for kids and adults.",
     "navHeading": "Explore",
     "legalHeading": "Legal",
     "followHeading": "Follow us",
@@ -305,5 +305,9 @@
     },
     "copyright": "© {{year}} Harmonia Baila. All rights reserved.",
     "madeIn": "Made with rhythm in Medellín."
+  },
+  "brand": {
+    "tagline": "Bailar encanta",
+    "logoAlt": "Harmonia logo: a dancer drawn in a single line, with the motto \"Bailar encanta\""
   }
 }

@@ -73,7 +73,7 @@ export default function Gallery() {
             <Reveal className="mt-6">
               <p className="inline-flex flex-wrap items-center gap-3 rounded-full bg-noche-2 px-5 py-3 text-sm">
                 <span className="muted">{t("gallery.placeholderNote")}</span>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-sol underline underline-offset-4">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-lima underline underline-offset-4">
                   {t("gallery.igCta")}
                 </a>
               </p>
@@ -89,7 +89,7 @@ export default function Gallery() {
                 onClick={() => setFilter(tag)}
                 aria-pressed={filter === tag}
                 className={`rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors ${
-                  filter === tag ? "bg-fucsia text-crudo" : "bg-noche-2 text-crudo hover:bg-fucsia/30"
+                  filter === tag ? "bg-lima text-noche" : "bg-noche-2 text-crudo hover:bg-teal/40"
                 }`}
               >
                 {tag === "all" ? t("gallery.filterAll") : t(`styles.${tag}.name`)}
@@ -124,7 +124,7 @@ export default function Gallery() {
       </section>
 
       {/* Showreel */}
-      <section className="field-fucsia" aria-labelledby="showreel-heading">
+      <section className="field-petrol" aria-labelledby="showreel-heading">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <Reveal>
@@ -164,7 +164,7 @@ export default function Gallery() {
               ref={closeBtnRef}
               type="button"
               onClick={() => setLightbox(null)}
-              className="absolute right-4 top-4 grid h-12 w-12 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-fucsia"
+              className="absolute right-4 top-4 grid h-12 w-12 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-lima hover:text-noche"
             >
               <span className="sr-only">{t("gallery.lightboxClose")}</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -174,7 +174,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); step(-1); }}
-              className="absolute left-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-fucsia"
+              className="absolute left-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-lima hover:text-noche"
             >
               <span className="sr-only">{t("gallery.lightboxPrev")}</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -184,7 +184,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); step(1); }}
-              className="absolute right-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-fucsia"
+              className="absolute right-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-noche-2 text-crudo hover:bg-lima hover:text-noche"
             >
               <span className="sr-only">{t("gallery.lightboxNext")}</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">

@@ -31,6 +31,14 @@ Format: date · decision · rationale · verify.
 - **Pass 3 (a11y/perf/taste):** found — `dl` structure invalid on home, logo link accessible-name mismatch, LCP waited for hydration, dual font preload contention; taste pre-flight flagged em-dashes throughout copy + hero scroll cue (banned tells). Fixed: a11y 100 both locales, hero mounts static then animates, single font preload, LazyMotion bundle, zero em-dashes in visible copy, scroll cue removed.
 - **Lighthouse (local gzip server, both locales): desktop 100/100/100/100; mobile-emulated 87/100/100/100** (FCP 2.9s/LCP 3.3s on simulated slow-4G moto G). The remaining mobile-perf gap is the React runtime + font on a throttled connection; CLS 0, TBT 0. Production Vercel (brotli, CDN edge, immutable caching) should land slightly higher. Documented rather than chased further — the next real win would be dropping client-side hydration entirely, which the stack mandate (React SPA + Framer Motion) precludes. `npx impeccable detect`: zero findings.
 
+## 2026-08-13 — Brand recolor + La Bailarina (client feedback round 1)
+
+- **2026-08-13 · Client supplied the real logo** (white badge + petrol/teal/chartreuse; script "harmonia"; tagline "Bailar encanta"; the initial is a line-drawn dancer). Entire color system reworked to the sampled palette: petrol #035668→fields, teal #306F88→ribbons/tints, script green→lima #A8BC42 CTAs, ivory. The La Falda world (fields, ruffles, 8-count) is retained, re-inked. Old fucsia/sol tokens removed. Form errors use an out-of-family #B23A2E on purpose (usability beats palette purity). Verify: client approves the lagoon look.
+- **2026-08-13 · Logo integrated as webp** (badge circle-cropped from logo-1; wide lockup cropped from the logo-2 screenshot; favicon + apple-touch-icon derived). logo-2 is a low-res phone screenshot — ask the client for the original vector/PNG logo files to replace `public/media/logo-*.webp` at higher quality. Verify: get original logo files.
+- **2026-08-13 · Hero wow effect: La Bailarina** — the logo's dancer glyph brought to life as a continuous-line figure that draws herself in like a signature, then dances on the 8-count (pose-morphing paths, teal ghost echoes as motion trails, skirt strokes in lima/teal). Static under reduced motion. Naive line style is deliberate: it matches the logo glyph's own hand.
+- **2026-08-13 · "Bailar encanta" adopted as the brand motto** across footer, OG cards and about; kept in Spanish on the EN site as a brand mark (translated in parentheses once in the footer).
+- **2026-08-13 · GitHub remote added** (github.com/Micromegass/harmonia) per client instruction; push + deploy on completion.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

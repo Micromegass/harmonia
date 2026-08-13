@@ -41,7 +41,7 @@ export default function Classes() {
       </section>
 
       {/* Formats */}
-      <section className="field-fucsia" aria-labelledby="formats-heading">
+      <section className="field-petrol" aria-labelledby="formats-heading">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <Reveal>
@@ -62,7 +62,7 @@ export default function Classes() {
 
       {/* Levels */}
       <section className="field-crudo" aria-labelledby="levels-heading">
-        <RuffleDivider from="fucsia" />
+        <RuffleDivider from="petrol" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <Reveal>
             <h2 id="levels-heading" className="display text-4xl sm:text-5xl">
@@ -100,7 +100,7 @@ export default function Classes() {
                   <article className={`grid items-center gap-8 md:grid-cols-2 md:gap-14 ${flip ? "md:[&>*:first-child]:order-2" : ""}`}>
                     <div>
                       <h3 className="display-mid text-3xl sm:text-4xl">{t(`styles.${key}.name`)}</h3>
-                      <p className="mt-1 text-lg font-medium italic text-sol">{t(`styles.${key}.tagline`)}</p>
+                      <p className="mt-1 text-lg font-medium italic text-lima">{t(`styles.${key}.tagline`)}</p>
                       <p className="muted mt-4 max-w-lg leading-relaxed">{t(`styles.${key}.description`)}</p>
                     </div>
                     {asset && <MediaTile asset={asset} locale={locale} sizes="(min-width: 768px) 45vw, 90vw" />}
@@ -113,7 +113,7 @@ export default function Classes() {
       </section>
 
       {/* Pricing honesty */}
-      <section className="field-sol" aria-labelledby="pricing-heading">
+      <section className="field-lima" aria-labelledby="pricing-heading">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-4xl px-5 py-16 text-center sm:px-8 sm:py-20">
           <Reveal>
@@ -127,7 +127,7 @@ export default function Classes() {
               href={waLink(t("whatsapp.prefill"))}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-noche px-8 py-4 text-lg font-bold text-sol transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-noche px-8 py-4 text-lg font-bold text-lima transition-transform hover:scale-105 motion-reduce:transition-none"
             >
               {t("classes.pricing.cta")}
             </a>

@@ -20,17 +20,18 @@ export function Footer() {
     <footer className="field-noche border-t border-crudo/10">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
-          <p className="display-mid text-xl text-crudo">
-            Harmonia<span className="text-fucsia">·</span>Baila
+          <img src="/media/logo-badge-360.webp" alt={t("brand.logoAlt")} className="h-16 w-16 rounded-full" width="64" height="64" />
+          <p className="display-mid mt-4 text-xl text-crudo">
+            Harmonia<span className="text-lima">·</span>Baila
           </p>
           <p className="muted mt-3 max-w-xs text-sm leading-relaxed">{t("footer.tagline")}</p>
         </div>
         <nav aria-label={t("footer.navHeading")}>
-          <h2 className="text-xs font-bold uppercase tracking-widest text-sol">{t("footer.navHeading")}</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-lima">{t("footer.navHeading")}</h2>
           <ul className="mt-4 space-y-2">
             {NAV_PAGES.map((page) => (
               <li key={page}>
-                <Link to={pathFor(page, locale)} className="text-sm text-crudo transition-colors hover:text-sol">
+                <Link to={pathFor(page, locale)} className="text-sm text-crudo transition-colors hover:text-lima">
                   {t(`nav.${page}`)}
                 </Link>
               </li>
@@ -38,11 +39,11 @@ export function Footer() {
           </ul>
         </nav>
         <nav aria-label={t("footer.legalHeading")}>
-          <h2 className="text-xs font-bold uppercase tracking-widest text-sol">{t("footer.legalHeading")}</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-lima">{t("footer.legalHeading")}</h2>
           <ul className="mt-4 space-y-2">
             {LEGAL_PAGES.map(({ page, key }) => (
               <li key={page}>
-                <Link to={pathFor(page, locale)} className="text-sm text-crudo transition-colors hover:text-sol">
+                <Link to={pathFor(page, locale)} className="text-sm text-crudo transition-colors hover:text-lima">
                   {t(`footer.legal.${key}`)}
                 </Link>
               </li>
@@ -50,12 +51,12 @@ export function Footer() {
           </ul>
         </nav>
         <div>
-          <h2 className="text-xs font-bold uppercase tracking-widest text-sol">{t("footer.followHeading")}</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-lima">{t("footer.followHeading")}</h2>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-sm text-crudo transition-colors hover:text-sol"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-crudo transition-colors hover:text-lima"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" strokeWidth="1.8" />

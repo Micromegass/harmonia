@@ -19,12 +19,12 @@ export type MediaAsset = {
 };
 
 const STYLE_COLORS: Record<string, [string, string]> = {
-  salsa: ["var(--color-fucsia)", "var(--color-coral)"],
-  bachata: ["var(--color-coral)", "var(--color-fucsia)"],
-  urbano: ["var(--color-mar)", "var(--color-sol)"],
-  tropical: ["var(--color-sol)", "var(--color-coral)"],
-  kids: ["var(--color-sol)", "var(--color-mar)"],
-  contemporaneo: ["var(--color-mar)", "var(--color-crudo)"],
+  salsa: ["var(--color-lima)", "var(--color-teal)"],
+  bachata: ["var(--color-teal)", "var(--color-lima)"],
+  urbano: ["var(--color-crudo)", "var(--color-lima)"],
+  tropical: ["var(--color-lima)", "var(--color-crudo)"],
+  kids: ["var(--color-lima)", "var(--color-teal)"],
+  contemporaneo: ["var(--color-crudo)", "var(--color-teal)"],
 };
 
 /** Deterministic pseudo-random from the asset id, so placeholder art is stable. */

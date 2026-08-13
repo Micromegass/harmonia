@@ -41,11 +41,21 @@ export default function About() {
                 </Reveal>
               ))}
             </div>
-            {portrait && (
-              <Reveal beats={2} className="self-start md:sticky md:top-24">
-                <MediaTile asset={portrait} locale={locale} sizes="(min-width: 768px) 40vw, 90vw" />
-              </Reveal>
-            )}
+            <Reveal beats={2} className="self-start md:sticky md:top-24">
+              <img
+                src="/media/logo-wide.webp"
+                alt={t("brand.logoAlt")}
+                className="w-full rounded-2xl"
+                width="1143"
+                height="630"
+                loading="lazy"
+              />
+              {portrait && (
+                <div className="mt-5">
+                  <MediaTile asset={portrait} locale={locale} sizes="(min-width: 768px) 40vw, 90vw" />
+                </div>
+              )}
+            </Reveal>
           </div>
         </div>
       </section>
@@ -64,7 +74,7 @@ export default function About() {
                 <dt className="display-mid text-2xl">
                   {t(`about.values.${key}.title`)}
                   <svg width="52" height="8" viewBox="0 0 52 8" aria-hidden="true" className="mt-2 block">
-                    <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-fucsia)" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-petrol)" strokeWidth="2.5" strokeLinecap="round" />
                   </svg>
                 </dt>
                 <dd className="muted mt-3 leading-relaxed">{t(`about.values.${key}.body`)}</dd>
@@ -74,7 +84,7 @@ export default function About() {
           <Reveal beats={2} className="mt-14">
             <Link
               to={pathFor("contact", locale)}
-              className="inline-block rounded-full bg-fucsia px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 motion-reduce:transition-none"
             >
               {t("about.cta")}
             </Link>

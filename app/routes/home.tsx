@@ -8,6 +8,7 @@ import { waLink } from "../lib/site";
 import { BEAT, countIn, EASE_DANCE, swingIn } from "../components/motion";
 import { Reveal } from "../components/Reveal";
 import { Ribbons } from "../components/Ribbons";
+import { Bailarina } from "../components/Bailarina";
 import { RuffleDivider } from "../components/RuffleDivider";
 import { JsonLd } from "../components/JsonLd";
 import { MediaTile, type MediaAsset } from "../components/MediaTile";
@@ -27,8 +28,8 @@ export default function Home() {
       <JsonLd data={studioJsonLd(locale)} />
       <Hero locale={locale} />
 
-      {/* ── Rhythms: fucsia field ── */}
-      <section className="field-fucsia" aria-labelledby="styles-heading">
+      {/* ── Rhythms: petrol field ── */}
+      <section className="field-petrol" aria-labelledby="styles-heading">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <Reveal>
@@ -65,7 +66,7 @@ export default function Home() {
 
       {/* ── Method: crudo field ── */}
       <section className="field-crudo" aria-labelledby="method-heading">
-        <RuffleDivider from="fucsia" />
+        <RuffleDivider from="petrol" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
             <Reveal>
@@ -80,7 +81,7 @@ export default function Home() {
                   <dt className="display-mid text-xl">
                     {t(`home.method.points.${key}.title`)}
                     <svg width="52" height="8" viewBox="0 0 52 8" aria-hidden="true" className="mt-1.5 block">
-                      <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-fucsia)" strokeWidth="2.5" strokeLinecap="round" />
+                      <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-petrol)" strokeWidth="2.5" strokeLinecap="round" />
                     </svg>
                   </dt>
                   <dd className="muted mt-2 leading-relaxed">{t(`home.method.points.${key}.body`)}</dd>
@@ -92,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* ── Kids: sol field ── */}
-      <section className="field-sol" aria-labelledby="kids-heading">
+      <section className="field-lima" aria-labelledby="kids-heading">
         <RuffleDivider from="crudo" />
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-8 px-5 py-14 sm:px-8 sm:py-20">
           <Reveal className="max-w-xl">
@@ -104,7 +105,7 @@ export default function Home() {
           <Reveal beats={2}>
             <Link
               to={pathFor("classes", locale)}
-              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-sol transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-lima transition-transform hover:scale-105 motion-reduce:transition-none"
             >
               {t("home.kids.cta")}
             </Link>
@@ -114,7 +115,7 @@ export default function Home() {
 
       {/* ── Gallery teaser: noche field ── */}
       <section className="field-noche" aria-labelledby="gallery-heading">
-        <RuffleDivider from="sol" />
+        <RuffleDivider from="lima" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
             <h2 id="gallery-heading" className="display text-4xl sm:text-6xl">
@@ -122,7 +123,7 @@ export default function Home() {
             </h2>
             <Link
               to={pathFor("gallery", locale)}
-              className="font-semibold text-sol underline underline-offset-4 hover:text-crudo"
+              className="font-semibold text-lima underline underline-offset-4 hover:text-crudo"
             >
               {t("home.gallery.cta")}
             </Link>
@@ -140,8 +141,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Final CTA: fucsia field ── */}
-      <section className="field-fucsia" aria-labelledby="cta-heading">
+      {/* ── Final CTA: petrol field ── */}
+      <section className="field-petrol" aria-labelledby="cta-heading">
         <RuffleDivider from="noche" />
         <div className="mx-auto max-w-4xl px-5 py-16 text-center sm:px-8 sm:py-24">
           <Reveal>
@@ -187,17 +188,21 @@ function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
       <Ribbons />
-      {/* local scrim so hero copy stays readable where ribbons cross it */}
+      {/* La Bailarina — the logo's dancer, alive on the right */}
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-[3%] right-[-8%] w-[56vw] max-w-[240px] opacity-80 sm:bottom-0 sm:right-[6%] sm:w-[22vw] sm:max-w-[300px] sm:opacity-100">
+        <Bailarina className="h-auto w-full" />
+      </div>
+      {/* local scrim so hero copy stays readable where ribbons and dancer cross it */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(34_16_34/0.82)_0%,rgb(34_16_34/0.55)_45%,transparent_75%)]"
+        className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(6_42_53/0.85)_0%,rgb(6_42_53/0.55)_45%,transparent_72%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-24 sm:px-8">
         {!animated ? (
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-sol">{t("home.hero.count")}</p>
+          <p className="text-sm font-bold uppercase tracking-[0.35em] text-lima">{t("home.hero.count")}</p>
         ) : (
           <m.p
-            className="text-sm font-bold uppercase tracking-[0.35em] text-sol"
+            className="text-sm font-bold uppercase tracking-[0.35em] text-lima"
             initial="hidden"
             animate="visible"
             variants={countIn}
@@ -266,13 +271,13 @@ function Hero({ locale }: { locale: Locale }) {
             href={waLink(t("whatsapp.prefill"))}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-fucsia px-8 py-4 text-lg font-bold text-crudo shadow-lift transition-transform hover:scale-105 motion-reduce:transition-none"
+            className="rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche shadow-lift transition-transform hover:scale-105 motion-reduce:transition-none"
           >
             {t("home.hero.ctaPrimary")}
           </a>
           <Link
             to={pathFor("classes", locale)}
-            className="rounded-full border-2 border-crudo/40 px-7 py-3.5 font-bold text-crudo transition-colors hover:border-sol hover:text-sol"
+            className="rounded-full border-2 border-crudo/40 px-7 py-3.5 font-bold text-crudo transition-colors hover:border-lima hover:text-lima"
           >
             {t("home.hero.ctaSecondary")}
           </Link>

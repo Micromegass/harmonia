@@ -1,11 +1,11 @@
 /** The ruffle hem — the world's section divider. A scalloped skirt edge in the
  *  color of the field above, laid over the top of the field below. */
-export function RuffleDivider({ from, flip = false }: { from: "noche" | "fucsia" | "crudo" | "sol"; flip?: boolean }) {
+export function RuffleDivider({ from, flip = false }: { from: "noche" | "petrol" | "crudo" | "lima"; flip?: boolean }) {
   const fills: Record<string, string> = {
     noche: "var(--color-noche)",
-    fucsia: "var(--color-fucsia)",
+    petrol: "var(--color-petrol)",
     crudo: "var(--color-crudo)",
-    sol: "var(--color-sol)",
+    lima: "var(--color-lima)",
   };
   // 12 scallops across the width, like a gathered hem.
   const scallops = Array.from({ length: 12 }, (_, i) => `q ${60},${flip ? -52 : 52} ${120},0`).join(" ");

@@ -41,12 +41,15 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-40">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-5 sm:px-8">
         <Link
           to={pathFor("home", locale)}
-          className="display-mid text-lg leading-none tracking-tight text-crudo"
+          className="flex items-center gap-2.5"
         >
-          Harmonia<span className="text-fucsia">·</span>Baila
+          <img src="/media/logo-badge-360.webp" alt="" className="h-10 w-10 rounded-full" width="40" height="40" />
+          <span className="display-mid text-base leading-none tracking-tight text-crudo sm:text-lg">
+            Harmonia<span className="text-lima">·</span>Baila
+          </span>
         </Link>
 
         <nav aria-label={t("nav.home")} className="hidden items-center gap-6 md:flex">
@@ -55,8 +58,8 @@ export function Header() {
               key={page}
               to={pathFor(page, locale)}
               className={({ isActive }) =>
-                `text-sm font-semibold uppercase tracking-wide transition-colors hover:text-sol ${
-                  isActive ? "text-sol" : "text-crudo"
+                `text-sm font-semibold uppercase tracking-wide transition-colors hover:text-lima ${
+                  isActive ? "text-lima" : "text-crudo"
                 }`
               }
             >
@@ -96,7 +99,7 @@ export function Header() {
             animate={reduced ? { opacity: 1 } : { clipPath: "circle(150% at 92% 5%)" }}
             exit={reduced ? { opacity: 0 } : { clipPath: "circle(0% at 92% 5%)", transition: { duration: BEAT * 2 } }}
             transition={{ duration: BEAT * 4, ease: [...EASE_DANCE] }}
-            className="field-fucsia fixed inset-0 z-50 flex flex-col justify-center gap-1 px-8 md:hidden"
+            className="field-petrol fixed inset-0 z-50 flex flex-col justify-center gap-1 px-8 md:hidden"
           >
             <button
               type="button"
@@ -148,7 +151,7 @@ function LangSwitch({
     <Link
       to={alternatePath(pathname, otherLocale)}
       onClick={() => onSwitch(otherLocale)}
-      className="rounded-full border-2 border-crudo/40 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-crudo transition-colors hover:border-sol hover:text-sol"
+      className="rounded-full border-2 border-crudo/40 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-crudo transition-colors hover:border-lima hover:text-lima"
       aria-label={t("langSwitcher.switchTo")}
     >
       <span aria-hidden="true">{locale === "es" ? "EN" : "ES"}</span>

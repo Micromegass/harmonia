@@ -53,7 +53,7 @@ export function LegalPage({ pageKey }: { pageKey: LegalKey }) {
           <h1 className="display text-4xl sm:text-5xl">{doc.title}</h1>
           <p className="muted mt-4 text-sm font-semibold">{doc.updated}</p>
           {doc.prevails && (
-            <p className="mt-4 rounded-xl bg-sol/25 px-4 py-3 text-sm font-medium leading-relaxed">{doc.prevails}</p>
+            <p className="mt-4 rounded-xl bg-lima/25 px-4 py-3 text-sm font-medium leading-relaxed">{doc.prevails}</p>
           )}
           <div className="mt-10 space-y-10">
             {doc.sections.map((section, i) => (

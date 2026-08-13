@@ -36,15 +36,16 @@ export default function LanguageRedirect() {
   return (
     <main className="field-noche grid min-h-svh place-items-center px-6 text-center">
       <div>
-        <p className="display-mid text-2xl text-crudo">
-          Harmonia<span className="text-fucsia">·</span>Baila
+        <img src="/media/logo-badge-360.webp" alt="Harmonia" className="mx-auto h-24 w-24 rounded-full" width="96" height="96" />
+        <p className="display-mid mt-5 text-2xl text-crudo">
+          Harmonia<span className="text-lima">·</span>Baila
         </p>
         <nav aria-label="Idioma / Language" className="mt-8 flex items-center justify-center gap-6">
           {locales.map((l) => (
             <Link
               key={l}
               to={`/${l}`}
-              className="rounded-full border-2 border-crudo/40 px-6 py-3 font-bold uppercase tracking-widest text-crudo hover:border-sol hover:text-sol"
+              className="rounded-full border-2 border-crudo/40 px-6 py-3 font-bold uppercase tracking-widest text-crudo hover:border-lima hover:text-lima"
             >
               {l === "es" ? "Español" : "English"}
             </Link>

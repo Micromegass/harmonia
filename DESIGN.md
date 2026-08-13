@@ -1,24 +1,26 @@
-# DESIGN.md — La Falda (the skirt in motion)
+# DESIGN.md — La Falda (the skirt in motion) · lagoon inks
 
-<!-- Documented from the built world after the finish review; seed cf667dc0. -->
+<!-- Documented from the built world after the finish review; seed cf667dc0.
+     Recolored 2026-08-13 to the client's real logo palette (petrol/teal/lima/ivory). -->
 
 ## World
 
-The pollera skirt in motion. The page is built as layered, drenched fabric fields separated by scalloped ruffle hems; movement is choreographed to a musical 8-count. Refuses the category defaults (neon-nightclub salsa template, generic clean studio site).
+The pollera skirt in motion, painted in the brand's own inks. Layered drenched fields separated by scalloped ruffle hems; movement choreographed to a musical 8-count; the logo's continuous-line dancer (La Bailarina) alive in the hero. Refuses the category defaults (neon-nightclub salsa template, generic clean studio site).
 
 ## Tokens (source of truth: `@theme` in [app/app.css](app/app.css))
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--color-noche` | `#221022` | deep plum night — primary ground |
-| `--color-noche-2` | `#2E1530` | raised layer on noche (cards, chips) |
-| `--color-crudo` | `#FFF3E4` | raw-cotton light — text on dark, paper field |
-| `--color-crudo-2` | `#F7E7D3` | deeper paper for layering on crudo |
-| `--color-fucsia` | `#E83D7C` | pollera fuchsia — brand ink, primary CTA |
-| `--color-fucsia-deep` | `#C21F5E` | pressed fuchsia (hover, emphasis on light) |
-| `--color-coral` | `#FF6B3D` | hot coral — ribbon trails, gradients only |
-| `--color-sol` | `#FFC53D` | golden sun — kids field, highlights, focus ring on dark |
-| `--color-mar` | `#35C4B5` | caribbean counterpoint — small accents only |
+| `--color-noche` | `#062A35` | deep petrol night — primary ground |
+| `--color-noche-2` | `#0C3B4A` | raised layer on noche (cards, chips) |
+| `--color-crudo` | `#F5F6EC` | ivory white — text on dark, paper field |
+| `--color-crudo-2` | `#E9ECDA` | deeper paper for layering on crudo |
+| `--color-petrol` | `#0A5568` | brand petrol (logo-2 ground) — deep field ink |
+| `--color-petrol-deep` | `#063E4F` | pressed petrol (hover on light), links on crudo |
+| `--color-teal` | `#306F88` | logo-circle teal — ribbons, tints, ghosts |
+| `--color-lima` | `#A8BC42` | brand script green — primary CTAs (noche text), highlights |
+| `--color-lima-deep` | `#86962F` | pressed lima (hover) |
+| `--color-error` | `#B23A2E` | form errors only, deliberately outside the family |
 | `--color-wa` | `#25D366` | WhatsApp brand green, the floating button only |
 | `--beat` | `140ms` | one musical beat; all delays are multiples |
 | `--ease-dance` | `cubic-bezier(0.16,1,0.3,1)` | the "land the step" entrance curve |
@@ -35,9 +37,11 @@ Secondary text is always tinted from its field (`.muted` per `.field-*`), never 
 
 ## Composition grammar
 
-- **Fabric fields**: every section owns one full-bleed color (`.field-noche/fucsia/crudo/sol`). Field order on a page alternates dark/saturated/light like skirt layers; two adjacent fields never share a color.
+- **Fabric fields**: every section owns one full-bleed color (`.field-noche/petrol/crudo/lima`). Field order on a page alternates dark/saturated/light like skirt layers; two adjacent fields never share a color.
 - **Ruffle hem** (`RuffleDivider`): scalloped SVG in the color of the field above, laid over the next field. The only section divider.
-- **Ribbon trails** (`Ribbons`): thick round-capped flowing paths in fucsia/coral/sol — hero + 404 only; masked to fade before the hem.
+- **Ribbon trails** (`Ribbons`): thick round-capped flowing paths in lima/teal/ivory — hero + 404 only; masked to fade before the hem.
+- **La Bailarina** (`Bailarina.tsx`): the logo's continuous-line dancer — draws in like a signature, then morphs between two poses on the 8-count with teal ghost echoes (motion trail). Hero only; static under reduced motion.
+- **Logo assets**: `public/media/logo-badge{,-360}.webp` (circular badge, header/footer/contact/redirect), `logo-wide.webp` (about page), favicon + apple-touch-icon from the badge. Never recolor the logo files.
 - Buttons are pills; media tiles and cards are `rounded-xl/2xl` — that two-tier radius system is fixed.
 - Squiggle underline (small scalloped SVG path) marks `dt` titles; no colored side-borders, no kickers/eyebrows, no hard offset shadows, no gradient text.
 
@@ -53,7 +57,7 @@ Manifest-driven (`app/content/media.manifest.json` → `MediaTile`). Placeholder
 
 ## Voice
 
-ES-CO: warm, personal, proud ("Sin pena: todos llegamos con dos pies izquierdos"). EN: native English, never translated Spanish. No em-dashes anywhere in visible copy. WhatsApp is always the primary CTA; one label per intent per page.
+ES-CO: warm, personal, proud ("Sin pena: todos llegamos con dos pies izquierdos"). The brand motto is **"Bailar encanta"** (footer, OG, about). EN: native English, never translated Spanish; the motto stays in Spanish as a brand mark. No em-dashes anywhere in visible copy. WhatsApp is always the primary CTA; one label per intent per page.
 
 ## Open ceiling items (future polish)
 

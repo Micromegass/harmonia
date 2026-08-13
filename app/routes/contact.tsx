@@ -100,9 +100,9 @@ export default function Contact() {
   }
 
   const inputCls =
-    "w-full rounded-xl border-2 border-noche/20 bg-crudo px-4 py-3 text-noche placeholder:text-noche/45 focus:border-fucsia";
+    "w-full rounded-xl border-2 border-noche/20 bg-crudo px-4 py-3 text-noche placeholder:text-noche/45 focus:border-petrol";
   const labelCls = "block text-sm font-bold uppercase tracking-wide";
-  const errCls = "mt-1.5 text-sm font-semibold text-fucsia-deep";
+  const errCls = "mt-1.5 text-sm font-semibold text-error";
 
   return (
     <>
@@ -151,21 +151,21 @@ export default function Contact() {
 
             <div ref={statusRef} tabIndex={-1} aria-live="polite" className="mt-6 focus:outline-none">
               {status === "success" && (
-                <div className="rounded-2xl bg-mar/20 p-6">
+                <div className="rounded-2xl bg-lima/25 p-6">
                   <h3 className="display-mid text-xl">{t("contact.form.success.title")}</h3>
                   <p className="mt-2">{t("contact.form.success.body")}</p>
                 </div>
               )}
               {status === "error" && (
-                <div className="rounded-2xl bg-fucsia/15 p-6">
+                <div className="rounded-2xl bg-error/10 p-6">
                   <h3 className="display-mid text-xl">{t("contact.form.error.title")}</h3>
                   <p className="mt-2">{t("contact.form.error.body")}</p>
                   <div className="mt-4 flex flex-wrap gap-4">
-                    <a href={waLink(t("whatsapp.prefill"))} target="_blank" rel="noopener noreferrer" className="font-bold text-fucsia-deep underline underline-offset-4">
+                    <a href={waLink(t("whatsapp.prefill"))} target="_blank" rel="noopener noreferrer" className="font-bold text-petrol underline underline-offset-4">
                       {t("contact.form.error.waFallback")}
                     </a>
                     {CONTACT_EMAIL && (
-                      <a href={mailtoLink("Harmonia Baila")} className="font-bold text-fucsia-deep underline underline-offset-4">
+                      <a href={mailtoLink("Harmonia Baila")} className="font-bold text-petrol underline underline-offset-4">
                         {t("contact.form.error.mailFallback")}
                       </a>
                     )}
@@ -280,7 +280,7 @@ export default function Contact() {
                       id="consent"
                       name="consent"
                       type="checkbox"
-                      className="mt-1 h-5 w-5 shrink-0 accent-fucsia"
+                      className="mt-1 h-5 w-5 shrink-0 accent-petrol"
                       aria-invalid={!!errors.consent}
                       aria-describedby={errors.consent ? "err-consent" : undefined}
                     />
@@ -307,7 +307,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="rounded-full bg-fucsia px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 disabled:opacity-60 disabled:hover:scale-100 motion-reduce:transition-none"
+                  className="rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 disabled:opacity-60 disabled:hover:scale-100 motion-reduce:transition-none"
                 >
                   {status === "submitting" ? t("contact.form.submitting") : t("contact.form.submit")}
                 </button>
@@ -317,7 +317,8 @@ export default function Contact() {
 
           <aside className="self-start md:sticky md:top-24">
             <Reveal>
-              <h2 className="display-mid text-2xl">{t("contact.info.heading")}</h2>
+              <img src="/media/logo-badge-360.webp" alt={t("brand.logoAlt")} className="h-20 w-20 rounded-full" width="80" height="80" loading="lazy" />
+              <h2 className="display-mid mt-5 text-2xl">{t("contact.info.heading")}</h2>
               <address className="mt-4 space-y-2 not-italic">
                 <p className="font-bold">{t("contact.info.cityLine")}</p>
                 <p className="muted text-sm">{t("contact.info.addressNote")}</p>
@@ -326,7 +327,7 @@ export default function Contact() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 font-bold text-fucsia-deep underline underline-offset-4"
+                className="mt-6 inline-flex items-center gap-2 font-bold text-petrol underline underline-offset-4"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" strokeWidth="1.8" />

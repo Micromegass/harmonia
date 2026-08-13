@@ -23,14 +23,16 @@ const DESIGN_CONTRACT = `<!--
 THESIS: The pollera skirt in motion is the site. Layered drenched fabric fields and
 choreographed 8-count movement prove dance craft directly; refuses the category default
 (dark nightclub-neon salsa template / generic clean studio site).
-OWN-WORLD: Night-plum ground (#221022) under saturated fabric fields — fucsia #E83D7C,
-coral #FF6B3D, sol #FFC53D, crudo #FFF3E4 — separated by curved ruffle hems; Archivo
-(Omnibus-Type) expanded-black poster caps for display; motion quantized to a 140ms beat.
+OWN-WORLD: Deep petrol night ground (#062A35) under the brand's lagoon fields (petrol
+#0A5568, teal #306F88, lima #A8BC42, ivory #F5F6EC — sampled from the logo), separated by
+curved ruffle hems; Archivo expanded-black poster caps; motion quantized to a 140ms beat;
+the logo's continuous-line dancer brought to life in the hero.
 STORY: A stranger from Instagram lands, feels the studio's joy and professionalism within
 one viewport, browses rhythms/classes/gallery as skirt layers, and messages on WhatsApp.
-FIRST VIEWPORT: Full-bleed noche ground; ribbon trails arcing behind giant stacked
-"¿BAILAMOS?" display caps that swing in on the count after a "5·6·7·8" pre-roll; subline
-naming salsa/bachata/Medellín; WhatsApp primary CTA + classes secondary, above the fold on mobile.
+FIRST VIEWPORT: Full-bleed petrol-night ground; La Bailarina — the logo's line-drawn
+dancer — draws herself in like a signature and dances on the count with skirt trails,
+beside "¿BAILAMOS?" display caps swinging in after a "5·6·7·8" pre-roll; subline naming
+salsa/bachata/Medellín; WhatsApp primary CTA + classes secondary, above the fold on mobile.
 FORM: Grounded candidate 7 (cumbia/pollera costume textile world), seed key cf667dc0.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review,
 the verdict, and DESIGN.md
@@ -47,7 +49,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Preload only the upright face — italic is below-the-fold accent type
             and loads on demand (font-display: swap). */}
         <link

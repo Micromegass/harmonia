@@ -22,21 +22,23 @@
 @theme {
   --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
 
-  /* palette — the five inks of the world */
-  --color-noche: #221022; /* deep plum night — primary ground */
-  --color-noche-2: #2e1530; /* raised layer on noche */
-  --color-crudo: #fff3e4; /* warm raw-cotton light — text on dark, paper field */
-  --color-crudo-2: #f7e7d3; /* deeper paper for layering on crudo */
-  --color-fucsia: #e83d7c; /* pollera fuchsia — the brand ink */
-  --color-fucsia-deep: #c21f5e; /* pressed fuchsia (hover, deep field) */
-  --color-coral: #ff6b3d; /* hot coral — motion trails, gradients */
-  --color-sol: #ffc53d; /* golden sun — kids field, highlights */
-  --color-mar: #35c4b5; /* caribbean counterpoint — small accents only */
+  /* palette — the brand's lagoon inks, sampled from the logo
+     (petrol #035668, teal circle #306F88, script green #A0AF4E, white) */
+  --color-noche: #062a35; /* deep petrol night — primary ground */
+  --color-noche-2: #0c3b4a; /* raised layer on noche */
+  --color-crudo: #f5f6ec; /* ivory white — text on dark, paper field */
+  --color-crudo-2: #e9ecda; /* deeper paper for layering on crudo */
+  --color-petrol: #0a5568; /* brand petrol — the deep field ink */
+  --color-petrol-deep: #063e4f; /* pressed petrol (hover on light) */
+  --color-teal: #306f88; /* logo-circle teal — ribbons, tints */
+  --color-lima: #a8bc42; /* brand script green — CTAs, highlights */
+  --color-lima-deep: #86962f; /* pressed lima (hover) */
+  --color-error: #b23a2e; /* form errors only — outside the brand family on purpose */
 
   /* WhatsApp brand green (button only) */
   --color-wa: #25d366;
 
-  --shadow-lift: 0 10px 30px -10px rgb(34 16 34 / 0.45);
+  --shadow-lift: 0 10px 30px -10px rgb(6 42 53 / 0.5);
 
   /* choreography — the 8-count */
   --beat: 140ms;
@@ -84,29 +86,29 @@ body {
 
 /* Visible focus everywhere, tuned per field via --focus-ring */
 :root {
-  --focus-ring: var(--color-sol);
+  --focus-ring: var(--color-lima);
 }
 :focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
   border-radius: 2px;
 }
-.field-sol,
+.field-lima,
 .field-crudo {
-  --focus-ring: var(--color-fucsia-deep);
+  --focus-ring: var(--color-petrol);
 }
 
 /* Fabric fields — sections that own a whole color */
 .field-noche { background: var(--color-noche); color: var(--color-crudo); }
-.field-fucsia { background: var(--color-fucsia); color: var(--color-noche); }
+.field-petrol { background: var(--color-petrol); color: var(--color-crudo); }
 .field-crudo { background: var(--color-crudo); color: var(--color-noche); }
-.field-sol { background: var(--color-sol); color: var(--color-noche); }
+.field-lima { background: var(--color-lima); color: var(--color-noche); }
 
 /* Secondary text tinted from its field, never gray */
-.field-noche .muted { color: #d9b8c9; }
-.field-fucsia .muted { color: #4d1030; }
-.field-crudo .muted { color: #6d4a55; }
-.field-sol .muted { color: #5c4413; }
+.field-noche .muted { color: #9dc0cb; }
+.field-petrol .muted { color: #bcd6da; }
+.field-crudo .muted { color: #55707a; }
+.field-lima .muted { color: #414d12; }
 
 /* Skip link */
 .skip-link {
@@ -114,7 +116,7 @@ body {
   left: -9999px;
   top: 0;
   z-index: 100;
-  background: var(--color-sol);
+  background: var(--color-lima);
   color: var(--color-noche);
   padding: 0.75rem 1.25rem;
   font-weight: 700;
@@ -122,6 +124,30 @@ body {
 .skip-link:focus-visible {
   left: 0.5rem;
   top: 0.5rem;
+}
+
+/* La Bailarina draw-in: each stroke writes itself like a signature.
+   pathLength="1" on the elements normalizes the dash space. */
+.bailarina-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: bailarina-draw 1.4s var(--ease-dance) forwards;
+}
+@keyframes bailarina-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/* no-JS / reduced motion: show her fully drawn */
+html:not(.js) .bailarina-draw {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bailarina-draw {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
 }
 
 /* No-JS fallback: entrance animations bake opacity:0 into the prerendered

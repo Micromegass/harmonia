@@ -14,7 +14,7 @@ export function Ribbons() {
 
   const ribbons = [
     {
-      color: "var(--color-fucsia)",
+      color: "var(--color-lima)",
       width: 90,
       opacity: 0.9,
       d: "M-100,520 C240,380 420,660 760,520 C1080,390 1240,560 1560,430",
@@ -22,7 +22,7 @@ export function Ribbons() {
       dur: 11,
     },
     {
-      color: "var(--color-coral)",
+      color: "var(--color-teal)",
       width: 56,
       opacity: 0.8,
       d: "M-100,640 C300,540 520,760 900,620 C1180,520 1360,660 1560,560",
@@ -30,7 +30,7 @@ export function Ribbons() {
       dur: 13,
     },
     {
-      color: "var(--color-sol)",
+      color: "var(--color-crudo)",
       width: 30,
       opacity: 0.85,
       d: "M-100,430 C260,330 500,540 840,430 C1140,340 1300,470 1560,360",

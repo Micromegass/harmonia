@@ -293,7 +293,7 @@
     "cta": "Ir al inicio"
   },
   "footer": {
-    "tagline": "Academia de baile en Medellín: salsa, bachata y más, para niños y adultos.",
+    "tagline": "Bailar encanta. Academia de baile en Medellín: salsa, bachata y más, para niños y adultos.",
     "navHeading": "Navega",
     "legalHeading": "Legal",
     "followHeading": "Síguenos",
@@ -305,5 +305,9 @@
     },
     "copyright": "© {{year}} Harmonia Baila. Todos los derechos reservados.",
     "madeIn": "Hecho con ritmo en Medellín."
+  },
+  "brand": {
+    "tagline": "Bailar encanta",
+    "logoAlt": "Logo de Harmonia: bailarina dibujada en una sola línea, con el lema «Bailar encanta»"
   }
 }
