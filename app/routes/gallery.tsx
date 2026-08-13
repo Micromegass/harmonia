@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { breadcrumbJsonLd, metaFor } from "../lib/seo";
@@ -98,12 +98,11 @@ export default function Gallery() {
           </div>
 
           {/* Grid */}
-          <motion.ul layout={!reduced} className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
+          <m.ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
             <AnimatePresence mode="popLayout">
               {filtered.map((asset, i) => (
-                <motion.li
+                <m.li
                   key={asset.id}
-                  layout={!reduced}
                   initial={reduced ? false : { opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.92 }}
@@ -117,10 +116,10 @@ export default function Gallery() {
                   >
                     <MediaTile asset={asset} locale={locale} sizes="(min-width: 768px) 33vw, 50vw" />
                   </button>
-                </motion.li>
+                </m.li>
               ))}
             </AnimatePresence>
-          </motion.ul>
+          </m.ul>
         </div>
       </section>
 
@@ -146,7 +145,7 @@ export default function Gallery() {
       {/* Lightbox */}
       <AnimatePresence>
         {lightbox !== null && filtered[lightbox] && (
-          <motion.div
+          <m.div
             role="dialog"
             aria-modal="true"
             aria-label={filtered[lightbox].alt[locale]}
@@ -192,7 +191,7 @@ export default function Gallery() {
                 <path d="M7.5 3.5 14 10l-6.5 6.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

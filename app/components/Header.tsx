@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { alternatePath, pathFor, resolvePath, LOCALE_STORAGE_KEY, type Locale, type PageKey } from "../i18n/routing";
 import { BEAT, EASE_DANCE } from "./motion";
@@ -45,7 +45,6 @@ export function Header() {
         <Link
           to={pathFor("home", locale)}
           className="display-mid text-lg leading-none tracking-tight text-crudo"
-          aria-label="Harmonia Baila"
         >
           Harmonia<span className="text-fucsia">·</span>Baila
         </Link>
@@ -90,7 +89,7 @@ export function Header() {
 
       <AnimatePresence>
         {open && (
-          <motion.nav
+          <m.nav
             id="mobile-menu"
             aria-label={t("nav.menuOpen")}
             initial={reduced ? { opacity: 0 } : { clipPath: "circle(0% at 92% 5%)" }}
@@ -110,7 +109,7 @@ export function Header() {
               </svg>
             </button>
             {(["home", ...NAV_PAGES] as PageKey[]).map((page, i) => (
-              <motion.div
+              <m.div
                 key={page}
                 initial={reduced ? false : { opacity: 0, x: -24 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -124,9 +123,9 @@ export function Header() {
                 >
                   {t(`nav.${page}`)}
                 </NavLink>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.nav>
+          </m.nav>
         )}
       </AnimatePresence>
     </header>

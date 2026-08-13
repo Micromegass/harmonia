@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+import { m, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { BEAT, EASE_DANCE } from "./motion";
 
 /** Skirt-trail ribbons behind the hero: three thick flowing paths that draw in
@@ -47,8 +47,8 @@ export function Ribbons() {
     >
       <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" className="h-full w-full" focusable="false">
         {ribbons.map((r, i) => (
-          <motion.g key={i} style={{ y: reduced ? 0 : r.y }}>
-            <motion.path
+          <m.g key={i} style={{ y: reduced ? 0 : r.y }}>
+            <m.path
               d={r.d}
               fill="none"
               stroke={r.color}
@@ -70,7 +70,7 @@ export function Ribbons() {
                     }
               }
             />
-          </motion.g>
+          </m.g>
         ))}
       </svg>
       {/* soft vignette so the type stays readable over the trails */}

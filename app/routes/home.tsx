@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { motion, useReducedMotion } from "motion/react";
+import { m, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { metaFor, studioJsonLd } from "../lib/seo";
@@ -76,15 +77,13 @@ export default function Home() {
             <dl className="space-y-8 self-center">
               {(["pro", "levels", "formats"] as const).map((key, i) => (
                 <Reveal key={key} beats={i * 2}>
-                  <div>
-                    <dt className="display-mid text-xl">
-                      {t(`home.method.points.${key}.title`)}
-                      <svg width="52" height="8" viewBox="0 0 52 8" aria-hidden="true" className="mt-1.5 block">
-                        <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-fucsia)" strokeWidth="2.5" strokeLinecap="round" />
-                      </svg>
-                    </dt>
-                    <dd className="muted mt-2 leading-relaxed">{t(`home.method.points.${key}.body`)}</dd>
-                  </div>
+                  <dt className="display-mid text-xl">
+                    {t(`home.method.points.${key}.title`)}
+                    <svg width="52" height="8" viewBox="0 0 52 8" aria-hidden="true" className="mt-1.5 block">
+                      <path d="M1 6 Q 7.5 0 14 6 T 27 6 T 40 6 T 53 6" fill="none" stroke="var(--color-fucsia)" strokeWidth="2.5" strokeLinecap="round" />
+                    </svg>
+                  </dt>
+                  <dd className="muted mt-2 leading-relaxed">{t(`home.method.points.${key}.body`)}</dd>
                 </Reveal>
               ))}
             </dl>
@@ -176,6 +175,11 @@ export default function Home() {
 function Hero({ locale }: { locale: Locale }) {
   const { t } = useTranslation();
   const reduced = useReducedMotion();
+  // LCP: the prerendered HTML paints the hero fully visible; the entrance
+  // choreography starts only after hydration (animated = client-side + motion ok).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const animated = mounted && !reduced;
   const title = t("home.hero.title");
   // Words wrap; letters inside a word never do (letter spans are the stagger unit).
   const words = title.split(" ").map((w) => Array.from(w));
@@ -189,10 +193,10 @@ function Hero({ locale }: { locale: Locale }) {
         className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(34_16_34/0.82)_0%,rgb(34_16_34/0.55)_45%,transparent_75%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-24 sm:px-8">
-        {reduced ? (
+        {!animated ? (
           <p className="text-sm font-bold uppercase tracking-[0.35em] text-sol">{t("home.hero.count")}</p>
         ) : (
-          <motion.p
+          <m.p
             className="text-sm font-bold uppercase tracking-[0.35em] text-sol"
             initial="hidden"
             animate="visible"
@@ -202,7 +206,7 @@ function Hero({ locale }: { locale: Locale }) {
             {t("home.hero.count")
               .split(" ")
               .map((token, i) => (
-                <motion.span
+                <m.span
                   key={i}
                   className="inline-block whitespace-pre"
                   variants={{
@@ -211,19 +215,19 @@ function Hero({ locale }: { locale: Locale }) {
                   }}
                 >
                   {token}{" "}
-                </motion.span>
+                </m.span>
               ))}
-          </motion.p>
+          </m.p>
         )}
 
         <h1
           className="display mt-5 text-[min(10.4vw,8rem)] leading-[0.92] md:text-[min(8.6vw,9.5rem)]"
           aria-label={title}
         >
-          {reduced ? (
+          {!animated ? (
             <span>{title}</span>
           ) : (
-            <motion.span
+            <m.span
               initial="hidden"
               animate="visible"
               transition={{ staggerChildren: BEAT / 2, delayChildren: BEAT * 4 }}
@@ -232,29 +236,29 @@ function Hero({ locale }: { locale: Locale }) {
               {words.map((letters, w) => (
                 <span key={w} className="inline-block whitespace-nowrap">
                   {letters.map((ch, i) => (
-                    <motion.span key={i} className="inline-block" variants={swingIn()}>
+                    <m.span key={i} className="inline-block" variants={swingIn()}>
                       {ch}
-                    </motion.span>
+                    </m.span>
                   ))}
                   {w < words.length - 1 && " "}
                 </span>
               ))}
-            </motion.span>
+            </m.span>
           )}
         </h1>
 
-        <motion.p
+        <m.p
           className="lead mt-7 max-w-xl text-crudo"
-          initial={reduced ? false : { opacity: 0, y: 20 }}
+          initial={!animated ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: BEAT * 8, duration: BEAT * 4, ease: [...EASE_DANCE] }}
         >
           {t("home.hero.subtitle")}
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           className="mt-9 flex flex-wrap items-center gap-4"
-          initial={reduced ? false : { opacity: 0, y: 20 }}
+          initial={!animated ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: BEAT * 10, duration: BEAT * 4, ease: [...EASE_DANCE] }}
         >
@@ -272,7 +276,7 @@ function Hero({ locale }: { locale: Locale }) {
           >
             {t("home.hero.ctaSecondary")}
           </Link>
-        </motion.div>
+        </m.div>
       </div>
       <p className="muted absolute bottom-6 left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest" aria-hidden="true">
         ↓ {t("home.hero.scrollHint")}

@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "motion/react";
+import { m, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 import { riseIn, viewportOnce } from "./motion";
 
@@ -15,7 +15,7 @@ export function Reveal({
   as?: "div" | "section" | "li" | "p";
 }) {
   const reduced = useReducedMotion();
-  const Tag = motion[as];
+  const Tag = m[as];
   if (reduced) {
     const Static = as;
     return <Static className={className}>{children}</Static>;

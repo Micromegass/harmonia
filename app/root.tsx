@@ -8,6 +8,7 @@ import {
   useLocation,
 } from "react-router";
 import type { Route } from "./+types/root";
+import { LazyMotion, domAnimation } from "motion/react";
 import "./app.css";
 import i18n, { syncLocale } from "./i18n/config";
 import { defaultLocale, type Locale } from "./i18n/routing";
@@ -47,6 +48,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* Preload only the upright face — italic is below-the-fold accent type
+            and loads on demand (font-display: swap). */}
         <link
           rel="preload"
           href="/fonts/archivo-var.woff2"
@@ -74,9 +77,14 @@ export default function App() {
   const location = useLocation();
   const isLocalized = /^\/(es|en)(\/|$)/.test(location.pathname);
   // The root "/" language-redirect page renders bare (no chrome).
-  if (!isLocalized) return <Outlet />;
+  if (!isLocalized)
+    return (
+      <LazyMotion features={domAnimation} strict>
+        <Outlet />
+      </LazyMotion>
+    );
   return (
-    <>
+    <LazyMotion features={domAnimation} strict>
       <a href="#main" className="skip-link">
         {i18n.t("nav.skipToContent")}
       </a>
@@ -86,7 +94,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </LazyMotion>
   );
 }
 
