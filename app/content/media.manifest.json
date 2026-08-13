@@ -1,0 +1,126 @@
+{
+  "note": "Add originals to media-raw/ with the listed filename, then run `npm run media`. Entries with placeholder:true render branded placeholders until the real file arrives. See MEDIA.md.",
+  "styles": ["salsa", "bachata", "urbano", "tropical", "kids", "contemporaneo"],
+  "assets": [
+    {
+      "id": "salsa-pareja-01",
+      "file": "salsa-pareja-01.jpg",
+      "type": "image",
+      "styleTag": "salsa",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Pareja bailando salsa en el estudio de Harmonia Baila",
+        "en": "Couple dancing salsa at the Harmonia Baila studio"
+      }
+    },
+    {
+      "id": "salsa-giro-02",
+      "file": "salsa-giro-02.jpg",
+      "type": "image",
+      "styleTag": "salsa",
+      "orientation": "landscape",
+      "placeholder": true,
+      "alt": {
+        "es": "Giro de salsa en plena clase grupal",
+        "en": "Salsa spin during a group class"
+      }
+    },
+    {
+      "id": "bachata-clase-01",
+      "file": "bachata-clase-01.jpg",
+      "type": "image",
+      "styleTag": "bachata",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Clase de bachata: figura en pareja con la profesora",
+        "en": "Bachata class: partner figure with the teacher"
+      }
+    },
+    {
+      "id": "bachata-sensual-02",
+      "file": "bachata-sensual-02.jpg",
+      "type": "image",
+      "styleTag": "bachata",
+      "orientation": "landscape",
+      "placeholder": true,
+      "alt": {
+        "es": "Ondulación de bachata sensual en el salón principal",
+        "en": "Sensual bachata body wave in the main studio room"
+      }
+    },
+    {
+      "id": "urbano-grupo-01",
+      "file": "urbano-grupo-01.jpg",
+      "type": "image",
+      "styleTag": "urbano",
+      "orientation": "landscape",
+      "placeholder": true,
+      "alt": {
+        "es": "Grupo de estudiantes en clase de baile urbano",
+        "en": "Group of students in an urban dance class"
+      }
+    },
+    {
+      "id": "tropical-cumbia-01",
+      "file": "tropical-cumbia-01.jpg",
+      "type": "image",
+      "styleTag": "tropical",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Falda de cumbia en movimiento durante una clase de ritmos tropicales",
+        "en": "Cumbia skirt in motion during a tropical rhythms class"
+      }
+    },
+    {
+      "id": "kids-clase-01",
+      "file": "kids-clase-01.jpg",
+      "type": "image",
+      "styleTag": "kids",
+      "orientation": "landscape",
+      "placeholder": true,
+      "alt": {
+        "es": "Niños y niñas aprendiendo coreografía en clase infantil",
+        "en": "Kids learning choreography in a children's class"
+      }
+    },
+    {
+      "id": "contemporaneo-solo-01",
+      "file": "contemporaneo-solo-01.jpg",
+      "type": "image",
+      "styleTag": "contemporaneo",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Bailarina en una línea de danza contemporánea",
+        "en": "Dancer holding a contemporary dance line"
+      }
+    },
+    {
+      "id": "showreel-01",
+      "file": "showreel-01.mp4",
+      "type": "video",
+      "styleTag": "salsa",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Video: momentos de clases de salsa en Harmonia Baila",
+        "en": "Video: salsa class moments at Harmonia Baila"
+      }
+    },
+    {
+      "id": "showreel-02",
+      "file": "showreel-02.mp4",
+      "type": "video",
+      "styleTag": "bachata",
+      "orientation": "portrait",
+      "placeholder": true,
+      "alt": {
+        "es": "Video: coreografía de bachata de la profesora",
+        "en": "Video: the teacher's bachata choreography"
+      }
+    }
+  ]
+}

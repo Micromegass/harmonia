@@ -11,6 +11,13 @@ Format: date · decision · rationale · verify.
 - **2026-08-13 · WhatsApp number is a placeholder** (`VITE_WHATSAPP_NUMBER`, format `57XXXXXXXXXX`). **Verify: client must provide her real WhatsApp business number.**
 - **2026-08-13 · Git identity set to repo-local micromegas/axelbraunschweiger@gmail.com** (global git identity was unset). Verify: fine unless she wants her own identity on history.
 
+## 2026-08-13 — Phase 0.5: Instagram & media
+
+- **2026-08-13 · Automated Instagram retrieval failed (expected).** Anonymous profile fetch returns the login shell; the `web_profile_info` API rejects anonymous calls; @harmonia.baila is not indexed anywhere else on the web (searched). Per brief: fell back immediately — full pipeline built (`scripts/process-media.mjs`, manifest, `npm run media`), branded placeholders ship, `MEDIA.md` documents the manual export route. Verify: client runs Instagram "Download your information" export and drops files per MEDIA.md.
+- **2026-08-13 · No logo could be retrieved → designed a typographic wordmark ("Harmonia Baila") + palette from scratch,** aimed at warm Colombian dance energy. Verify: client may supply her real logo; swap in `app/components/` and re-derive tokens if she has one.
+- **2026-08-13 · Style list assumed: salsa, bachata (confirmed by user prompt) + urbano, ritmos tropicales (cumbia/merengue), baile infantil, contemporáneo (plausible for a university-trained dancer in Medellín).** All marked as placeholder content. Verify: confirm exact styles taught.
+- **2026-08-13 · ffmpeg not installed on this machine** — video branch of the pipeline copies uncompressed with a warning until `brew install ffmpeg`. Verify: install ffmpeg before processing real video.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).
