@@ -79,7 +79,7 @@ export default function Schedule() {
               href={waLink(t("whatsapp.prefill"))}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-noche px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-noche px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("schedule.cta")}
             </a>

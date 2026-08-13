@@ -1,9 +1,9 @@
 import { m, useReducedMotion } from "motion/react";
 
-/** The ruffle hem — the world's section divider, now alive. The scalloped
- *  skirt edge breathes between two wave phases and sways gently sideways
- *  while in view, so every section change moves like fabric mid-turn.
- *  Static hem under prefers-reduced-motion. */
+/** The ruffle hem — the world's section divider, visibly alive. The scalloped
+ *  edge rolls sideways like fabric being pulled through a turn (seamless
+ *  one-scallop travel loop) while its depth breathes between two wave phases.
+ *  Runs only while in view; static hem under prefers-reduced-motion. */
 export function RuffleDivider({ from, flip = false }: { from: "noche" | "petrol" | "crudo" | "lima"; flip?: boolean }) {
   const reduced = useReducedMotion();
   const fills: Record<string, string> = {
@@ -13,36 +13,37 @@ export function RuffleDivider({ from, flip = false }: { from: "noche" | "petrol"
     lima: "var(--color-lima)",
   };
   const dir = flip ? -1 : 1;
-  // 12 scallops; phase A = even hem, phase B = traveling wave (alternating depth).
+  // 16 scallops (two extra periods each side) so a 240px travel loops seamlessly
+  // (amplitudes alternate, so the true period is two scallops = 240px).
   const hem = (amps: number[]) =>
-    `M0,0 L0,0 ${amps.map((a) => `q ${60},${dir * a} ${120},0`).join(" ")} L1440,0 Z`;
-  const phaseA = hem(Array.from({ length: 12 }, () => 52));
-  const phaseB = hem(Array.from({ length: 12 }, (_, i) => (i % 2 === 0 ? 38 : 64)));
+    `M-240,0 L-240,0 ${amps.map((a) => `q ${60},${dir * a} ${120},0`).join(" ")} L1680,0 Z`;
+  const phaseA = hem(Array.from({ length: 16 }, (_, i) => (i % 2 === 0 ? 40 : 62)));
+  const phaseB = hem(Array.from({ length: 16 }, (_, i) => (i % 2 === 0 ? 62 : 40)));
 
   return (
     <div aria-hidden="true" className="relative -mt-px h-8 w-full overflow-hidden sm:h-10" style={{ lineHeight: 0 }}>
-      <m.svg
+      <svg
         viewBox="0 0 1440 52"
         preserveAspectRatio="none"
-        className="absolute inset-x-[-2%] inset-y-0 h-full w-[104%]"
+        className="absolute inset-0 h-full w-full"
         focusable="false"
-        {...(!reduced && {
-          initial: { x: "-0.6%" },
-          whileInView: { x: "0.6%" },
-          viewport: { amount: 0.1 },
-          transition: { repeat: Infinity, repeatType: "mirror" as const, duration: 7, ease: "easeInOut" as const },
-        })}
       >
-        <m.path
-          d={phaseA}
-          fill={fills[from]}
-          {...(!reduced && {
-            whileInView: { d: phaseB },
-            viewport: { amount: 0.1 },
-            transition: { repeat: Infinity, repeatType: "mirror" as const, duration: 3.4, ease: "easeInOut" as const },
-          })}
-        />
-      </m.svg>
+        {reduced ? (
+          <path d={phaseA} fill={fills[from]} />
+        ) : (
+          <m.path
+            d={phaseA}
+            fill={fills[from]}
+            initial={{ x: 0 }}
+            whileInView={{ x: -240, d: phaseB }}
+            viewport={{ amount: 0.1 }}
+            transition={{
+              x: { repeat: Infinity, duration: 8, ease: "linear" },
+              d: { repeat: Infinity, repeatType: "mirror", duration: 2.5, ease: "easeInOut" },
+            }}
+          />
+        )}
+      </svg>
     </div>
   );
 }

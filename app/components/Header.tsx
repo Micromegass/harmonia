@@ -59,8 +59,8 @@ export function Header() {
               key={page}
               to={pathFor(page, locale)}
               className={({ isActive }) =>
-                `text-sm font-semibold uppercase tracking-wide transition-colors hover:text-lima ${
-                  isActive ? "text-lima" : "text-crudo"
+                `navlink text-sm font-semibold uppercase tracking-wide transition-colors hover:text-lima ${
+                  isActive ? "text-lima is-active" : "text-crudo"
                 }`
               }
             >

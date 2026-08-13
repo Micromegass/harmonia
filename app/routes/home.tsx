@@ -7,8 +7,7 @@ import { metaFor, studioJsonLd } from "../lib/seo";
 import { waLink } from "../lib/site";
 import { BEAT, countIn, EASE_DANCE, swingIn } from "../components/motion";
 import { Reveal } from "../components/Reveal";
-import { Ribbons } from "../components/Ribbons";
-import { Bailarina } from "../components/Bailarina";
+import { FlowField } from "../components/FlowField";
 import { RuffleDivider } from "../components/RuffleDivider";
 import { JsonLd } from "../components/JsonLd";
 import { MediaTile, type MediaAsset } from "../components/MediaTile";
@@ -56,7 +55,7 @@ export default function Home() {
           <Reveal className="mt-8">
             <Link
               to={pathFor("classes", locale)}
-              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-crudo transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-crudo transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("home.styles.cta")}
             </Link>
@@ -105,7 +104,7 @@ export default function Home() {
           <Reveal beats={2}>
             <Link
               to={pathFor("classes", locale)}
-              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-lima transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-noche px-7 py-3.5 font-bold text-lima transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("home.kids.cta")}
             </Link>
@@ -156,7 +155,7 @@ export default function Home() {
               href={waLink(t("whatsapp.prefill"))}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-noche px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="rounded-full bg-noche px-8 py-4 text-lg font-bold text-crudo transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("home.finalCta.ctaPrimary")}
             </a>
@@ -187,12 +186,8 @@ function Hero({ locale }: { locale: Locale }) {
 
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
-      <Ribbons />
-      {/* La Bailarina — the logo's dancer, alive on the right */}
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-[3%] right-[-8%] w-[56vw] max-w-[240px] opacity-80 sm:bottom-0 sm:right-[6%] sm:w-[22vw] sm:max-w-[300px] sm:opacity-100">
-        <Bailarina className="h-auto w-full" />
-      </div>
-      {/* local scrim so hero copy stays readable where ribbons and dancer cross it */}
+      <FlowField />
+      {/* local scrim so hero copy stays readable where trails cross it */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(6_42_53/0.85)_0%,rgb(6_42_53/0.55)_45%,transparent_72%)]"
@@ -242,7 +237,18 @@ function Hero({ locale }: { locale: Locale }) {
                 <span key={w} className="inline-block whitespace-nowrap">
                   {letters.map((ch, i) => (
                     <m.span key={i} className="inline-block" variants={swingIn()}>
-                      {ch}
+                      <m.span
+                        className="inline-block"
+                        animate={{ y: [0, -3.5, 0, 2, 0] }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: BEAT * 16,
+                          ease: "easeInOut",
+                          delay: 2.4 + (w * 6 + i) * (BEAT / 2),
+                        }}
+                      >
+                        {ch}
+                      </m.span>
                     </m.span>
                   ))}
                   {w < words.length - 1 && " "}
@@ -271,7 +277,7 @@ function Hero({ locale }: { locale: Locale }) {
             href={waLink(t("whatsapp.prefill"))}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche shadow-lift transition-transform hover:scale-105 motion-reduce:transition-none"
+            className="rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche shadow-lift transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
           >
             {t("home.hero.ctaPrimary")}
           </a>

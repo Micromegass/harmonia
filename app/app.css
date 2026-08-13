@@ -108,6 +108,28 @@ body {
 .field-crudo .muted { color: #55707a; }
 .field-lima .muted { color: #414d12; }
 
+/* Desktop nav links: underline grows in from the left */
+.navlink {
+  position: relative;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--color-lima);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms var(--ease-dance);
+}
+.navlink:hover::after,
+.navlink:focus-visible::after,
+.navlink.is-active::after {
+  transform: scaleX(1);
+}
+
 /* Skip link */
 .skip-link {
   position: absolute;
@@ -122,30 +144,6 @@ body {
 .skip-link:focus-visible {
   left: 0.5rem;
   top: 0.5rem;
-}
-
-/* La Bailarina draw-in: each stroke writes itself like a signature.
-   pathLength="1" on the elements normalizes the dash space. */
-.bailarina-draw {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: bailarina-draw 1.4s var(--ease-dance) forwards;
-}
-@keyframes bailarina-draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-/* no-JS / reduced motion: show her fully drawn */
-html:not(.js) .bailarina-draw {
-  animation: none;
-  stroke-dashoffset: 0;
-}
-@media (prefers-reduced-motion: reduce) {
-  .bailarina-draw {
-    animation: none !important;
-    stroke-dashoffset: 0 !important;
-  }
 }
 
 /* No-JS fallback: entrance animations bake opacity:0 into the prerendered

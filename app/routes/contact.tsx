@@ -127,7 +127,7 @@ export default function Contact() {
               href={waLink(t("whatsapp.prefill"))}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-wa px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="rounded-full bg-wa px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("contact.waCta")}
             </a>

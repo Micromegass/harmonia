@@ -85,7 +85,7 @@ export default function About() {
           <Reveal beats={2} className="mt-14">
             <Link
               to={pathFor("contact", locale)}
-              className="inline-block rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 motion-reduce:transition-none"
+              className="inline-block rounded-full bg-lima px-8 py-4 text-lg font-bold text-noche transition-transform hover:scale-105 active:scale-95 motion-reduce:transition-none"
             >
               {t("about.cta")}
             </Link>

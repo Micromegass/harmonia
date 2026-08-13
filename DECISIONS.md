@@ -39,6 +39,13 @@ Format: date · decision · rationale · verify.
 - **2026-08-13 · "Bailar encanta" adopted as the brand motto** across footer, OG cards and about; kept in Spanish on the EN site as a brand mark (translated in parentheses once in the footer).
 - **2026-08-13 · GitHub remote added** (github.com/Micromegass/harmonia) per client instruction; push + deploy on completion.
 
+## 2026-08-13 — Client feedback round 3 (hero rework + flow polish)
+
+- **2026-08-13 · The figurative dancer is gone.** Client disliked the line-figure animation in both incarnations. Replaced with **Estela**: a silk-trail flow field (52 thin lines in two mirrored sheaves, teal/lima/ivory, perpetually drawing/releasing along their curves) inspired by the most-liked flowing-paths pattern on 21st.dev (client-provided inspiration link), recomposed for the brand palette and viewport framing. Bailarina.tsx deleted.
+- **2026-08-13 · The headline is now the dancer**: after the count entrance, each letter of "¿Bailamos?" grooves on an endless, subtle 8-count loop with per-letter phase offset.
+- **2026-08-13 · Section dividers visibly animate now**: the client couldn't perceive the previous subtle breathe, so hems roll sideways in a seamless travel loop (240px period) plus a stronger depth breathe; in-view gated, reduced-motion static.
+- **2026-08-13 · Senior polish pass**: tactile press states (active:scale-95) on all pill CTAs and the WhatsApp button; desktop nav links get an underline that grows in on hover/focus and stays on the active page.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

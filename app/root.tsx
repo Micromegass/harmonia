@@ -30,10 +30,10 @@ curved ruffle hems; Archivo expanded-black poster caps; motion quantized to a 14
 the logo's continuous-line dancer brought to life in the hero.
 STORY: A stranger from Instagram lands, feels the studio's joy and professionalism within
 one viewport, browses rhythms/classes/gallery as skirt layers, and messages on WhatsApp.
-FIRST VIEWPORT: Full-bleed petrol-night ground; La Bailarina — the logo's line-drawn
-dancer — draws herself in like a signature and dances on the count with skirt trails,
-beside "¿BAILAMOS?" display caps swinging in after a "5·6·7·8" pre-roll; subline naming
-salsa/bachata/Medellín; WhatsApp primary CTA + classes secondary, above the fold on mobile.
+FIRST VIEWPORT: Full-bleed petrol-night ground under Estela, a field of thin silk
+trails in teal/lima/ivory perpetually flowing along their own curves; "¿Bailamos?"
+letters swing in on the count then groove forever on a gentle 8-count loop; subline
+naming salsa/bachata/Medellín; WhatsApp primary CTA + classes secondary, above the fold.
 FORM: Grounded candidate 7 (cumbia/pollera costume textile world), seed key cf667dc0.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review,
 the verdict, and DESIGN.md

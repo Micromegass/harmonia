@@ -5,7 +5,7 @@
 
 ## World
 
-The pollera skirt in motion, painted in the brand's own inks. Layered drenched fields separated by scalloped ruffle hems; movement choreographed to a musical 8-count; the logo's continuous-line dancer (La Bailarina) alive in the hero. Refuses the category defaults (neon-nightclub salsa template, generic clean studio site).
+The pollera skirt in motion, painted in the brand's own inks. Layered drenched fields separated by scalloped ruffle hems; movement choreographed to a musical 8-count; a perpetual silk-trail field (Estela) filling the hero night. Refuses the category defaults (neon-nightclub salsa template, generic clean studio site).
 
 ## Tokens (source of truth: `@theme` in [app/app.css](app/app.css))
 
@@ -38,9 +38,9 @@ Secondary text is always tinted from its field (`.muted` per `.field-*`), never 
 ## Composition grammar
 
 - **Fabric fields**: every section owns one full-bleed color (`.field-noche/petrol/crudo/lima`). Field order on a page alternates dark/saturated/light like skirt layers; two adjacent fields never share a color.
-- **Ruffle hem** (`RuffleDivider`): scalloped SVG in the color of the field above, laid over the next field. The only section divider.
+- **Ruffle hem** (`RuffleDivider`): scalloped SVG in the color of the field above, laid over the next field; rolls sideways in a seamless 240px travel loop while its depth breathes (in-view only). The only section divider.
 - **Ribbon trails** (`Ribbons`): thick round-capped flowing paths in lima/teal/ivory — hero + 404 only; masked to fade before the hem.
-- **La Bailarina** (`Bailarina.tsx`): the logo's continuous-line dancer — draws in like a signature, then morphs between two poses on the 8-count with teal ghost echoes (motion trail). Hero only; static under reduced motion.
+- **Estela** (`FlowField.tsx`): the hero's silk-trail field — two mirrored sheaves of 26 thin lines in teal/lima/ivory perpetually flowing along their own curves (pathLength/pathOffset loops). The hero headline letters groove on an endless gentle 8-count after their entrance. Static sheaf under reduced motion.
 - **Logo assets**: `public/media/logo-badge{,-360}.webp` (circular badge, header/footer/contact/redirect), `logo-wide.webp` (about page), favicon + apple-touch-icon from the badge. Never recolor the logo files.
 - Buttons are pills; media tiles and cards are `rounded-xl/2xl` — that two-tier radius system is fixed.
 - Squiggle underline (small scalloped SVG path) marks `dt` titles; no colored side-borders, no kickers/eyebrows, no hard offset shadows, no gradient text.
