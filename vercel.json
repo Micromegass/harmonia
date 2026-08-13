@@ -4,5 +4,49 @@
   "outputDirectory": "build/client",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-/A0/Gr6PJ//ot2vLG1pt3qu3iZTwO1HByrEspEX1jmQ=' 'sha256-0iZ3Qk+cNrwvM0A9UPizB+m2/znFvRWCvyyJgVXYMyg=' 'sha256-5O6mpnZ0rCT6Lvh+MBCcyh312PpkgAAwJdmwV7kpPek=' 'sha256-5mqRJiehOv3Y82I2kAdSGR8YW5QqmHndAbTSrdM8AUI=' 'sha256-7mu4H06fwDCjmnxxr/xNHyuQC6pLTHr4M2E4jXw5WZs=' 'sha256-8RHvws3tzwBEg8bWeLXxtN1jMeo8eHd/H+mmG2m00K8=' 'sha256-9Qlo6UtqTf3jHqNKtYsVk8IW57EXtRba09tIX3/9+Nk=' 'sha256-ADb87z9JVowBCZSfVF9vYTyLtcgKdfYJROyd7JpNTok=' 'sha256-DzLKMsLVLa9n6q70Lk1YLxKKjqeLMqaEKIXWmfTiXc8=' 'sha256-JVO3HrURalsy1AtufntzLndxYZIIKwU59AH+2ip3MNI=' 'sha256-QAlSewaQLi/NPCznjAZSyvQ72heD0VdxmNDDkZeCxgc=' 'sha256-Qjl+wLM1AJ9zedCnZdnHhgRHQ7pkHa9bfK1GVXLJEYU=' 'sha256-RBZNiG3Ztb26Xi/69+VRecU4BPhrfxcvspLXMRrrCNE=' 'sha256-WgiDwd8MjOY8rwQRdZTLYmgDbRrDdAfFjwuwCnDzkdI=' 'sha256-X+PV4o5mNco/Pvq+pI48kE+2DEZFB7C85wagfp0G5Bc=' 'sha256-XHRz811HZHfth+7VAb2ZW73GjCWA2GKETWAcBYDCNCE=' 'sha256-Z/o0xVrV6ylZRaI1+MT6hgUUbHbM6yymMzwOLCPL4lQ=' 'sha256-aWji8IwZ74P8gyxDgGK0wObDbc9Bo+dfpVvF6mvg2kw=' 'sha256-b5LCyW7koFTp186VLMAJapy8lutA1m8I/urk9uhBrYs=' 'sha256-duhaxWNI+6QAukUMmlYrkl97X+e0pxobkwS+TpY5/CQ=' 'sha256-eWa6DMZRMTkb7k2BX579qgK/VGeDqc4D+SQPSUKmNtE=' 'sha256-fOd3ScjH2GliBhQ6SnTFPKL6jLws2b6OlF/4XR6Ru9U=' 'sha256-iIquyaiyjSwT6nhySsyEKInGycYtMQoG6RvqLWL3jS8=' 'sha256-n1D9cZXw4ZNSiUR+6/8u4KC6Mx7KCFb9ScJA8U0UdhI=' 'sha256-oypfRVfDBXCJJR2mjaCcWx47hC3uQybS2d04vWmxzAo=' 'sha256-p7GE78bbMHDrE4IWzpiMSttAsTpUu7wwi5/wvnH54Os=' 'sha256-q8wo3L4tRCGvEuAkCbmT1eA8kOn+gXcE5ZvPzfcZyh8=' 'sha256-qB9BmSd6Ou7AIyVuKlyPLk7PeP+kBJMyTjX9KWXPI/s=' 'sha256-u+B9plEykBY1XbUHNOwlXmTnzKCgQr0cMvEx+peqs00=' 'sha256-yKEOMH52G7cvXsvtA6QUvBKAZvEXed1FZbHbbgX65as=' 'sha256-z5xrcgZoBA/RcYooqTK5GqLeY5eLmBpFTxnkdw9k8qo='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        }
+      ]
+    },
+    {
+      "source": "/(assets|fonts|media)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
 }

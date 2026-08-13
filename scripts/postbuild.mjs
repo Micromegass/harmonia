@@ -60,6 +60,80 @@ await writeFile(path.join(OUT, "robots.txt"), robots);
 // Vercel: a root-level 404.html is served (with 404 status) for unmatched paths.
 await copyFile(path.join(OUT, "404", "index.html"), path.join(OUT, "404.html"));
 
+/* ── CSP: hash every executable inline script the prerender emitted, and keep
+ *  vercel.json's Content-Security-Policy in sync. Inline-script hashes are
+ *  build-deterministic (verified), so the committed header always matches the
+ *  committed code. On CI/Vercel a mismatch fails the build loudly instead of
+ *  shipping a CSP that blocks hydration — fix by running `npm run build`
+ *  locally and committing vercel.json. ld+json never executes → not hashed. */
+import { createHash } from "node:crypto";
+import { readdir } from "node:fs/promises";
+
+async function* htmlFiles(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) yield* htmlFiles(p);
+    else if (entry.name.endsWith(".html")) yield p;
+  }
+}
+
+const hashes = new Set();
+for await (const file of htmlFiles(OUT)) {
+  const html = await readFile(file, "utf8");
+  for (const m of html.matchAll(/<script(?![^>]*\ssrc=)([^>]*)>([\s\S]*?)<\/script>/g)) {
+    if (m[1].includes("ld+json")) continue;
+    hashes.add(`'sha256-${createHash("sha256").update(m[2]).digest("base64")}'`);
+  }
+}
+
+const csp = [
+  "default-src 'self'",
+  `script-src 'self' ${[...hashes].sort().join(" ")}`,
+  "style-src 'self' 'unsafe-inline'", // React/Framer Motion style attributes
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "connect-src 'self' https://api.web3forms.com",
+  "media-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+  "upgrade-insecure-requests",
+].join("; ");
+
+const vercelPath = path.join(ROOT, "vercel.json");
+const vercelBefore = await readFile(vercelPath, "utf8");
+const vercelJson = JSON.parse(vercelBefore);
+vercelJson.headers = [
+  {
+    source: "/(.*)",
+    headers: [
+      { key: "Content-Security-Policy", value: csp },
+      { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "X-Frame-Options", value: "DENY" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+      { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+    ],
+  },
+  {
+    source: "/(assets|fonts|media)/(.*)",
+    headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+  },
+];
+const vercelAfter = JSON.stringify(vercelJson, null, 2) + "\n";
+if (vercelAfter !== vercelBefore) {
+  if (process.env.VERCEL || process.env.CI) {
+    console.error("✗ vercel.json CSP hashes are stale for this build. Run `npm run build` locally and commit vercel.json.");
+    process.exit(1);
+  }
+  await writeFile(vercelPath, vercelAfter);
+  console.log(`✓ vercel.json headers refreshed (${hashes.size} inline-script hashes) — commit it`);
+} else {
+  console.log(`✓ vercel.json headers up to date (${hashes.size} inline-script hashes)`);
+}
+
 // Sanity: every sitemap URL must exist as prerendered HTML.
 let missing = 0;
 for (const slugs of Object.values(pageSlugs)) {
