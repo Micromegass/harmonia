@@ -2,31 +2,31 @@
   "meta": {
     "siteName": "Harmonia Baila",
     "home": {
-      "title": "Harmonia Baila — Clases de baile en Medellín | Salsa, bachata y más",
+      "title": "Harmonia Baila | Clases de baile en Medellín | Salsa, bachata y más",
       "description": "Academia de baile en Medellín dirigida por una bailarina profesional. Clases de salsa, bachata y más ritmos para niños y adultos, grupales y personalizadas. ¡Agenda tu clase!"
     },
     "about": {
-      "title": "Nuestra historia — Harmonia Baila, academia de baile en Medellín",
+      "title": "Nuestra historia | Harmonia Baila, academia de baile en Medellín",
       "description": "Conoce Harmonia Baila: una academia fundada por una bailarina profesional con formación universitaria. Pedagogía real, alegría de barrio y amor por el baile."
     },
     "classes": {
-      "title": "Clases de baile en Medellín — salsa, bachata, ritmos urbanos | Harmonia Baila",
+      "title": "Clases de baile en Medellín | salsa, bachata, ritmos urbanos | Harmonia Baila",
       "description": "Clases de salsa, bachata, ritmos urbanos y tropicales en Medellín. Grupos para niños y adultos, desde principiante hasta avanzado. Clases grupales y personalizadas."
     },
     "schedule": {
-      "title": "Horarios de clases — Harmonia Baila Medellín",
+      "title": "Horarios de clases | Harmonia Baila Medellín",
       "description": "Consulta los horarios de las clases de baile de Harmonia Baila en Medellín: salsa, bachata, ritmos urbanos, niños y adultos. Confirma tu cupo por WhatsApp."
     },
     "gallery": {
-      "title": "Galería — así se baila en Harmonia Baila",
+      "title": "Galería | así se baila en Harmonia Baila",
       "description": "Fotos y videos de nuestras clases de salsa, bachata y más en Medellín. Mira el ambiente de la academia y anímate a dar el primer paso."
     },
     "contact": {
-      "title": "Contacto — agenda tu clase de baile en Medellín | Harmonia Baila",
+      "title": "Contacto | agenda tu clase de baile en Medellín | Harmonia Baila",
       "description": "Escríbenos por WhatsApp o con el formulario y agenda tu clase de baile en Medellín. Salsa, bachata y más, para niños y adultos."
     },
     "notFound": {
-      "title": "Página no encontrada — Harmonia Baila",
+      "title": "Página no encontrada | Harmonia Baila",
       "description": "Ese paso no existe. Vuelve a la pista: clases de baile en Medellín con Harmonia Baila."
     }
   },
@@ -55,10 +55,9 @@
     "hero": {
       "count": "5 · 6 · 7 · 8",
       "title": "¿Bailamos?",
-      "subtitle": "Clases de salsa, bachata y más ritmos en Medellín. Para niños y adultos, desde cero hasta avanzado — con una bailarina profesional que te enseña de verdad.",
+      "subtitle": "Clases de salsa, bachata y más ritmos en Medellín. Para niños y adultos, desde cero hasta avanzado, con una bailarina profesional que te enseña de verdad.",
       "ctaPrimary": "Escríbenos por WhatsApp",
-      "ctaSecondary": "Ver las clases",
-      "scrollHint": "Baja y conoce más"
+      "ctaSecondary": "Ver las clases"
     },
     "styles": {
       "heading": "Los ritmos de la casa",
@@ -67,7 +66,7 @@
     },
     "method": {
       "heading": "Aquí se aprende de verdad",
-      "body": "Harmonia Baila no es solo mover el esqueleto: es una academia dirigida por una bailarina profesional con formación universitaria en danza. Eso se nota en cada clase — técnica limpia, pedagogía por niveles y la alegría de bailar bien.",
+      "body": "Harmonia Baila no es solo mover el esqueleto: es una academia dirigida por una bailarina profesional con formación universitaria en danza. Eso se nota en cada clase: técnica limpia, pedagogía por niveles y la alegría de bailar bien.",
       "points": {
         "pro": {
           "title": "Profesora profesional",
@@ -85,7 +84,7 @@
     },
     "kids": {
       "heading": "Los niños también bailan",
-      "body": "Clases infantiles donde se juega, se aprende ritmo y se gana confianza. Coordinación, disciplina y mucha música — la mejor extraescolar que le puedes regalar.",
+      "body": "Clases infantiles donde se juega, se aprende ritmo y se gana confianza. Coordinación, disciplina y mucha música. La mejor extraescolar que le puedes regalar.",
       "cta": "Clases para niños"
     },
     "gallery": {
@@ -94,7 +93,7 @@
     },
     "finalCta": {
       "heading": "Tu primera clase está a un mensaje",
-      "body": "Cuéntanos qué quieres bailar y te decimos cómo empezar. Sin pena — todos llegamos con dos pies izquierdos.",
+      "body": "Cuéntanos qué quieres bailar y te decimos cómo empezar. Sin pena: todos llegamos con dos pies izquierdos.",
       "ctaPrimary": "Escríbenos por WhatsApp",
       "ctaSecondary": "O usa el formulario"
     }
@@ -103,7 +102,7 @@
     "salsa": {
       "name": "Salsa",
       "tagline": "El ritmo que nos corre por las venas",
-      "description": "Desde el paso básico hasta las figuras que roban miradas en la pista. Salsa caleña, en línea y de salón — técnica, sabor y mucha calle."
+      "description": "Desde el paso básico hasta las figuras que roban miradas en la pista. Salsa caleña, en línea y de salón. Técnica, sabor y mucha calle."
     },
     "bachata": {
       "name": "Bachata",
@@ -113,7 +112,7 @@
     "urbano": {
       "name": "Ritmos urbanos",
       "tagline": "Energía pura para soltar el cuerpo",
-      "description": "Reguetón, dancehall y coreografías urbanas. Cardio, actitud y flow — perfecto para quien quiere sudar bailando."
+      "description": "Reguetón, dancehall y coreografías urbanas. Cardio, actitud y flow, perfecto para quien quiere sudar bailando."
     },
     "tropical": {
       "name": "Ritmos tropicales",
@@ -133,10 +132,10 @@
   },
   "about": {
     "heading": "Su historia",
-    "intro": "Harmonia Baila nació de una convicción: el baile se enseña con la misma seriedad que cualquier arte — y con el doble de alegría.",
+    "intro": "Harmonia Baila nació de una convicción: el baile se enseña con la misma seriedad que cualquier arte, y con el doble de alegría.",
     "story": {
       "p1": "Detrás de Harmonia Baila hay una bailarina profesional formada en la universidad, con años de escenario y de salón. Después de bailar y enseñar en compañías y academias, decidió crear un espacio propio en Medellín donde la técnica y el goce caben en la misma clase.",
-      "p2": "Aquí no hay coreografías de molde ni clases en piloto automático. Cada grupo avanza con una pedagogía clara: primero el ritmo, luego el paso, después la figura — y siempre la música primero. Los niños aprenden jugando; los adultos pierden la pena bailando.",
+      "p2": "Aquí no hay coreografías de molde ni clases en piloto automático. Cada grupo avanza con una pedagogía clara: primero el ritmo, luego el paso, después la figura. Y siempre la música primero. Los niños aprenden jugando; los adultos pierden la pena bailando.",
       "p3": "La academia es pequeña a propósito. Grupos donde la profe se sabe tu nombre, corrige tu postura y celebra tu primer giro como si fuera suyo. Eso es Harmonia: técnica de escuela, calor de casa."
     },
     "values": {
@@ -147,7 +146,7 @@
       },
       "joy": {
         "title": "Alegría primero",
-        "body": "Nadie mejora con miedo. Las clases se gozan — la disciplina llega sola cuando hay ganas de volver."
+        "body": "Nadie mejora con miedo. Las clases se gozan; la disciplina llega sola cuando hay ganas de volver."
       },
       "community": {
         "title": "Comunidad",
@@ -171,7 +170,7 @@
       },
       "kidsAdults": {
         "title": "Niños y adultos",
-        "body": "Clases infantiles llenas de juego y clases para adultos de todos los niveles. Nunca es tarde — ni demasiado temprano — para empezar."
+        "body": "Clases infantiles llenas de juego y clases para adultos de todos los niveles. Nunca es tarde (ni demasiado temprano) para empezar."
       }
     },
     "levels": {
@@ -192,14 +191,14 @@
     "stylesHeading": "Los ritmos",
     "pricing": {
       "heading": "¿Y los precios?",
-      "body": "Los valores dependen del formato y la frecuencia. Escríbenos y te armamos el plan que te convenga — sin compromiso.",
+      "body": "Los valores dependen del formato y la frecuencia. Escríbenos y te armamos el plan que te convenga, sin compromiso.",
       "cta": "Preguntar por WhatsApp"
     }
   },
   "schedule": {
     "heading": "Horarios",
     "intro": "Estos son los horarios habituales de la academia. Los cupos son limitados: confirma tu clase por WhatsApp antes de venir.",
-    "disclaimer": "Horario de referencia — confirma disponibilidad y cupos por WhatsApp.",
+    "disclaimer": "Horario de referencia: confirma disponibilidad y cupos por WhatsApp.",
     "days": {
       "mon": "Lunes",
       "tue": "Martes",
@@ -210,18 +209,18 @@
     },
     "slots": {
       "kidsAfternoon": "Baile infantil",
-      "salsaBeginner": "Salsa — principiante",
-      "salsaInter": "Salsa — intermedio/avanzado",
-      "bachataBeginner": "Bachata — principiante",
-      "bachataInter": "Bachata — intermedio",
+      "salsaBeginner": "Salsa: principiante",
+      "salsaInter": "Salsa: intermedio/avanzado",
+      "bachataBeginner": "Bachata: principiante",
+      "bachataInter": "Bachata: intermedio",
       "urbano": "Ritmos urbanos",
       "tropical": "Ritmos tropicales",
       "contemporaneo": "Danza contemporánea",
       "private": "Clases personalizadas (con cita)"
     },
-    "privateNote": "Las clases personalizadas se agendan según tu disponibilidad — mañanas, tardes o fines de semana.",
+    "privateNote": "Las clases personalizadas se agendan según tu disponibilidad: mañanas, tardes o fines de semana.",
     "cta": "Reservar mi cupo",
-    "ctaHeading": "Los cupos vuelan — asegura el tuyo"
+    "ctaHeading": "Los cupos vuelan. Asegura el tuyo"
   },
   "gallery": {
     "heading": "La galería",
@@ -263,7 +262,7 @@
       "submitting": "Enviando…",
       "success": {
         "title": "¡Mensaje enviado!",
-        "body": "Gracias por escribirnos. Te respondemos muy pronto — revisa también tu WhatsApp."
+        "body": "Gracias por escribirnos. Te respondemos muy pronto. Revisa también tu WhatsApp."
       },
       "error": {
         "title": "No pudimos enviar el mensaje",
@@ -274,7 +273,7 @@
       "validation": {
         "nameRequired": "Escribe tu nombre.",
         "emailRequired": "Escribe tu correo.",
-        "emailInvalid": "Ese correo no se ve completo — revísalo.",
+        "emailInvalid": "Ese correo no se ve completo. Revísalo.",
         "messageRequired": "Cuéntanos algo en el mensaje.",
         "consentRequired": "Para enviarnos el formulario necesitamos tu autorización de tratamiento de datos.",
         "throttled": "Acabas de enviar un mensaje. Espera un momento antes de enviar otro."
@@ -294,7 +293,7 @@
     "cta": "Ir al inicio"
   },
   "footer": {
-    "tagline": "Academia de baile en Medellín — salsa, bachata y más, para niños y adultos.",
+    "tagline": "Academia de baile en Medellín: salsa, bachata y más, para niños y adultos.",
     "navHeading": "Navega",
     "legalHeading": "Legal",
     "followHeading": "Síguenos",

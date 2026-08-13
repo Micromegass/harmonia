@@ -278,9 +278,6 @@ function Hero({ locale }: { locale: Locale }) {
           </Link>
         </m.div>
       </div>
-      <p className="muted absolute bottom-6 left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest" aria-hidden="true">
-        ↓ {t("home.hero.scrollHint")}
-      </p>
     </section>
   );
 }
