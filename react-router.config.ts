@@ -1,7 +1,9 @@
 import type { Config } from "@react-router/dev/config";
+import { allPaths } from "./app/i18n/routing";
 
 export default {
-  // Config options...
-  // Server-side render by default, to enable SPA mode set this to `false`
-  ssr: true,
+  // Fully static site: no server rendering at runtime, every route prerendered
+  // to real HTML at build time (SEO requirement + Vercel free tier).
+  ssr: false,
+  prerender: allPaths(),
 } satisfies Config;

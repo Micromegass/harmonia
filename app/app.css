@@ -1,15 +1,136 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* ─── Fonts: Archivo variable (Omnibus-Type) — self-hosted, latin subset ─── */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("/fonts/archivo-var.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("/fonts/archivo-var-italic.woff2") format("woff2");
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+/* ─── La Falda design tokens: pollera fabric fields on a night ground ─── */
+@theme {
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+  /* palette — the five inks of the world */
+  --color-noche: #221022; /* deep plum night — primary ground */
+  --color-noche-2: #2e1530; /* raised layer on noche */
+  --color-crudo: #fff3e4; /* warm raw-cotton light — text on dark, paper field */
+  --color-crudo-2: #f7e7d3; /* deeper paper for layering on crudo */
+  --color-fucsia: #e83d7c; /* pollera fuchsia — the brand ink */
+  --color-fucsia-deep: #c21f5e; /* pressed fuchsia (hover, deep field) */
+  --color-coral: #ff6b3d; /* hot coral — motion trails, gradients */
+  --color-sol: #ffc53d; /* golden sun — kids field, highlights */
+  --color-mar: #35c4b5; /* caribbean counterpoint — small accents only */
+
+  /* WhatsApp brand green (button only) */
+  --color-wa: #25d366;
+
+  --shadow-lift: 0 10px 30px -10px rgb(34 16 34 / 0.45);
+
+  /* choreography — the 8-count */
+  --beat: 140ms;
+  --ease-dance: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  @apply bg-noche text-crudo font-sans antialiased;
+  font-variation-settings: "wdth" 100;
+  overflow-x: clip;
+}
+
+/* Display voice: expanded black Archivo, poster register */
+.display {
+  font-variation-settings: "wdth" 125;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+.display-mid {
+  font-variation-settings: "wdth" 118;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
+/* Visible focus everywhere, tuned per field via --focus-ring */
+:root {
+  --focus-ring: var(--color-sol);
+}
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.field-sol,
+.field-crudo {
+  --focus-ring: var(--color-fucsia-deep);
+}
+
+/* Fabric fields — sections that own a whole color */
+.field-noche { background: var(--color-noche); color: var(--color-crudo); }
+.field-fucsia { background: var(--color-fucsia); color: var(--color-noche); }
+.field-crudo { background: var(--color-crudo); color: var(--color-noche); }
+.field-sol { background: var(--color-sol); color: var(--color-noche); }
+
+/* Secondary text tinted from its field, never gray */
+.field-noche .muted { color: #d9b8c9; }
+.field-fucsia .muted { color: #4d1030; }
+.field-crudo .muted { color: #6d4a55; }
+.field-sol .muted { color: #5c4413; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-sol);
+  color: var(--color-noche);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+}
+.skip-link:focus-visible {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* Reduced motion: kill non-essential animation globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "siteName": "Harmonia Baila",
+    "home": {
+      "title": "Harmonia Baila — Dance classes in Medellín | Salsa, bachata & more",
+      "description": "Dance studio in Medellín run by a professionally trained dancer. Salsa, bachata and more — group and private classes for kids and adults, beginner to advanced. English-friendly!"
+    },
+    "about": {
+      "title": "Our story — Harmonia Baila, dance studio in Medellín",
+      "description": "Meet Harmonia Baila: a Medellín dance studio founded by a university-trained professional dancer. Real teaching, small groups, and pure Colombian joy."
+    },
+    "classes": {
+      "title": "Dance classes in Medellín — salsa, bachata, urban styles | Harmonia Baila",
+      "description": "Learn salsa, bachata, urban and tropical rhythms in Medellín. Group and private classes for kids and adults, from absolute beginner to advanced. English spoken."
+    },
+    "schedule": {
+      "title": "Class schedule — Harmonia Baila Medellín",
+      "description": "See the weekly schedule for Harmonia Baila's dance classes in Medellín: salsa, bachata, urban styles, kids and adults. Confirm your spot on WhatsApp."
+    },
+    "gallery": {
+      "title": "Gallery — this is how we dance at Harmonia Baila",
+      "description": "Photos and videos from our salsa, bachata and dance classes in Medellín. See the vibe of the studio and take the first step."
+    },
+    "contact": {
+      "title": "Contact — book your dance class in Medellín | Harmonia Baila",
+      "description": "Message us on WhatsApp or use the form to book your dance class in Medellín. Salsa, bachata and more, for kids and adults. English-friendly."
+    },
+    "notFound": {
+      "title": "Page not found — Harmonia Baila",
+      "description": "That step doesn't exist. Back to the dance floor: dance classes in Medellín with Harmonia Baila."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "schedule": "Schedule",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "skipToContent": "Skip to content"
+  },
+  "langSwitcher": {
+    "label": "Language",
+    "es": "Español",
+    "en": "English",
+    "switchTo": "Cambiar a español"
+  },
+  "whatsapp": {
+    "buttonLabel": "Message us on WhatsApp",
+    "prefill": "Hi! I found Harmonia Baila's website and I'm interested in dance classes. Could you tell me more? (English ok!)"
+  },
+  "home": {
+    "hero": {
+      "count": "5 · 6 · 7 · 8",
+      "title": "Shall we dance?",
+      "subtitle": "Salsa, bachata and more in Medellín. Classes for kids and adults, from your very first step to advanced — taught by a professionally trained dancer. English-friendly.",
+      "ctaPrimary": "Message us on WhatsApp",
+      "ctaSecondary": "See the classes",
+      "scrollHint": "Scroll to see more"
+    },
+    "styles": {
+      "heading": "The rhythms we teach",
+      "intro": "Every rhythm has its own story and its own way of moving. Learn them all, at your own pace.",
+      "cta": "Explore all classes"
+    },
+    "method": {
+      "heading": "Real teaching, real progress",
+      "body": "Harmonia Baila isn't just moving to music — it's a studio led by a professional dancer with a university degree in dance. You feel it in every class: clean technique, structured levels, and the joy of actually dancing well.",
+      "points": {
+        "pro": {
+          "title": "A true professional",
+          "body": "University-trained, with years on stage. You learn proper technique from day one."
+        },
+        "levels": {
+          "title": "From zero to the dance floor",
+          "body": "Clear levels from beginner to advanced. Nobody is born dancing — here you build it step by step."
+        },
+        "formats": {
+          "title": "Your way",
+          "body": "Group classes for the energy, or private lessons to progress twice as fast. You choose."
+        }
+      }
+    },
+    "kids": {
+      "heading": "Kids dance too",
+      "body": "Children's classes built on play: rhythm, coordination and confidence that lasts a lifetime. The best after-school gift you can give them.",
+      "cta": "Classes for kids"
+    },
+    "gallery": {
+      "heading": "This is what joy looks like",
+      "cta": "See the full gallery"
+    },
+    "finalCta": {
+      "heading": "Your first class is one message away",
+      "body": "Tell us what you'd like to dance and we'll get you started. No pressure — everyone shows up with two left feet.",
+      "ctaPrimary": "Message us on WhatsApp",
+      "ctaSecondary": "Or use the contact form"
+    }
+  },
+  "styles": {
+    "salsa": {
+      "name": "Salsa",
+      "tagline": "The rhythm that runs in our veins",
+      "description": "From the basic step to the turns that own the dance floor. Cali-style, línea and salón salsa — technique, flavor and street soul."
+    },
+    "bachata": {
+      "name": "Bachata",
+      "tagline": "Slow, close and full of feeling",
+      "description": "Dominican and sensual bachata: partner connection, body waves and musicality. The rhythm people fall for fastest."
+    },
+    "urbano": {
+      "name": "Urban styles",
+      "tagline": "Pure energy to let loose",
+      "description": "Reggaeton, dancehall and urban choreography. Cardio, attitude and flow — perfect if you want your workout to feel like a party."
+    },
+    "tropical": {
+      "name": "Tropical rhythms",
+      "tagline": "Cumbia, merengue and Caribbean heritage",
+      "description": "The rhythms of Colombia: cumbia, merengue, porro. Skirts, handkerchiefs and traditions danced with pride."
+    },
+    "kids": {
+      "name": "Kids' dance",
+      "tagline": "Play, move and grow with music",
+      "description": "Classes where dance is a game: rhythm, coordination and confidence for life."
+    },
+    "contemporaneo": {
+      "name": "Contemporary dance",
+      "tagline": "Expression, technique and freedom",
+      "description": "For anyone who wants to explore movement beyond the dance floor: contemporary technique, improvisation and expression."
+    }
+  },
+  "about": {
+    "heading": "Our story",
+    "intro": "Harmonia Baila was born from one conviction: dance deserves to be taught as seriously as any art — with twice the joy.",
+    "story": {
+      "p1": "Behind Harmonia Baila is a professional dancer with a university degree in dance and years of stage and studio experience. After performing and teaching in companies and academies, she created her own space in Medellín — one where technique and pure fun belong in the same class.",
+      "p2": "There are no cookie-cutter choreographies here and no classes on autopilot. Every group follows a clear method: rhythm first, then the step, then the figure — and always the music above all. Kids learn through play; adults dance their shyness away.",
+      "p3": "The studio is small on purpose. Groups where the teacher knows your name, fixes your posture, and celebrates your first turn like it's her own. That's Harmonia: schooled technique, homegrown warmth."
+    },
+    "values": {
+      "heading": "What moves us",
+      "technique": {
+        "title": "Real technique",
+        "body": "A university dance education applied to every single class. Dancing well is also something you study."
+      },
+      "joy": {
+        "title": "Joy first",
+        "body": "Nobody improves while feeling judged. Classes are fun — discipline follows naturally when you can't wait to come back."
+      },
+      "community": {
+        "title": "Community",
+        "body": "Small groups, familiar faces, and a dance floor with room for everyone: kids, adults, beginners and longtime dancers."
+      }
+    },
+    "cta": "Come meet us"
+  },
+  "classes": {
+    "heading": "The classes",
+    "intro": "Group or private, kids or adults, from your first basic step to advanced level. Here's how Harmonia Baila works:",
+    "formats": {
+      "heading": "Formats",
+      "group": {
+        "title": "Group classes",
+        "body": "The group's energy does half the work. Grouped by level and age, with limited spots so the teacher actually sees you."
+      },
+      "private": {
+        "title": "Private lessons",
+        "body": "One-on-one or as a couple, at your pace and towards your goals: a wedding dance, polishing technique, or progressing twice as fast. Great if you prefer learning in English."
+      },
+      "kidsAdults": {
+        "title": "Kids & adults",
+        "body": "Playful children's classes and adult classes at every level. It's never too late — or too early — to start."
+      }
+    },
+    "levels": {
+      "heading": "Levels",
+      "beginner": {
+        "title": "Beginner",
+        "body": "From zero, no judgment. Rhythm, basic step and confidence."
+      },
+      "intermediate": {
+        "title": "Intermediate",
+        "body": "Figures, turns and partner connection. This is where the flavor starts."
+      },
+      "advanced": {
+        "title": "Advanced",
+        "body": "Musicality, personal style and stage-level technique."
+      }
+    },
+    "stylesHeading": "The rhythms",
+    "pricing": {
+      "heading": "What about prices?",
+      "body": "Rates depend on the format and how often you come. Message us and we'll put together a plan that fits — no strings attached.",
+      "cta": "Ask on WhatsApp"
+    }
+  },
+  "schedule": {
+    "heading": "Schedule",
+    "intro": "These are the studio's regular class times. Spots are limited — confirm your class on WhatsApp before coming.",
+    "disclaimer": "Reference schedule — please confirm availability and spots on WhatsApp.",
+    "days": {
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "slots": {
+      "kidsAfternoon": "Kids' dance",
+      "salsaBeginner": "Salsa — beginner",
+      "salsaInter": "Salsa — intermediate/advanced",
+      "bachataBeginner": "Bachata — beginner",
+      "bachataInter": "Bachata — intermediate",
+      "urbano": "Urban styles",
+      "tropical": "Tropical rhythms",
+      "contemporaneo": "Contemporary dance",
+      "private": "Private lessons (by appointment)"
+    },
+    "privateNote": "Private lessons are scheduled around your availability — mornings, afternoons or weekends.",
+    "cta": "Save my spot"
+  },
+  "gallery": {
+    "heading": "The gallery",
+    "intro": "Class moments, rehearsals and pure joy. This is what's waiting for you.",
+    "filterAll": "All",
+    "filterLabel": "Filter by rhythm",
+    "showreelHeading": "In motion",
+    "lightboxClose": "Close",
+    "lightboxPrev": "Previous",
+    "lightboxNext": "Next",
+    "placeholderNote": "Real photos and videos from our classes are coming very soon. In the meantime, find us on Instagram.",
+    "igCta": "See more on Instagram"
+  },
+  "contact": {
+    "heading": "Let's talk",
+    "intro": "The first step is the easiest one: message us and we'll tell you about times, levels and how to start. English is welcome!",
+    "waHeading": "Fastest: WhatsApp",
+    "waBody": "We usually reply the same day.",
+    "waCta": "Open WhatsApp",
+    "formHeading": "Or leave us a message",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "What should we call you?",
+      "email": "Your email",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Your WhatsApp (optional)",
+      "phonePlaceholder": "+1 555 123 4567",
+      "interest": "What are you interested in?",
+      "interestOptions": {
+        "group": "Group classes",
+        "private": "Private lessons",
+        "kids": "Classes for kids",
+        "other": "Something else"
+      },
+      "message": "Your message",
+      "messagePlaceholder": "Tell us what you'd like to dance, your level, or any questions…",
+      "consentLabel": "I authorize Harmonia Baila to process my personal data in line with its <policyLink>Personal Data Processing Policy</policyLink>, in order to answer my request.",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": {
+        "title": "Message sent!",
+        "body": "Thanks for reaching out. We'll get back to you very soon — keep an eye on your WhatsApp too."
+      },
+      "error": {
+        "title": "We couldn't send your message",
+        "body": "Please try again in a moment, or reach us directly:",
+        "waFallback": "Message on WhatsApp",
+        "mailFallback": "Send an email"
+      },
+      "validation": {
+        "nameRequired": "Please tell us your name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "That email looks incomplete — mind checking it?",
+        "messageRequired": "Please write a short message.",
+        "consentRequired": "We need your data-processing authorization to receive the form.",
+        "throttled": "You just sent a message. Please wait a moment before sending another."
+      }
+    },
+    "info": {
+      "heading": "The studio",
+      "cityLine": "Medellín, Colombia",
+      "addressNote": "Exact address shared when you confirm your class.",
+      "igLabel": "Follow us on Instagram"
+    }
+  },
+  "notFound": {
+    "count": "1, 2, 3… where's 4?",
+    "heading": "That step doesn't exist",
+    "body": "The page you're looking for danced out of the choreography. Let's get back to the floor.",
+    "cta": "Back home"
+  },
+  "footer": {
+    "tagline": "Dance studio in Medellín — salsa, bachata and more, for kids and adults.",
+    "navHeading": "Explore",
+    "legalHeading": "Legal",
+    "followHeading": "Follow us",
+    "legal": {
+      "dataPolicy": "Data processing",
+      "privacyNotice": "Privacy notice",
+      "terms": "Terms & conditions",
+      "cookies": "Cookie policy"
+    },
+    "copyright": "© {{year}} Harmonia Baila. All rights reserved.",
+    "madeIn": "Made with rhythm in Medellín."
+  }
+}
