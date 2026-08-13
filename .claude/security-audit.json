@@ -1,0 +1,7 @@
+{
+  "auditedCommit": "c08f4660d07de06fd405ec8b81502e6812ac143e",
+  "auditedAt": "2026-08-13T20:11:53Z",
+  "skill": "vibe-security",
+  "verdict": "pass",
+  "notes": "Frontend-only static site audit. Checked: secrets scan (none in repo; VITE_WEB3FORMS_KEY is a public-by-design client key, documented), .gitignore covers .env*, no console logging of PII, all 10 target=_blank links have rel=noopener noreferrer, dangerouslySetInnerHTML only for static design-contract comment and escaped JSON-LD (\u003c escaping), client form validation + honeypot + 60s throttle, data leaves site only to api.web3forms.com (CSP connect-src enforced), strict CSP without script unsafe-inline via deterministic per-build hashes, HSTS/nosniff/XFO DENY/Referrer-Policy/Permissions-Policy/COOP set in vercel.json, npm audit clean after sharp upgrade. No backend, no DB, no auth surface. Findings: none Critical/High open."
+}
