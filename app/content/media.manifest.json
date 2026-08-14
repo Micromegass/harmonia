@@ -1,6 +1,13 @@
 {
   "note": "Add originals to media-raw/ with the listed filename, then run `npm run media`. Entries with placeholder:true render branded placeholders until the real file arrives. See MEDIA.md.",
-  "styles": ["salsa", "bachata", "urbano", "tropical", "kids", "contemporaneo"],
+  "styles": [
+    "salsa",
+    "bachata",
+    "urbano",
+    "tropical",
+    "kids",
+    "contemporaneo"
+  ],
   "assets": [
     {
       "id": "salsa-pareja-01",
@@ -8,23 +15,39 @@
       "type": "image",
       "styleTag": "salsa",
       "orientation": "portrait",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Pareja bailando salsa en el estudio de Harmonia Baila",
         "en": "Couple dancing salsa at the Harmonia Baila studio"
-      }
+      },
+      "width": 1600,
+      "height": 2405,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAADQBQCdASoYACQAPu1grE2ppaSiMBqqqTAdiUAYG4DO0f9/moV5xNgyGH2Ii4DaTL1c976+oR4AAMmjNgXnPbWcNMqvzw/e/cW5VEIunMjeXt795jw+HvI633XmLBaQu7vCjA2v6uMkLTLUJvVo5HL4W9Di3deX6hhbcCmqHEW0VGrzmuIHWAyquucL+2Vh14tRxC8cuKpUI6Y+awVRjuOGCPsfCALANBdbKhpTIpH9Rcb/yeZAinrCHhESmLYoAAA="
     },
     {
       "id": "salsa-giro-02",
       "file": "salsa-giro-02.jpg",
       "type": "image",
       "styleTag": "salsa",
-      "orientation": "landscape",
-      "placeholder": true,
+      "orientation": "portrait",
+      "placeholder": false,
       "alt": {
         "es": "Giro de salsa en plena clase grupal",
         "en": "Salsa spin during a group class"
-      }
+      },
+      "width": 1600,
+      "height": 2348,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAAAQBgCdASoYACMAPulkq02pJaQiMBqqqSAdCWQAxnwMP9kdvB6+LqFPiF2+CxLaTZXkRQm4ghca2HAAyhMQWRdNuHwTfPoqPYRp8ZkXr6DTftDRrpEG3mC3qf1b0g8beibbu2M80oeIlDRqWHQrDzIcj+zgbaK31w/IoXOd8dWfi5Vz431Q4kPUVDB2Zc9eLs2crarnRiwUZzhOeL1qUZ3E8SUDbqXOJo3LF7zP2X/Gv0v5u/9k+Bx5AmX/C85QfKxyDw8gR+gbshj2DtxM6r6DAAA="
     },
     {
       "id": "bachata-clase-01",
@@ -32,23 +55,39 @@
       "type": "image",
       "styleTag": "bachata",
       "orientation": "portrait",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Clase de bachata: figura en pareja con la profesora",
         "en": "Bachata class: partner figure with the teacher"
-      }
+      },
+      "width": 1600,
+      "height": 2400,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBgCdASoYACQAPulgpk2pJaOiNVgIASAdCWgAnTKEhQAb4BnMiWV//zCyFXHxy0ysiJA+WGQiSggAAP7ZEaxtZfY4SBStniutMWHnTYGK2tWfr+vNQCyJ6X27eq4KyVx8xnGnACKFNtwrZtg87fylHmrzdUCYmngiPgrdSzoIKAHEv8JhfgB5vjrnFlh6gwGomipUeWpKgvCeJrVFQtfugVBUivLyc3FVcOp12VT0MxPzolH96Q+kcigzu1xAwePYwhIezOAAAA=="
     },
     {
       "id": "bachata-sensual-02",
       "file": "bachata-sensual-02.jpg",
       "type": "image",
       "styleTag": "bachata",
-      "orientation": "landscape",
-      "placeholder": true,
+      "orientation": "portrait",
+      "placeholder": false,
       "alt": {
         "es": "Ondulación de bachata sensual en el salón principal",
         "en": "Sensual bachata body wave in the main studio room"
-      }
+      },
+      "width": 1600,
+      "height": 2397,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAABQBgCdASoYACQAPu1mq04ppaQiKqwBMB2JZgCxH75CPS2a7yZGY1THm+DNHQ+r8iVxFXM1kN5Z9/G+0AD+o3y2C5/u7XYtGud0aBDI4Ov9XIDcDX3CkdngSeT51G1xcRk5sAfS0w4nVjYK7Ly8mXCERkkjOhOoDif0P3BHnVWrU2+jlNIBUOw+07ucYPTF+Jn0/0I88AObeFICccBY5aym3HpZ2Bwm5W5ME5zJiFcYNZF2bydNtWjo66JyPb6MT5q2VtclASiyTrsx/vEXKH7+MoyqNzReGSO8mgorYvyUdKUQCvd93q+mJLixNRZQ+YgzpqDBnpBGFUjcAAA="
     },
     {
       "id": "urbano-grupo-01",
@@ -56,11 +95,19 @@
       "type": "image",
       "styleTag": "urbano",
       "orientation": "landscape",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Grupo de estudiantes en clase de baile urbano",
         "en": "Group of students in an urban dance class"
-      }
+      },
+      "width": 1600,
+      "height": 1067,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAAAwBQCdASoYABAAPu1iqU2ppaOiMAgBMB2JQBOmUBcAFBn+wAsyAi6cRNkmPb2yGgC9AAD+6IwyX1VtbST+UPg2IiXqdavEKygTr9V1Vs3ol1/CUoTZPPvb9Ba+wYhGaRHN+8o2pnozgamqJFBuZVfHe55xySZN7MUFSb4tvaZIvZ337UZlZtEjn55AOd2hndvopme/IMx/bFyc8BZIffWmM98Tc8Xp3/sT7O7jH1Z1s/hZ5qidD652jFanv8ItpMdJU2stFC30+5MCu+BLneQ30/S3EtzMyAk2D0beFIwIAA=="
     },
     {
       "id": "tropical-cumbia-01",
@@ -68,35 +115,59 @@
       "type": "image",
       "styleTag": "tropical",
       "orientation": "portrait",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Falda de cumbia en movimiento durante una clase de ritmos tropicales",
         "en": "Cumbia skirt in motion during a tropical rhythms class"
-      }
+      },
+      "width": 1600,
+      "height": 2400,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRogBAABXRUJQVlA4IHwBAABwCACdASoYACQAPu1sr1GppaQipWsxMB2JbAC1GoQQFopkiXblvNJtAaQJnhJ+udcjDhx87CalBjLf9PR+eoJBYLBDzspRKIrPu5kAAP75bJEcGkfI4P7neLpXsSbbEs3PWNQ4/gl5p2woa8lF8Q5iVRPuDSv0YF8FJV8JS4tN+QwNUgy3xGxi3HeQKPcpSkj5Z2kiur7vCqYCAojFtz6NVZN8vPoeCetzEHkQwf2oDWQg4+cwG9FfmxzZbkP4G+6e/hRRBwn6oTF9/ssmhA/U3u/nkhCLgyHw2Odv0fgEr+c9u98GvoqUbfvGpQ22f/FMM83DFBLAeqDx6Yfg/UkZfo0UjYtXE2i4niFXLqWwtjSFSGcQ1wTxBlIap1JGZkmpAg+k4ipkxHxteJz+HvenSa6WB2hj2PXTDls5xSVoPSuj/OpX07rwzJG/L4rPb5qR7IbIszxfrzC019oZfU7lTjjKkqi4FPPdsTRNqXmE0koY0ti+6arSlAAAAA=="
     },
     {
       "id": "kids-clase-01",
       "file": "kids-clase-01.jpg",
       "type": "image",
       "styleTag": "kids",
-      "orientation": "landscape",
-      "placeholder": true,
+      "orientation": "portrait",
+      "placeholder": false,
       "alt": {
         "es": "Niños y niñas aprendiendo coreografía en clase infantil",
         "en": "Kids learning choreography in a children's class"
-      }
+      },
+      "width": 1600,
+      "height": 2400,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRmgBAABXRUJQVlA4IFwBAACwBwCdASoYACQAPu1oqlAppaOiqrgMATAdiUAWI/Bhqh9XoFMiMX6CNyhJL9vBnYmnqOJIMJ5h6o8BiLpuYvh/UuJL+H1AAP7eCUrXM333iew0StePHb1fqAt6dhwVWGP87cfRWftXWjruQuEekTXInc2ByuHfLntIXgu7T3wMDRohV/uDTgkXe8PWT5MYlgEtQJk2ZykPAY7rGE19k7HhbPWF15rd5OjEEPIsle5SSJAE7Tq9PnHsksj+l676yyKV7663VIokVGowystjjGmj2VtuZyOtq9U5yaSJReIUcoOEMBteh7dTLUWNpT5lRIPEqj5Hf4kboYoGorctxsjMDn0qKf6AqexOfK3O1UkjJpo/ijFxN5DuTDpr18+GdYfQvdDycur16iv17ozJpwqtHqfz7HYL5WlyANPeDOkW8gS+xQ/1YdhY7PKrrKYiblhJxJ0S3yZ1SB4AAAA="
     },
     {
       "id": "contemporaneo-solo-01",
       "file": "contemporaneo-solo-01.jpg",
       "type": "image",
       "styleTag": "contemporaneo",
-      "orientation": "portrait",
-      "placeholder": true,
+      "orientation": "landscape",
+      "placeholder": false,
       "alt": {
         "es": "Bailarina en una línea de danza contemporánea",
         "en": "Dancer holding a contemporary dance line"
-      }
+      },
+      "width": 1600,
+      "height": 1067,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAIEAPY8NmDs4jxWZbicQAA/pW/G4jfbV1syMgoDXyyAEgwOQTsjgBM7yX0KccCq9FQzflCTbMV2BGluhO5XTBa5edcpSc7PfCFq1sRgCAA"
     },
     {
       "id": "showreel-01",
@@ -104,11 +175,15 @@
       "type": "video",
       "styleTag": "salsa",
       "orientation": "portrait",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Video: momentos de clases de salsa en Harmonia Baila",
         "en": "Video: salsa class moments at Harmonia Baila"
-      }
+      },
+      "formats": [
+        "mp4"
+      ],
+      "poster": null
     },
     {
       "id": "showreel-02",
@@ -116,11 +191,55 @@
       "type": "video",
       "styleTag": "bachata",
       "orientation": "portrait",
-      "placeholder": true,
+      "placeholder": false,
       "alt": {
         "es": "Video: coreografía de bachata de la profesora",
         "en": "Video: the teacher's bachata choreography"
-      }
+      },
+      "formats": [
+        "mp4"
+      ],
+      "poster": null
+    },
+    {
+      "id": "profesora-01",
+      "file": "profesora-01.jpg",
+      "type": "image",
+      "styleTag": "contemporaneo",
+      "orientation": "portrait",
+      "placeholder": false,
+      "alt": {
+        "es": "Retrato de la profesora y fundadora de Harmonia Baila en el estudio",
+        "en": "Portrait of Harmonia Baila's founder and teacher in the studio"
+      },
+      "width": 1600,
+      "height": 2400,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBQCdASoYACQAPu1ysVOppqQipWgBMB2JaQAD5mTv7zUmrwjEtZVR0rEQ+vVbcFX6Pb8/rgAA/vpcNSXtpa3/i76lQPjk5iFBJ3VV/hvU5hxifxrOLp1htHAFLNYoaIYMYP1h0CjdlpcssB70RB3LlyU+BgvwsD+n2pK8+vakOO/yDCgcIihq2wzMU7xvN8iBhIH8E3uvRNsywCs8QJB3kNq80WLhZaAXGELTPCc4AAAA"
+    },
+    {
+      "id": "urbano-solo-02",
+      "file": "urbano-solo-02.jpg",
+      "type": "image",
+      "styleTag": "urbano",
+      "orientation": "landscape",
+      "placeholder": false,
+      "alt": {
+        "es": "Bailarín de ritmos urbanos en pleno movimiento",
+        "en": "Urban dancer mid-move"
+      },
+      "width": 1600,
+      "height": 1067,
+      "widths": [
+        480,
+        768,
+        1200
+      ],
+      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQAFEAMKhf1McGsh3yOEHdZeYADhsEOjA5NntBmW+jhjs1KnyPHG5XX7nTo+avTTH9THqePcZwj1fdCRAwtEUgGDgHf96MvnbR97lnMLC8fS35lWlF8I1kJNLqHzdu7CSxmgLdv7HEy18N/mEFF/O34gym2eMfSviCdSyMfPogkd8B2Uoe+jA3m04ctYgAA="
     }
   ]
 }

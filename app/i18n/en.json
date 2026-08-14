@@ -49,14 +49,14 @@
   },
   "whatsapp": {
     "buttonLabel": "Message us on WhatsApp",
-    "prefill": "Hi! I found Harmonia Baila's website and I'm interested in dance classes. Could you tell me more? (English ok!)"
+    "prefill": "Hi! I found Harmonia Baila's website and I'd like to book a trial class. Could you tell me how? (English ok!)"
   },
   "home": {
     "hero": {
       "count": "5 · 6 · 7 · 8",
       "title": "Shall we dance?",
       "subtitle": "Salsa, bachata and more in Medellín. Classes for kids and adults, from your very first step to advanced, taught by a professionally trained dancer. English-friendly.",
-      "ctaPrimary": "Message us on WhatsApp",
+      "ctaPrimary": "Book a trial class",
       "ctaSecondary": "See the classes"
     },
     "styles": {
@@ -94,8 +94,33 @@
     "finalCta": {
       "heading": "Your first class is one message away",
       "body": "Tell us what you'd like to dance and we'll get you started. No pressure: everyone shows up with two left feet.",
-      "ctaPrimary": "Message us on WhatsApp",
+      "ctaPrimary": "Book a trial class",
       "ctaSecondary": "Or use the contact form"
+    },
+    "benefits": {
+      "heading": "What dance gives you",
+      "items": {
+        "confianza": {
+          "title": "Confidence",
+          "line": "Believe in yourself"
+        },
+        "alegria": {
+          "title": "Joy",
+          "line": "Enjoy every step"
+        },
+        "disciplina": {
+          "title": "Discipline",
+          "line": "Grow with consistency"
+        },
+        "comunidad": {
+          "title": "Community",
+          "line": "Dance with others"
+        },
+        "expresion": {
+          "title": "Expression",
+          "line": "Tell your story"
+        }
+      }
     }
   },
   "styles": {

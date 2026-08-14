@@ -15,7 +15,7 @@ export default function About() {
   const { t } = useTranslation();
   const location = useLocation();
   const locale: Locale = location.pathname.startsWith("/en") ? "en" : "es";
-  const portrait = (manifest.assets as MediaAsset[]).find((a) => a.styleTag === "contemporaneo");
+  const portrait = (manifest.assets as MediaAsset[]).find((a) => a.id === "profesora-01");
 
   return (
     <>

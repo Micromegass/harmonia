@@ -14,6 +14,15 @@ export const meta = metaFor("home");
 
 const STYLE_KEYS = ["salsa", "bachata", "urbano", "tropical", "kids", "contemporaneo"] as const;
 
+/** Benefit → photo medallion (asset id from the media manifest). */
+const BENEFITS: [string, string][] = [
+  ["confianza", "salsa-pareja-01"],
+  ["alegria", "kids-clase-01"],
+  ["disciplina", "contemporaneo-solo-01"],
+  ["comunidad", "urbano-grupo-01"],
+  ["expresion", "tropical-cumbia-01"],
+];
+
 export default function Home() {
   const { t } = useTranslation();
   const location = useLocation();
@@ -85,10 +94,33 @@ export default function Home() {
               ))}
             </dl>
           </div>
+
+          {/* Benefits — what dance gives you (photo medallions) */}
+          <div className="mt-16 sm:mt-20">
+            <Reveal>
+              <h3 className="display text-3xl sm:text-4xl">{t("home.benefits.heading")}</h3>
+            </Reveal>
+            <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 md:grid-cols-5">
+              {BENEFITS.map(([key, assetId], i) => {
+                const asset = (manifest.assets as MediaAsset[]).find((a) => a.id === assetId);
+                return (
+                  <Reveal as="li" key={key} beats={i} className="flex flex-col items-center text-center">
+                    {asset && (
+                      <div className="h-28 w-28 overflow-hidden rounded-full sm:h-36 sm:w-36 [&_img]:h-full [&_img]:w-full [&_img]:rounded-full [&_img]:object-cover [&>picture]:block [&>picture]:h-full [&>picture]:w-full">
+                        <MediaTile asset={asset} locale={locale} sizes="9rem" className="!aspect-square" />
+                      </div>
+                    )}
+                    <p className="display-mid mt-4 text-lg">{t(`home.benefits.items.${key}.title`)}</p>
+                    <p className="muted mt-0.5 text-sm">{t(`home.benefits.items.${key}.line`)}</p>
+                  </Reveal>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* ── Kids: sol field ── */}
+      {/* ── Kids: lima field ── */}
       <section className="field-lima" aria-labelledby="kids-heading">
         <RuffleDivider from="crudo" />
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-8 px-5 py-14 sm:px-8 sm:py-20">

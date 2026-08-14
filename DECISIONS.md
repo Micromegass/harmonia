@@ -54,6 +54,12 @@ Format: date · decision · rationale · verify.
 - **2026-08-14 · Hydration warning fixed** (`suppressHydrationWarning` scoped to <html>, whose class the progressive-enhancement script mutates pre-hydration). Console is clean again.
 - **2026-08-14 · Inline code review** (the /code-review subagents hit the session usage limit): pruned dead exports (swingIn/countIn/SPRING), verified reduced-motion freezes, hydration-stable deterministic jitter, seamless divider period under preserveAspectRatio=none, no var-name collisions with the no-JS opacity overrides.
 
+## 2026-08-14 — Client references adopted (claudiacadena.com, beacademy.com.co)
+
+- **2026-08-14 · Reference analysis** (both are Wix sites; we keep our concept). Adopted three patterns: (1) **"Agenda tu clase de prueba" trial-class CTA** (Claudia Cadena) replaces the generic WhatsApp label on home hero + final CTA and in the WhatsApp prefill — concrete offers convert; (2) **benefits section** (Be Academy's "beneficios que transforman vidas"): five photo medallions on home — Confianza/Alegría/Disciplina/Comunidad/Expresión; (3) **real photography everywhere** — see below. NOT adopted: testimonials (we never invent them), blog, multi-sede structure (single studio).
+- **2026-08-14 · Placeholder photos/videos installed through the real pipeline** so the client sees the final look: 10 photos + 2 SD videos from **Pexels (free license, no attribution required)**, downloaded to media-raw/ under the manifest filenames and processed via `npm run media` (AVIF/WebP variants + blur-ups). **These are temporary stand-ins: every one should be replaced by her real class photos/videos via the exact same drop-in flow (MEDIA.md).** Files: salsa-pareja-01, salsa-giro-02, bachata-clase-01, bachata-sensual-02, urbano-grupo-01, urbano-solo-02, tropical-cumbia-01, kids-clase-01, contemporaneo-solo-01, profesora-01, showreel-01/02.
+- **2026-08-14 · About page portrait slot now uses profesora-01** (stock stand-in for her real portrait). Video pipeline still copies uncompressed (no ffmpeg) — SD sources are ~2MB each so acceptable; install ffmpeg when her real videos arrive.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).
@@ -62,5 +68,7 @@ Format: date · decision · rationale · verify.
 - Exact address / neighborhood (JSON-LD geo + local SEO use approximate Medellín center until confirmed).
 - Full list of styles taught (site ships: salsa, bachata + others gathered from Instagram; confirm).
 - Prices — **not published anywhere** (never invented); site says "contact for pricing".
+- **Trial-class offer**: the site now invites visitors to "agendar una clase de prueba" — confirm she offers one (free or paid) and adjust wording if needed.
+- **All Pexels placeholder photos/videos must be replaced with her real media before/at launch** (they are generic stock, not her studio).
 - Legal identity fields: razón social, NIT, domicilio, contact email (placeholders in legal pages).
 - **Image rights: she must confirm she has consent for any identifiable students in photos/videos, especially minors, before launch.**

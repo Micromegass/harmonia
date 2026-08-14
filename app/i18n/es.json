@@ -49,14 +49,14 @@
   },
   "whatsapp": {
     "buttonLabel": "Escríbenos por WhatsApp",
-    "prefill": "¡Hola! Vi la página de Harmonia Baila y me interesan las clases de baile. ¿Me cuentas más?"
+    "prefill": "¡Hola! Vi la página de Harmonia Baila y me gustaría agendar una clase de prueba. ¿Me cuentas cómo?"
   },
   "home": {
     "hero": {
       "count": "5 · 6 · 7 · 8",
       "title": "¿Bailamos?",
       "subtitle": "Clases de salsa, bachata y más ritmos en Medellín. Para niños y adultos, desde cero hasta avanzado, con una bailarina profesional que te enseña de verdad.",
-      "ctaPrimary": "Escríbenos por WhatsApp",
+      "ctaPrimary": "Agenda tu clase de prueba",
       "ctaSecondary": "Ver las clases"
     },
     "styles": {
@@ -94,8 +94,33 @@
     "finalCta": {
       "heading": "Tu primera clase está a un mensaje",
       "body": "Cuéntanos qué quieres bailar y te decimos cómo empezar. Sin pena: todos llegamos con dos pies izquierdos.",
-      "ctaPrimary": "Escríbenos por WhatsApp",
+      "ctaPrimary": "Agenda tu clase de prueba",
       "ctaSecondary": "O usa el formulario"
+    },
+    "benefits": {
+      "heading": "Lo que el baile te regala",
+      "items": {
+        "confianza": {
+          "title": "Confianza",
+          "line": "Cree en ti"
+        },
+        "alegria": {
+          "title": "Alegría",
+          "line": "Goza cada paso"
+        },
+        "disciplina": {
+          "title": "Disciplina",
+          "line": "Avanza con constancia"
+        },
+        "comunidad": {
+          "title": "Comunidad",
+          "line": "Baila con otros"
+        },
+        "expresion": {
+          "title": "Expresión",
+          "line": "Cuenta tu historia"
+        }
+      }
     }
   },
   "styles": {
