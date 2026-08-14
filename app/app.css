@@ -146,6 +146,41 @@ body {
   top: 0.5rem;
 }
 
+/* Estela silk trails: a long dash drifting along each path in a seamless
+   period, plus one soft fade-in. Pure CSS — calm, cheap, hydration-safe. */
+.trail {
+  stroke-dasharray: 0.82 0.18;
+  opacity: var(--trail-o, 0.2);
+  animation:
+    trail-drift var(--trail-drift, 30s) linear infinite,
+    trail-in 2.4s ease-out var(--trail-delay, 0s) backwards;
+}
+@keyframes trail-drift {
+  to {
+    stroke-dashoffset: -1;
+  }
+}
+@keyframes trail-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Hero headline groove: each letter sways on an endless, gentle 8-count. */
+.groove {
+  display: inline-block;
+  animation: groove var(--groove-dur, 3.36s) ease-in-out var(--groove-delay, 0s) infinite; /* 3 bars */
+}
+@keyframes groove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5px);
+  }
+}
+
 /* No-JS fallback: entrance animations bake opacity:0 into the prerendered
    HTML; without JS (or before it runs) force everything visible. */
 html:not(.js) [style*="opacity"] {

@@ -46,6 +46,14 @@ Format: date · decision · rationale · verify.
 - **2026-08-13 · Section dividers visibly animate now**: the client couldn't perceive the previous subtle breathe, so hems roll sideways in a seamless travel loop (240px period) plus a stronger depth breathe; in-view gated, reduced-motion static.
 - **2026-08-13 · Senior polish pass**: tactile press states (active:scale-95) on all pill CTAs and the WhatsApp button; desktop nav links get an underline that grows in on hover/focus and stays on the active page.
 
+## 2026-08-14 — Client feedback round 4 (calm / harmony)
+
+- **2026-08-14 · Design principle made explicit: HARMONY.** Everything moves slowly, in phase, nothing competes; animation periods are harmonic multiples of one musical bar (1.12s): letter groove 3 bars, divider breathe 4 bars, divider travel 8 bars, trails 26-44s.
+- **2026-08-14 · Hero text never hides.** All entrance opacity animations removed from the hero (they caused the visible disappear/reappear at hydration). The headline is always visible; its only motion is the endless gentle per-letter groove, now pure CSS.
+- **2026-08-14 · Flicker eliminated in Estela.** Root cause found and fixed: framer hijacks `pathLength` on m.path and rewrites dash styles (also causing a React hydration-mismatch warning), and the old pathOffset cycle made lines vanish at the end of each pass. Rewritten framer-free: each line is a long CSS dash (0.82/0.18) drifting by exactly one period per loop at constant opacity — a seamless current, nothing ever pops. 52 animations now cost zero main-thread work.
+- **2026-08-14 · Hydration warning fixed** (`suppressHydrationWarning` scoped to <html>, whose class the progressive-enhancement script mutates pre-hydration). Console is clean again.
+- **2026-08-14 · Inline code review** (the /code-review subagents hit the session usage limit): pruned dead exports (swingIn/countIn/SPRING), verified reduced-motion freezes, hydration-stable deterministic jitter, seamless divider period under preserveAspectRatio=none, no var-name collisions with the no-JS opacity overrides.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

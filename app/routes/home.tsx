@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { m, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { metaFor, studioJsonLd } from "../lib/seo";
 import { waLink } from "../lib/site";
-import { BEAT, countIn, EASE_DANCE, swingIn } from "../components/motion";
 import { Reveal } from "../components/Reveal";
 import { FlowField } from "../components/FlowField";
 import { RuffleDivider } from "../components/RuffleDivider";
@@ -174,16 +171,12 @@ export default function Home() {
 
 function Hero({ locale }: { locale: Locale }) {
   const { t } = useTranslation();
-  const reduced = useReducedMotion();
-  // LCP: the prerendered HTML paints the hero fully visible; the entrance
-  // choreography starts only after hydration (animated = client-side + motion ok).
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  const animated = mounted && !reduced;
   const title = t("home.hero.title");
-  // Words wrap; letters inside a word never do (letter spans are the stagger unit).
+  // Words wrap; letters inside a word never do (letter spans are the groove unit).
   const words = title.split(" ").map((w) => Array.from(w));
 
+  // Calm principle: hero text is ALWAYS visible — no entrance opacity, no
+  // hydration swap. The only motion is the endless, gentle letter groove.
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
       <FlowField />
@@ -193,86 +186,33 @@ function Hero({ locale }: { locale: Locale }) {
         className="absolute inset-x-0 top-1/4 h-3/5 bg-[linear-gradient(100deg,rgb(6_42_53/0.85)_0%,rgb(6_42_53/0.55)_45%,transparent_72%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-24 sm:px-8">
-        {!animated ? (
-          <p className="text-sm font-bold uppercase tracking-[0.35em] text-lima">{t("home.hero.count")}</p>
-        ) : (
-          <m.p
-            className="text-sm font-bold uppercase tracking-[0.35em] text-lima"
-            initial="hidden"
-            animate="visible"
-            variants={countIn}
-            aria-hidden="true"
-          >
-            {t("home.hero.count")
-              .split(" ")
-              .map((token, i) => (
-                <m.span
-                  key={i}
-                  className="inline-block whitespace-pre"
-                  variants={{
-                    hidden: { opacity: 0, y: 8 },
-                    visible: { opacity: 1, y: 0, transition: { duration: BEAT * 2, ease: [...EASE_DANCE] } },
-                  }}
-                >
-                  {token}{" "}
-                </m.span>
-              ))}
-          </m.p>
-        )}
+        <p className="text-sm font-bold uppercase tracking-[0.35em] text-lima">{t("home.hero.count")}</p>
 
         <h1
           className="display mt-5 text-[min(10.4vw,8rem)] leading-[0.92] md:text-[min(8.6vw,9.5rem)]"
           aria-label={title}
         >
-          {!animated ? (
-            <span>{title}</span>
-          ) : (
-            <m.span
-              initial="hidden"
-              animate="visible"
-              transition={{ staggerChildren: BEAT / 2, delayChildren: BEAT * 4 }}
-              aria-hidden="true"
-            >
-              {words.map((letters, w) => (
-                <span key={w} className="inline-block whitespace-nowrap">
-                  {letters.map((ch, i) => (
-                    <m.span key={i} className="inline-block" variants={swingIn()}>
-                      <m.span
-                        className="inline-block"
-                        animate={{ y: [0, -3.5, 0, 2, 0] }}
-                        transition={{
-                          repeat: Infinity,
-                          duration: BEAT * 16,
-                          ease: "easeInOut",
-                          delay: 2.4 + (w * 6 + i) * (BEAT / 2),
-                        }}
-                      >
-                        {ch}
-                      </m.span>
-                    </m.span>
-                  ))}
-                  {w < words.length - 1 && " "}
-                </span>
-              ))}
-            </m.span>
-          )}
+          <span aria-hidden="true">
+            {words.map((letters, w) => (
+              <span key={w} className="inline-block whitespace-nowrap">
+                {letters.map((ch, i) => (
+                  <span
+                    key={i}
+                    className="groove"
+                    style={{ "--groove-delay": `${((w * 6 + i) * 0.17).toFixed(2)}s` } as React.CSSProperties}
+                  >
+                    {ch}
+                  </span>
+                ))}
+                {w < words.length - 1 && " "}
+              </span>
+            ))}
+          </span>
         </h1>
 
-        <m.p
-          className="lead mt-7 max-w-xl text-crudo"
-          initial={!animated ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: BEAT * 8, duration: BEAT * 4, ease: [...EASE_DANCE] }}
-        >
-          {t("home.hero.subtitle")}
-        </m.p>
+        <p className="lead mt-7 max-w-xl text-crudo">{t("home.hero.subtitle")}</p>
 
-        <m.div
-          className="mt-9 flex flex-wrap items-center gap-4"
-          initial={!animated ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: BEAT * 10, duration: BEAT * 4, ease: [...EASE_DANCE] }}
-        >
+        <div className="mt-9 flex flex-wrap items-center gap-4">
           <a
             href={waLink(t("whatsapp.prefill"))}
             target="_blank"
@@ -287,7 +227,7 @@ function Hero({ locale }: { locale: Locale }) {
           >
             {t("home.hero.ctaSecondary")}
           </Link>
-        </m.div>
+        </div>
       </div>
     </section>
   );

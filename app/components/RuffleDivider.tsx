@@ -38,8 +38,8 @@ export function RuffleDivider({ from, flip = false }: { from: "noche" | "petrol"
             whileInView={{ x: -240, d: phaseB }}
             viewport={{ amount: 0.1 }}
             transition={{
-              x: { repeat: Infinity, duration: 8, ease: "linear" },
-              d: { repeat: Infinity, repeatType: "mirror", duration: 2.5, ease: "easeInOut" },
+              x: { repeat: Infinity, duration: 8.96, ease: "linear" }, // 8 bars
+              d: { repeat: Infinity, repeatType: "mirror", duration: 4.48, ease: "easeInOut" }, // 4 bars
             }}
           />
         )}
