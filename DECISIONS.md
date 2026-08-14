@@ -60,6 +60,12 @@ Format: date · decision · rationale · verify.
 - **2026-08-14 · Placeholder photos/videos installed through the real pipeline** so the client sees the final look: 10 photos + 2 SD videos from **Pexels (free license, no attribution required)**, downloaded to media-raw/ under the manifest filenames and processed via `npm run media` (AVIF/WebP variants + blur-ups). **These are temporary stand-ins: every one should be replaced by her real class photos/videos via the exact same drop-in flow (MEDIA.md).** Files: salsa-pareja-01, salsa-giro-02, bachata-clase-01, bachata-sensual-02, urbano-grupo-01, urbano-solo-02, tropical-cumbia-01, kids-clase-01, contemporaneo-solo-01, profesora-01, showreel-01/02.
 - **2026-08-14 · About page portrait slot now uses profesora-01** (stock stand-in for her real portrait). Video pipeline still copies uncompressed (no ffmpeg) — SD sources are ~2MB each so acceptable; install ffmpeg when her real videos arrive.
 
+## 2026-08-14 — Client feedback round 5 (hero video, Chrome flicker, flow dividers)
+
+- **2026-08-14 · Hero video medallion**: a circular video window (showreel-01) floats where the silk trails converge — echoes the round logo badge, doesn't fight the flow field (trails pass behind, scrim keeps type readable). Ultra-slow 8-bar float; muted loop; mobile: small, top-right.
+- **2026-08-14 · Chrome flicker root-caused and fixed**: animating stroke-dashoffset on 52 full-width thin paths made Chrome repaint + re-antialias every line every frame (perceived shimmer). New architecture: base lines fully static (zero repaint), ~14 short "runner" comets carry the flow, plus one GPU-composited whole-field drift. Same look, calm on every GPU.
+- **2026-08-14 · Section dividers replaced with flow dividers** per client preference: smooth traveling wave seam (seamless one-period loop, GPU-composited) + teal/lima echo lines + runner comets, left→right — one motion language from hero to footer. Scalloped ruffle hems retired; component name kept to avoid churn.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

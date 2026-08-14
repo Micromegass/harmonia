@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { pathFor, type Locale } from "../i18n/routing";
 import { metaFor, studioJsonLd } from "../lib/seo";
-import { waLink } from "../lib/site";
+import { asset as assetUrl, waLink } from "../lib/site";
 import { Reveal } from "../components/Reveal";
 import { FlowField } from "../components/FlowField";
 import { RuffleDivider } from "../components/RuffleDivider";
@@ -212,6 +212,25 @@ function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
       <FlowField />
+      {/* A window into the studio: circular video medallion echoing the logo's
+          badge, floating where the trails converge. Decorative — muted, looping,
+          paused for reduced-motion visitors (first frame only). */}
+      <div
+        aria-hidden="true"
+        className="float-slow pointer-events-none absolute right-4 top-[11%] z-[1] h-32 w-32 sm:right-[7%] sm:top-1/2 sm:h-72 sm:w-72 sm:-translate-y-[58%] lg:h-80 lg:w-80"
+      >
+        <video
+          className="h-full w-full rounded-full object-cover ring-2 ring-crudo/20 shadow-lift"
+          muted
+          loop
+          playsInline
+          autoPlay
+          preload="metadata"
+          tabIndex={-1}
+        >
+          <source src={assetUrl("/media/showreel-01.mp4")} type="video/mp4" />
+        </video>
+      </div>
       {/* local scrim so hero copy stays readable where trails cross it */}
       <div
         aria-hidden="true"

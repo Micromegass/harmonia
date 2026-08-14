@@ -38,9 +38,10 @@ Secondary text is always tinted from its field (`.muted` per `.field-*`), never 
 ## Composition grammar
 
 - **Fabric fields**: every section owns one full-bleed color (`.field-noche/petrol/crudo/lima`). Field order on a page alternates dark/saturated/light like skirt layers; two adjacent fields never share a color.
-- **Ruffle hem** (`RuffleDivider`): scalloped SVG in the color of the field above, laid over the next field; rolls sideways in a seamless 240px travel loop while its depth breathes (in-view only). The only section divider.
+- **Flow divider** (`RuffleDivider`, name historical): a smooth wave seam in the color of the field above, traveling left→right in a seamless one-period loop (GPU-composited), with teal/lima echo lines and runner comets — the hero's current carried between sections. The only section divider.
 - **Ribbon trails** (`Ribbons`): thick round-capped flowing paths in lima/teal/ivory — hero + 404 only; masked to fade before the hem.
-- **Estela** (`FlowField.tsx`): the hero's silk-trail field — two mirrored sheaves of 26 thin lines in teal/lima/ivory perpetually flowing along their own curves (pathLength/pathOffset loops). The hero headline letters groove on an endless gentle 8-count after their entrance. Static sheaf under reduced motion.
+- **Estela** (`FlowField.tsx`): the hero's silk-trail field — 52 static thin lines (never repaint → no Chrome AA shimmer) with ~14 runner comets drifting along every fourth line and one imperceptible GPU drift of the whole field. Headline letters groove endlessly on a gentle 3-bar CSS loop; no entrance animations, text is always visible.
+- **Hero medallion**: a circular video window (echoing the round logo badge) floating at the trail convergence, ultra-slow 8-bar float; muted/looping/decorative, first-frame-only under reduced motion.
 - **Logo assets**: `public/media/logo-badge{,-360}.webp` (circular badge, header/footer/contact/redirect), `logo-wide.webp` (about page), favicon + apple-touch-icon from the badge. Never recolor the logo files.
 - Buttons are pills; media tiles and cards are `rounded-xl/2xl` — that two-tier radius system is fixed.
 - Squiggle underline (small scalloped SVG path) marks `dt` titles; no colored side-borders, no kickers/eyebrows, no hard offset shadows, no gradient text.

@@ -146,23 +146,61 @@ body {
   top: 0.5rem;
 }
 
-/* Estela silk trails: a long dash drifting along each path in a seamless
-   period, plus one soft fade-in. Pure CSS — calm, cheap, hydration-safe. */
-.trail {
-  stroke-dasharray: 0.82 0.18;
-  opacity: var(--trail-o, 0.2);
-  animation:
-    trail-drift var(--trail-drift, 30s) linear infinite,
-    trail-in 2.4s ease-out var(--trail-delay, 0s) backwards;
+/* Estela: static silk + a few runner comets. Only the runners repaint
+   (short dashes on a normalized 0..1 path), so Chrome never re-antialiases
+   the 52 base lines — no shimmer. Negative delays start mid-stream. */
+.trail-runner {
+  stroke-dasharray: 0.07 0.93;
+  opacity: var(--runner-o, 0.4);
+  animation: trail-run var(--runner-dur, 28s) linear var(--runner-delay, 0s) infinite;
 }
-@keyframes trail-drift {
+@keyframes trail-run {
+  from {
+    stroke-dashoffset: 0;
+  }
   to {
     stroke-dashoffset: -1;
   }
 }
-@keyframes trail-in {
-  from {
-    opacity: 0;
+
+/* Flow divider: the whole band travels one wave period left→right, seamless
+   and GPU-composited (-20% of its own width == exactly one period). */
+.divider-travel {
+  will-change: transform;
+  animation: divider-travel 8.96s linear infinite;
+}
+@keyframes divider-travel {
+  to {
+    transform: translate3d(-20%, 0, 0);
+  }
+}
+
+/* One imperceptible, GPU-composited drift of the whole field — 16 bars. */
+.field-drift {
+  will-change: transform;
+  animation: field-drift 17.92s ease-in-out infinite;
+}
+@keyframes field-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-14px, 6px, 0);
+  }
+}
+
+/* Hero video medallion: one calm, slow float — 8 bars, same pulse as the hems. */
+.float-slow {
+  animation: float-slow 8.96s ease-in-out infinite;
+}
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 
