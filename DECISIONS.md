@@ -66,6 +66,10 @@ Format: date · decision · rationale · verify.
 - **2026-08-14 · Chrome flicker root-caused and fixed**: animating stroke-dashoffset on 52 full-width thin paths made Chrome repaint + re-antialias every line every frame (perceived shimmer). New architecture: base lines fully static (zero repaint), ~14 short "runner" comets carry the flow, plus one GPU-composited whole-field drift. Same look, calm on every GPU.
 - **2026-08-14 · Section dividers replaced with flow dividers** per client preference: smooth traveling wave seam (seamless one-period loop, GPU-composited) + teal/lima echo lines + runner comets, left→right — one motion language from hero to footer. Scalloped ruffle hems retired; component name kept to avoid churn.
 
+## 2026-08-14 — Client feedback round 6 (hero video integration)
+
+- **2026-08-14 · Hero video recomposed from circle medallion to an integrated card**: large soft-edged rectangle (rounded 2.2rem, 9:15) laid into the current at -2.5°, floating on the 8-bar pulse. Integration devices: petrol color-grade overlay (mix-blend-color) tunes the stock footage to the lagoon palette, edge vignette sinks it into the night, and three of the field's own lines + a runner comet are re-drawn IN FRONT of the card so the current visibly weaves around it. Mobile: compact card top-right, clear of headline and controls.
+
 ## TODO: confirm with client
 
 - WhatsApp number (env var `VITE_WHATSAPP_NUMBER`).

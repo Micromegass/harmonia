@@ -17,13 +17,13 @@ const jitter = (i: number, salt: number) => {
   return x - Math.floor(x);
 };
 
-function trailColor(i: number): string {
+export function trailColor(i: number): string {
   if (i % 5 === 0) return "var(--color-lima)";
   if (i % 3 === 0) return "var(--color-crudo)";
   return "var(--color-teal)";
 }
 
-function sheafPaths(position: 1 | -1) {
+export function sheafPaths(position: 1 | -1) {
   const y0 = position === -1 ? 430 : 0;
   return Array.from({ length: COUNT }, (_, i) => ({
     id: i,

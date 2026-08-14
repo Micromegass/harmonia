@@ -4,7 +4,7 @@ import { pathFor, type Locale } from "../i18n/routing";
 import { metaFor, studioJsonLd } from "../lib/seo";
 import { asset as assetUrl, waLink } from "../lib/site";
 import { Reveal } from "../components/Reveal";
-import { FlowField } from "../components/FlowField";
+import { FlowField, sheafPaths, trailColor } from "../components/FlowField";
 import { RuffleDivider } from "../components/RuffleDivider";
 import { JsonLd } from "../components/JsonLd";
 import { MediaTile, type MediaAsset } from "../components/MediaTile";
@@ -212,25 +212,67 @@ function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="field-noche relative flex min-h-svh flex-col justify-center overflow-hidden">
       <FlowField />
-      {/* A window into the studio: circular video medallion echoing the logo's
-          badge, floating where the trails converge. Decorative — muted, looping,
-          paused for reduced-motion visitors (first frame only). */}
+      {/* A window into the studio: a large soft-edged video card laid into the
+          current — slightly rotated like a card in the stream, graded toward the
+          lagoon palette, floating on the same slow pulse as the hems. Trails pass
+          behind it (FlowField) AND in front of it (the overlay svg below), so the
+          field weaves around it. Decorative: muted loop, still frame under
+          reduced motion. */}
       <div
         aria-hidden="true"
-        className="float-slow pointer-events-none absolute right-4 top-[11%] z-[1] h-32 w-32 sm:right-[7%] sm:top-1/2 sm:h-72 sm:w-72 sm:-translate-y-[58%] lg:h-80 lg:w-80"
+        className="pointer-events-none absolute right-[-7%] top-[3%] z-[1] w-32 rotate-[-2.5deg] sm:right-[6%] sm:top-1/2 sm:w-[clamp(250px,26vw,370px)] sm:-translate-y-[56%]"
       >
-        <video
-          className="h-full w-full rounded-full object-cover ring-2 ring-crudo/20 shadow-lift"
-          muted
-          loop
-          playsInline
-          autoPlay
-          preload="metadata"
-          tabIndex={-1}
-        >
-          <source src={assetUrl("/media/showreel-01.mp4")} type="video/mp4" />
-        </video>
+        <div className="float-slow">
+          <div className="relative aspect-[9/15] overflow-hidden rounded-[1.8rem] shadow-lift ring-1 ring-crudo/15 sm:rounded-[2.2rem]">
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              muted
+              loop
+              playsInline
+              autoPlay
+              preload="metadata"
+              tabIndex={-1}
+            >
+              <source src={assetUrl("/media/showreel-01.mp4")} type="video/mp4" />
+            </video>
+            {/* lagoon grade + edge vignette sink it into the night */}
+            <div className="absolute inset-0 bg-petrol/35 mix-blend-color" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_52%,rgb(6_42_53/0.5)_100%)]" />
+          </div>
+        </div>
       </div>
+      {/* front currents: three of the field's own lines re-drawn above the card */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1440 900"
+        preserveAspectRatio="xMidYMid slice"
+        className="pointer-events-none absolute inset-0 z-[2] hidden h-full w-full sm:block"
+        focusable="false"
+      >
+        {sheafPaths(1)
+          .filter((p) => [17, 20, 23].includes(p.id))
+          .map((p) => (
+            <path
+              key={p.id}
+              d={p.d}
+              stroke={trailColor(p.id)}
+              strokeWidth={p.width}
+              strokeOpacity={p.opacity * 0.9}
+              strokeLinecap="round"
+              fill="none"
+            />
+          ))}
+        <path
+          className="trail-runner"
+          d={sheafPaths(1)[20].d}
+          pathLength={1}
+          fill="none"
+          stroke="var(--color-crudo)"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          style={{ "--runner-o": 0.4, "--runner-dur": "27s", "--runner-delay": "-9s" } as React.CSSProperties}
+        />
+      </svg>
       {/* local scrim so hero copy stays readable where trails cross it */}
       <div
         aria-hidden="true"
